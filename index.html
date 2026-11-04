@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MAMMEDOV & CO. — Growth House, Dubai</title>
+<meta name="description" content="MAMMEDOV & CO. — growth house for premium businesses in Dubai: strategy, targeted advertising, SMM, AI production, websites and sales in Direct.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#2B3527">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MAMMEDOV & CO.">
+<meta property="og:title" content="MAMMEDOV & CO. — Growth House, Dubai">
+<meta property="og:description" content="From one second on a phone to revenue: ads, Direct sales, SMM, AI production and websites for premium businesses in Dubai. Free audit in 12 hours.">
+<meta property="og:url" content="https://mammedov.pages.dev/">
+<meta property="og:image" content="https://mammedov.pages.dev/og.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://mammedov.pages.dev/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#F4F1EB; --stone:#E9E3D9; --card:#FBF9F5;
+  --olive:#2B3527; --olive-2:#3B4835; --sage:#9DAA93; --sage-l:#D3DACB;
+  --rose:#A9786A; --rose-l:#EBD5CC;
+  --ink:#1C1B18; --muted:#4F4C46; --line:rgba(28,27,24,.12); --line-d:rgba(244,241,235,.16);
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Manrope",system-ui,sans-serif;
+  --pad:clamp(20px,5vw,72px); --max:1280px; --ease:cubic-bezier(.22,.7,.1,1);
+  --navh:72px;
+}
+html[lang="ar"]{--serif:"Noto Naskh Arabic",serif;--sans:"IBM Plex Sans Arabic",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+
+/* ===== PAGE-BY-PAGE SNAP ===== */
+html{scroll-snap-type:y mandatory;scroll-behavior:smooth;overscroll-behavior-y:none}
+.screen{min-height:100vh;min-height:100svh;scroll-snap-align:start;scroll-snap-stop:always;display:flex;flex-direction:column;justify-content:center;padding:calc(var(--navh) + 2vh) 0 4vh;position:relative}
+.screen.end{scroll-snap-align:end;min-height:auto}
+
+body{background:var(--ivory);color:var(--ink);font-family:var(--sans);font-size:clamp(15px,min(1.15vw,2vh),17px);line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html[lang="ar"] body{font-size:clamp(16px,min(1.2vw,2.1vh),18px);line-height:1.8}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+::selection{background:var(--olive);color:var(--ivory)}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding-inline:var(--pad)}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--rose)}
+html[lang="ar"] .eyebrow{letter-spacing:0;font-size:13.5px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08}
+html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3{line-height:1.45;font-weight:700}
+h2{font-size:clamp(28px,min(3.6vw,6vh),56px);margin-top:10px;max-width:22ch}
+html[lang="ar"] h2{font-size:clamp(24px,min(2.8vw,4.8vh),42px)}
+h2 em,h1 em{font-style:italic;color:var(--rose)}
+html[lang="ar"] em{font-style:normal}
+.lead{font-size:clamp(15px,min(1.25vw,2.2vh),18px);color:var(--muted);max-width:60ch;margin-top:14px}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.dark{background:var(--olive);color:var(--ivory)}
+.dark .lead{color:rgba(244,241,235,.82)}
+.dark h2 em{color:var(--rose-l)}
+.dark .eyebrow{color:var(--rose-l)}
+.stone{background:var(--stone)}
+.mt{margin-top:clamp(18px,3.4vh,40px)}
+
+/* NAV */
+.nav{position:fixed;inset-inline:0;top:0;z-index:90;height:var(--navh);display:flex;justify-content:space-between;align-items:center;padding:0 var(--pad);color:var(--ivory);transition:background .4s,color .4s}
+.nav.solid{background:rgba(244,241,235,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:var(--ink);border-bottom:1px solid var(--line)}
+.logo{text-decoration:none;font-family:"Cormorant Garamond",serif;font-weight:600;font-size:21px;letter-spacing:.22em;white-space:nowrap}
+.logo i{font-style:italic;letter-spacing:0;margin:0 .18em}
+.nav-r{display:flex;gap:14px;align-items:center}
+.langs{display:flex;border:1px solid currentColor;border-radius:99px;padding:3px}
+.langs button{all:unset;cursor:pointer;font:700 12px "Manrope","IBM Plex Sans Arabic",sans-serif;padding:6px 11px;border-radius:99px}
+.langs button[aria-pressed="true"]{background:var(--ivory);color:var(--ink)}
+.nav.solid .langs button[aria-pressed="true"]{background:var(--ink);color:var(--ivory)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:700 15px var(--sans);text-decoration:none;padding:15px 26px;border-radius:99px;border:1.5px solid currentColor;background:none;color:inherit;cursor:pointer;transition:background .3s,color .3s,border-color .3s}
+html[dir="rtl"] .btn .ar{transform:scaleX(-1)}
+.btn.light{background:var(--ivory);color:var(--ink);border-color:var(--ivory)}
+.btn.light:hover{background:var(--rose-l);border-color:var(--rose-l)}
+.btn.dark{background:var(--olive);color:var(--ivory);border-color:var(--olive)}
+.btn.dark:hover{background:var(--ink);border-color:var(--ink)}
+.nav .btn{padding:10px 18px;font-size:13.5px}
+
+/* DOTS */
+.dots{position:fixed;z-index:85;inset-inline-end:22px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:12px}
+.dots button{all:unset;cursor:pointer;width:8px;height:8px;border-radius:50%;background:var(--sage);opacity:.55;transition:all .35s var(--ease)}
+.dots button.on{background:var(--rose);opacity:1;height:24px;border-radius:6px}
+
+/* RAILS (grid on desktop, swipe on mobile) */
+.rail{display:grid;gap:16px}
+.rail.c4{grid-template-columns:repeat(4,1fr)}
+.rail.c3{grid-template-columns:repeat(3,1fr)}
+.rail.swipe{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 32px)/3);grid-template-columns:none;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px}
+.rail::-webkit-scrollbar{display:none}
+.rail>*{scroll-snap-align:start}
+.rail-ctl{display:flex;gap:8px}
+.rail-ctl button{all:unset;cursor:pointer;width:46px;height:46px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-size:18px;transition:background .3s}
+.rail-ctl button:hover{background:var(--card)}
+html[dir="rtl"] .rail-ctl button{transform:scaleX(-1)}
+.swipe-hint{display:none;font-size:13px;color:var(--muted);margin-top:10px}
+
+/* HERO */
+.hero{padding:0;justify-content:stretch;background:var(--olive);color:var(--ivory)}
+.hero-grid{flex:1;display:grid;grid-template-columns:minmax(0,46fr) minmax(0,54fr)}
+.hero-text{display:flex;flex-direction:column;justify-content:center;padding:calc(var(--navh) + 3vh) var(--pad) 4vh}
+.hero .eyebrow{color:var(--rose-l);margin-bottom:2.4vh}
+.hero h1{font-size:clamp(34px,min(4vw,7.4vh),66px);max-width:15ch}
+html[lang="ru"] .hero h1{font-size:clamp(30px,min(3.5vw,6.6vh),58px)}
+html[lang="ar"] .hero h1{font-size:clamp(28px,min(3.2vw,6vh),54px)}
+.hero h1 em{color:var(--rose-l)}
+.hero-sub{margin-top:2.6vh;max-width:46ch;font-size:clamp(15px,min(1.2vw,2.2vh),18.5px);color:rgba(244,241,235,.88)}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:3.6vh}
+.hero-media{position:relative;overflow:hidden}
+.hero-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:42% 50%}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--olive) 0%,rgba(43,53,39,0) 22%)}
+html[dir="rtl"] .hero-media::after{background:linear-gradient(270deg,var(--olive) 0%,rgba(43,53,39,0) 22%)}
+.hero-cap{position:absolute;z-index:2;bottom:20px;inset-inline-end:56px;font-size:13px;color:rgba(244,241,235,.88);text-align:end;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+.hero-cap b{display:block;font-family:var(--serif);font-style:italic;font-weight:500;font-size:19px}
+.strip{background:var(--olive-2);color:rgba(244,241,235,.92);font-size:13.5px;font-weight:600}
+.strip .wrap{display:flex;gap:8px 30px;flex-wrap:wrap;justify-content:space-between;padding-block:14px}
+.strip span::before{content:"✦";color:var(--rose-l);margin-inline-end:9px;font-size:9px;vertical-align:middle}
+
+/* CARDS */
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:clamp(18px,2.6vh,28px)}
+.pain .q{font-family:var(--serif);font-size:40px;line-height:.6;color:var(--rose)}
+.pain h3{font-size:clamp(20px,min(1.7vw,3vh),24px);margin:12px 0 6px}
+.pain p{color:var(--muted);font-size:15px}
+
+.svc{display:flex;flex-direction:column}
+.svc .n{font-family:"Cormorant Garamond",serif;font-size:24px;color:var(--rose);font-weight:600}
+.svc h3{font-size:clamp(24px,min(2vw,3.6vh),30px);margin:2px 0 6px}
+html[lang="ar"] .svc h3{font-size:clamp(20px,min(1.6vw,3vh),24px)}
+.svc>p{color:var(--muted);font-size:14.5px}
+.svc ul{list-style:none;margin:12px 0;display:flex;flex-direction:column;gap:6px}
+.svc li{display:flex;gap:9px;font-size:14.5px;line-height:1.45}
+.svc li::before{content:"";flex:0 0 6px;height:6px;border-radius:50%;background:var(--sage);margin-top:8px}
+.svc .proof{display:inline-block;font-size:12px;font-weight:700;color:var(--olive);background:var(--sage-l);padding:5px 11px;border-radius:99px;align-self:flex-start;margin-bottom:10px}
+.svc .res{margin-top:auto;border-top:1px solid var(--line);padding-top:12px;font-size:14px;font-weight:700;color:var(--olive-2)}
+
+.rd{border-top:1px solid var(--line-d);padding-top:2.6vh}
+.rd .d{font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--rose-l)}
+html[lang="ar"] .rd .d{letter-spacing:0}
+.rd h3{font-size:clamp(22px,min(2vw,3.6vh),28px);margin:8px 0 8px}
+.rd p{color:rgba(244,241,235,.84);font-size:15px}
+
+.roi{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,80px);align-items:center}
+.cr{margin-bottom:2.2vh}
+.cr .top{display:flex;justify-content:space-between;align-items:baseline;font-weight:700;font-size:15px;margin-bottom:4px}
+.cr .top output{font-family:"Cormorant Garamond",serif;font-size:26px;color:var(--olive);line-height:1}
+input[type=range]{width:100%;accent-color:var(--olive);height:26px;cursor:pointer}
+.calc-out{border-top:1px solid var(--line);padding-top:2vh;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.calc-out span{display:block;font-size:13px;color:var(--muted);font-weight:600}
+.calc-out b{font-family:"Cormorant Garamond",serif;font-size:clamp(30px,min(3vw,5.4vh),44px);font-weight:600;color:var(--olive);line-height:1.15}
+.calc-out .x b{color:var(--rose)}
+.note{font-size:12.5px;color:var(--muted);margin-top:10px}
+
+.ind .ph{aspect-ratio:1/1;overflow:hidden;border-radius:12px}
+.ind .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.ind:hover .ph img{transform:scale(1.05)}
+.ind .tag{display:block;margin-top:14px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--rose)}
+html[lang="ar"] .ind .tag{letter-spacing:0;font-size:13.5px}
+.ind h3{font-size:clamp(20px,min(1.7vw,3vh),24px);margin:4px 0 4px}
+.ind p{color:var(--muted);font-size:14.5px}
+
+.case-top{display:grid;grid-template-columns:1.2fr 1fr;gap:50px;align-items:end}
+.conf{display:flex;gap:10px;align-items:center;font-size:13px;color:rgba(244,241,235,.7);margin-top:12px}
+.conf::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--rose-l);flex:none}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line-d)}
+.stat{padding:2.6vh 18px 0 0}
+html[dir="rtl"] .stat{padding:2.6vh 0 0 18px}
+.stat .pre{font-size:13px;font-weight:600;color:rgba(244,241,235,.65);height:20px}
+.stat .big{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(52px,min(6.4vw,12vh),104px);line-height:1;margin:6px 0 8px}
+.stat .big small{font:600 .24em var(--sans);color:var(--rose-l);margin-inline-start:6px}
+.stat p{font-size:14.5px;color:rgba(244,241,235,.86);max-width:24ch}
+.case-b{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(24px,4vw,60px);align-items:center}
+.case-b .ph{height:min(66vh,560px);overflow:hidden;border-radius:12px}
+.case-b .ph img{width:100%;height:100%;object-fit:cover}
+.wk{border-top:1px solid var(--line-d);padding:2vh 0}
+.wk .w{font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--rose-l)}
+html[lang="ar"] .wk .w{letter-spacing:0}
+.wk h3{font-size:clamp(22px,min(1.9vw,3.4vh),27px);margin:4px 0 4px}
+.wk p{color:rgba(244,241,235,.86);font-size:15px}
+
+.cmp{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.cmp table{width:100%;border-collapse:collapse;min-width:560px}
+.cmp th,.cmp td{padding:min(1.6vh,14px) 16px;text-align:start;border-bottom:1px solid var(--line);font-size:15px}
+.cmp th{font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700}
+html[lang="ar"] .cmp th{letter-spacing:0;font-size:13.5px}
+.cmp tr:last-child td{border-bottom:none}
+.cmp td:not(:first-child),.cmp th:not(:first-child){text-align:center;width:18%}
+.cmp .us{background:var(--sage-l);color:var(--olive);font-weight:700}
+.y{color:var(--olive);font-weight:700}.n{color:#A9A296}.p{color:var(--rose)}
+
+.fgrid{display:grid;grid-template-columns:5fr 6fr;gap:clamp(36px,6vw,100px);align-items:center}
+.fphoto{height:min(72vh,620px);overflow:hidden;border-radius:14px}
+.fphoto img{width:100%;height:100%;object-fit:cover;object-position:50% 18%}
+.quote{font-family:var(--serif);font-size:clamp(24px,min(2.6vw,4.6vh),40px);line-height:1.25;font-weight:600;margin-top:12px}
+html[lang="ar"] .quote{line-height:1.7;font-size:clamp(21px,min(2vw,3.6vh),30px)}
+.fname{margin-top:2.6vh}
+.fname b{display:block;font-family:"Cormorant Garamond",serif;font-size:25px;font-weight:600}
+.fname span{color:var(--muted);font-size:14.5px}
+.team{display:flex;flex-wrap:wrap;gap:8px;margin-top:2.4vh}
+.team span{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:6px 14px;font-size:13.5px;font-weight:600;color:var(--olive-2)}
+
+.pkg{display:flex;flex-direction:column;position:relative}
+.pkg.hi{background:var(--olive);color:var(--ivory);border-color:var(--olive)}
+.pkg .badge{position:absolute;top:-12px;inset-inline-start:24px;background:var(--rose);color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:99px}
+.pkg h3{font-size:clamp(24px,min(2vw,3.8vh),30px)}
+.pkg .for{font-size:14px;color:var(--muted);margin-top:4px}
+.pkg.hi .for{color:rgba(244,241,235,.8)}
+.pkg .pr{font-family:"Cormorant Garamond",serif;font-size:clamp(34px,min(3.2vw,6vh),46px);font-weight:600;margin:1.6vh 0 0;line-height:1}
+.pkg .pr small,.pkg .pr span{font:600 13.5px var(--sans);opacity:.75;margin-inline:4px}
+.pkg ul{list-style:none;margin:2vh 0 2.4vh;display:flex;flex-direction:column;gap:8px}
+.pkg li{display:flex;gap:9px;font-size:14.5px;line-height:1.45}
+.pkg li::before{content:"✓";color:var(--rose);font-weight:700}
+.pkg.hi li::before{color:var(--rose-l)}
+.pkg .btn{margin-top:auto;padding:13px 20px}
+.pk-note{font-size:13px;color:var(--muted);margin-top:14px}
+
+.faq{border-top:1px solid var(--line);max-width:900px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;padding:min(2.4vh,20px) 0;font-size:clamp(16px,min(1.4vw,2.6vh),19px);font-weight:700}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:24px;line-height:1;color:var(--rose);transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{color:var(--muted);padding-bottom:2vh;max-width:70ch}
+
+.agrid{display:grid;grid-template-columns:5fr 6fr;gap:clamp(36px,6vw,100px);align-items:center}
+.gets{list-style:none;margin-top:2.6vh}
+.gets li{display:flex;gap:12px;padding:1.4vh 0;border-bottom:1px solid var(--line-d);color:rgba(244,241,235,.92)}
+.gets li::before{content:"✓";color:var(--rose-l);font-weight:700}
+form{display:grid;grid-template-columns:1fr 1fr;gap:min(2.2vh,20px) 18px;align-content:start;background:rgba(244,241,235,.05);border:1px solid var(--line-d);border-radius:16px;padding:clamp(18px,3vh,32px)}
+.f{display:flex;flex-direction:column;gap:5px}.f.full{grid-column:1/-1}
+label{font-size:13px;font-weight:700;color:rgba(244,241,235,.78)}
+input:not([type=range]),select,textarea{font:inherit;font-size:16px;color:var(--ivory);background:rgba(244,241,235,.07);border:1px solid rgba(244,241,235,.22);border-radius:10px;padding:min(1.4vh,12px) 14px;outline:none;-webkit-appearance:none;appearance:none;width:100%}
+input:not([type=range]):focus,select:focus,textarea:focus{border-color:var(--rose-l)}
+select option{color:var(--ink)}
+textarea{min-height:min(9vh,80px);resize:vertical}
+.ffoot{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.ffoot small{color:rgba(244,241,235,.65);font-size:12.5px;max-width:32ch}
+.err{grid-column:1/-1;color:var(--rose-l);font-size:14px}
+.err:empty{display:none}
+.sent{display:none;grid-column:1/-1;border-top:1px solid var(--line-d);padding-top:16px}
+.sent.show{display:block}
+.sent h3{font-size:26px;margin-bottom:4px}
+.sent pre{white-space:pre-wrap;font:14px var(--sans);color:rgba(244,241,235,.9);background:rgba(0,0,0,.18);padding:12px;border-radius:10px;margin:12px 0;max-height:22vh;overflow:auto}
+.sent .row{display:flex;gap:10px;flex-wrap:wrap}
+
+footer{background:#232C20;color:rgba(244,241,235,.75);padding:44px 0 34px;font-size:14.5px}
+.fbig{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(38px,8vw,120px);letter-spacing:.06em;color:var(--ivory);line-height:1;white-space:nowrap}
+.fbig i{letter-spacing:0;color:var(--rose-l)}
+.frow{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:24px}
+.frow a{color:var(--ivory);text-decoration:none;font-weight:700}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.no-io .rv{opacity:1;transform:none}
+
+/* ===== TABLET / MOBILE ===== */
+
+.flow{--ivory:#F4F1EB;--olive:#2B3527;--olive-2:#3B4835;--sage:#9DAA93;--sage-l:#D3DACB;--rose:#A9786A;--rose-l:#EBD5CC;
+  position:relative;width:100%;height:100%;background:radial-gradient(120% 90% at 50% 0%,#34412F 0%,#2B3527 55%,#242D21 100%);color:var(--ivory);overflow:hidden;
+  font-family:"Manrope","IBM Plex Sans Arabic",system-ui,sans-serif;display:flex;flex-direction:column;container-type:size}
+.flow .ft{padding:5cqh 6cqw 0;display:flex;justify-content:space-between;align-items:flex-start;gap:4cqw}
+.flow .ft h3{margin:0;font-family:"Cormorant Garamond","Noto Naskh Arabic",serif;font-weight:600;font-size:min(4.4cqw,7cqh);line-height:1.08;max-width:22ch}
+.flow .ft h3 em{font-style:italic;color:var(--rose-l)}
+.flow .brand{font-family:"Cormorant Garamond",serif;font-weight:600;letter-spacing:.2em;font-size:min(1.4cqw,2.4cqh);opacity:.8;white-space:nowrap}
+.flow .brand i{letter-spacing:0;color:var(--rose-l)}
+.flow .track{position:relative;flex:1;display:grid;grid-template-columns:repeat(4,1fr);align-content:center;gap:2.4cqw;padding:2cqh 6cqw 2cqh}
+.flow .line{position:absolute;left:calc(6cqw + 12.5% - 3cqw);right:calc(6cqw + 12.5% - 3cqw);top:calc(4cqh + 9cqh);height:2px;background:rgba(244,241,235,.14)}
+.flow .line i{position:absolute;inset:0;background:var(--rose-l);transform-origin:left;transform:scaleX(0)}
+.flow .dot{position:absolute;top:calc(4cqh + 9cqh);width:16px;height:16px;margin:-7px 0 0 -8px;border-radius:50%;background:var(--rose-l);box-shadow:0 0 0 6px rgba(235,213,204,.18),0 0 24px rgba(235,213,204,.6);left:0;opacity:0}
+.flow .node{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;opacity:.28;transition:none}
+.flow .ico{width:18cqh;height:18cqh;max-width:15cqw;max-height:15cqw;border-radius:50%;background:var(--olive-2);border:1.5px solid rgba(244,241,235,.2);display:grid;place-items:center;position:relative;z-index:1}
+.flow .ico svg{width:58%;height:58%;overflow:visible}
+.flow .k{margin-top:3cqh;font-size:min(1.1cqw,1.9cqh);letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--rose-l)}
+.flow .big{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:min(5.6cqw,10cqh);line-height:1;margin-top:1.4cqh;font-variant-numeric:lining-nums;white-space:nowrap}
+.flow .big small{font-family:"Manrope",sans-serif;font-size:.3em;font-weight:600;margin-inline-start:.3em;color:var(--rose-l)}
+.flow .lbl{margin-top:1.2cqh;font-size:min(1.3cqw,2.3cqh);color:rgba(244,241,235,.82);max-width:22ch;line-height:1.4}
+.flow .fn{padding:0 6cqw 4cqh;font-size:min(1cqw,1.8cqh);color:rgba(244,241,235,.55);display:flex;justify-content:space-between;gap:20px}
+/* chat bubbles / calendar / bars inside icons via svg */
+.flow .b{fill:var(--ivory)}
+.flow .b2{fill:var(--rose-l)}
+.flow .cal rect{fill:rgba(244,241,235,.16)}
+.flow .cal rect.on{fill:var(--sage-l)}
+.flow .bar{fill:var(--rose-l)}
+/* vertical layout (portrait) */
+@container (max-aspect-ratio: 1/1){
+  .flow .ft{flex-direction:column;padding:6cqh 8cqw 0;gap:1.4cqh}
+  .flow .ft h3{font-size:8.4cqw;max-width:none}
+  .flow .brand{font-size:3.2cqw;order:-1}
+  .flow .track{grid-template-columns:1fr;grid-template-rows:repeat(4,1fr);gap:0;padding:3cqh 8cqw 2cqh}
+  .flow .line{left:calc(8cqw + 8.5cqw);right:auto;top:calc(3cqh + 7cqh);bottom:calc(2cqh + 12.5% - 2cqh);width:2px;height:auto}
+  .flow .line i{transform-origin:top;transform:scaleY(0)}
+  .flow .dot{left:calc(8cqw + 8.5cqw);top:0;margin:-8px 0 0 -7px}
+  .flow .node{flex-direction:row;align-items:center;text-align:start;gap:5cqw}
+  .flow .ico{width:17cqw;height:17cqw;max-width:none;max-height:none;flex:none}
+  .flow .node .tx{display:flex;flex-direction:column}
+  .flow .k{margin-top:0;font-size:2.8cqw}
+  .flow .big{font-size:11cqw;margin-top:.6cqh}
+  .flow .lbl{font-size:3.4cqw;margin-top:.4cqh;max-width:none}
+  .flow .fn{padding:0 8cqw 4cqh;font-size:2.6cqw;flex-direction:column;gap:4px}
+}
+.flow[dir="rtl"] .k{letter-spacing:0}
+
+.flow-s{padding:var(--navh) 0 0!important;background:#2B3527}
+.flow-s .stage{height:calc(100vh - var(--navh));height:calc(100svh - var(--navh))}
+@media(max-width:1050px){
+  .rail.swipe{grid-auto-columns:calc((100% - 16px)/2)}
+  .rail.c4{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:760px){
+  :root{--navh:60px}
+  .logo{font-size:16px;letter-spacing:.14em}
+  .nav .btn,.dots{display:none}
+  .screen{padding:calc(var(--navh) + 14px) 0 22px}
+  .hero{padding:0}
+  .hero-grid{grid-template-columns:1fr;grid-template-rows:auto 1fr}
+  .hero-text{padding:calc(var(--navh) + 14px) var(--pad) 18px}
+  .hero h1{font-size:clamp(28px,8.2vw,36px)}
+  html[lang="ar"] .hero h1{font-size:clamp(25px,7.2vw,32px)}
+  .hero-sub{font-size:15px;margin-top:12px}
+  .hero-ctas{margin-top:16px}
+  .hero-ctas .btn{padding:12px 18px;font-size:14px}
+  .hero-media{min-height:28svh}
+  .hero-media::after{background:linear-gradient(180deg,var(--olive) 0%,rgba(43,53,39,0) 30%)}
+  .hero-cap{inset-inline-end:16px;bottom:12px}
+  .strip{font-size:12px}.strip .wrap{gap:4px 16px;padding-block:10px;justify-content:flex-start}
+  h2{font-size:clamp(25px,7vw,31px)}
+  html[lang="ar"] h2{font-size:clamp(22px,6.2vw,28px)}
+  .lead{font-size:15px;margin-top:8px}
+  .hide-m{display:none!important}
+  .rail,.rail.c3,.rail.c4,.rail.swipe{display:grid;grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:84%;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin-inline:calc(var(--pad) * -1);padding-inline:var(--pad);scroll-padding-inline:var(--pad)}
+  .swipe-hint{display:block}
+  .rail-ctl{display:none}
+  .card{padding:18px}
+  .rd{background:rgba(244,241,235,.06);border:1px solid var(--line-d);border-radius:14px;padding:18px}
+  .roi{grid-template-columns:1fr;gap:14px}
+  .cr{margin-bottom:10px}
+  .ind .ph{aspect-ratio:4/3}
+  .case-top{grid-template-columns:1fr;gap:4px}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat{padding-top:14px}
+  .stat .big{font-size:52px}
+  .stat p{font-size:13.5px}
+  .case-b{grid-template-columns:1fr;gap:10px}
+  .case-b .ph{height:26svh}
+  .wk{padding:10px 0}.wk p{font-size:14px}
+  .cmp th,.cmp td{padding:9px 10px;font-size:13.5px}
+  .fgrid{grid-template-columns:1fr;gap:14px}
+  .fphoto{height:30svh}
+  .quote{font-size:22px}
+  .fname{margin-top:10px}.fname b{font-size:21px}
+  .team{margin-top:10px}.team span{font-size:12.5px;padding:5px 11px}
+  .pkg .pr{font-size:34px}
+  .faq summary{font-size:16px;padding:14px 0}
+  .agrid{grid-template-columns:1fr;gap:14px}
+  form{grid-template-columns:1fr 1fr;gap:10px;padding:16px}
+  .f.msg{display:none}
+  input:not([type=range]),select{font-size:16px;padding:10px 12px}
+  label{font-size:12px}
+  .ffoot small{display:none}
+  .ffoot .btn{width:100%}
+}
+@media(max-height:700px) and (min-width:761px){.lead.opt,.hide-short{display:none}}
+@media(max-width:760px){
+  html[lang="ru"] .hero h1{font-size:clamp(26px,7.4vw,32px)}
+  .hero-media{min-height:22svh}
+}
+@media(max-width:760px) and (max-height:760px){
+  .hero-sub{display:none}
+  .hero h1{font-size:26px} html[lang="ar"] .hero h1{font-size:23px}
+  .strip{display:none}
+  h2{font-size:23px} html[lang="ar"] h2{font-size:21px}
+  .eyebrow{font-size:11px}
+  .svc ul li:nth-child(n+4){display:none}
+  .svc>p{display:none}
+  .case-top .lead{display:none}
+  .stat .big{font-size:42px} .stat p{font-size:12.5px}
+  .case-b .ph{height:20svh} .wk p{font-size:13px} .wk h3{font-size:19px}
+  .cmp th,.cmp td{padding:7px 9px;font-size:12.5px}
+  .fphoto{height:24svh} .quote{font-size:19px} .fgrid .lead{font-size:13.5px}
+  .pkg ul{gap:5px;margin:10px 0 12px} .pkg li{font-size:13.5px} .pkg .for{display:none}
+}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+.amp{font-style:normal;font-weight:400;letter-spacing:0;margin:0 .42em 0 .2em;color:var(--rose-l,#EBD5CC)}
+.nav.solid .amp{color:var(--rose,#A9786A)}
+
+.curs{display:inline-flex;border:1.5px solid var(--line);border-radius:99px;padding:3px;background:var(--card);gap:2px}
+.curs button{all:unset;cursor:pointer;font:700 13px var(--sans);padding:8px 14px;border-radius:99px;color:var(--muted)}
+.curs button.on{background:var(--olive);color:var(--ivory)}
+.curs.sm{margin-bottom:14px}.curs.sm button{padding:6px 12px;font-size:12px}
+
+/* ===== HERO PHONE SCENARIO ===== */
+.hero-media video{filter:brightness(.42) saturate(.8)}
+.ph-wrap{position:absolute;inset:0;z-index:2;display:grid;place-items:center}
+.phone{--h:min(76vh,640px);height:var(--h);width:calc(var(--h)*.49);border-radius:calc(var(--h)*.075);background:#0d0d0c;padding:calc(var(--h)*.016);box-shadow:0 40px 80px rgba(0,0,0,.45),0 0 0 1.5px rgba(244,241,235,.18) inset;position:relative}
+.phone::before{content:"";position:absolute;top:calc(var(--h)*.028);left:50%;width:28%;height:calc(var(--h)*.03);border-radius:99px;background:#0d0d0c;transform:translateX(-50%);z-index:5}
+.scr{position:relative;width:100%;height:100%;border-radius:calc(var(--h)*.062);overflow:hidden;background:#F4F1EB;font-family:"Manrope","IBM Plex Sans Arabic",sans-serif;font-size:calc(var(--h)*.0215);color:#1C1B18}
+.reel{position:absolute;inset:0;background:#111;z-index:0}
+.reel img{width:100%;height:100%;object-fit:cover}
+.reel::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 45%,rgba(0,0,0,.78) 100%)}
+.r-top{position:absolute;top:9%;inset-inline-start:6%;z-index:2;color:#fff;font-size:.82em;font-weight:600;opacity:.85}
+.r-bot{position:absolute;inset-inline:6%;bottom:5%;z-index:2;color:#fff}
+.r-acc{display:flex;align-items:center;gap:.5em;font-size:.95em}
+.r-acc i,.c-head i{width:2em;height:2em;border-radius:50%;background:linear-gradient(135deg,#EBD5CC,#A9786A);flex:none;border:2px solid #fff}
+.r-bot p{margin:.5em 0 .6em;font-size:.95em;line-height:1.35;opacity:.95}
+.r-price{display:inline-block;background:rgba(255,255,255,.18);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.35);border-radius:99px;padding:.25em .8em;font-weight:700;font-size:.9em;margin-bottom:.7em}
+.r-cta{display:flex;justify-content:space-between;align-items:center;background:#fff;color:#1C1B18;border-radius:.6em;padding:.75em .9em;font-weight:700}
+.tap{position:absolute;z-index:3;width:3.2em;height:3.2em;border-radius:50%;background:rgba(255,255,255,.55);box-shadow:0 0 0 0 rgba(255,255,255,.5);bottom:6.2%;left:50%;margin-left:-1.6em;opacity:0;pointer-events:none}
+.chat{position:absolute;inset:0;z-index:3;background:#F4F1EB;display:flex;flex-direction:column;transform:translateY(100%)}
+.c-head{display:flex;align-items:center;gap:.6em;padding:3.2em .9em .7em;border-bottom:1px solid rgba(0,0,0,.08);background:#FBF9F5}
+.c-head .back{font-size:1.6em;line-height:1;color:#555}
+.c-head b{display:block;font-size:.95em}.c-head small{font-size:.75em;color:#3B4835}
+.c-body{flex:1;display:flex;flex-direction:column;justify-content:flex-end;gap:.55em;padding:.9em;overflow:hidden}
+.m{max-width:82%;padding:.65em .85em;border-radius:1.1em;line-height:1.38;font-size:.92em;display:none}
+.m.me{align-self:flex-end;background:#3B4835;color:#F4F1EB;border-end-end-radius:.3em}
+.m.them{align-self:flex-start;background:#fff;border:1px solid rgba(0,0,0,.07);border-end-start-radius:.3em}
+.m.ok{background:#D3DACB;border-color:transparent;font-weight:700}
+.m.typing{padding:.75em .9em}.m.typing span{display:inline-block;width:.42em;height:.42em;margin:0 .1em;border-radius:50%;background:#9DAA93;animation:tdot 1s infinite}
+.m.typing span:nth-child(2){animation-delay:.15s}.m.typing span:nth-child(3){animation-delay:.3s}
+@keyframes tdot{0%,60%,100%{transform:translateY(0);opacity:.5}30%{transform:translateY(-.3em);opacity:1}}
+.c-in{margin:.6em .9em 1.1em;border:1px solid rgba(0,0,0,.12);border-radius:99px;padding:.7em 1em;color:#999;font-size:.85em;background:#fff}
+.notif{position:absolute;top:2.6%;inset-inline:4%;z-index:6;display:flex;gap:.7em;align-items:center;background:rgba(251,249,245,.97);border-radius:1.1em;padding:.8em .9em;box-shadow:0 10px 30px rgba(0,0,0,.25);transform:translateY(-150%);opacity:0}
+.notif i{font-style:normal;width:2.1em;height:2.1em;border-radius:50%;background:#3B4835;color:#fff;display:grid;place-items:center;font-weight:700;flex:none}
+.notif b{display:block;font-size:.92em}.notif span{font-size:1.05em;font-weight:700;color:#A9786A}
+.chip{position:absolute;z-index:3;display:flex;align-items:center;gap:.6em;background:rgba(251,249,245,.95);color:#1C1B18;border-radius:14px;padding:12px 16px;font-size:14px;font-weight:600;box-shadow:0 14px 40px rgba(0,0,0,.3);opacity:0}
+.chip b{font-family:"Cormorant Garamond",serif;font-size:26px;line-height:1;color:#2B3527}
+.chip.c1{top:16%;inset-inline-start:8%}.chip.c2{bottom:16%;inset-inline-end:8%}
+@media(max-width:760px){
+  .hero-sub,.strip{display:none!important}
+  .hero-media{min-height:0!important}
+  .phone{--h:min(44svh,420px)}
+  .hero-ctas .btn:nth-child(2){display:none}
+  .hero-text{padding-bottom:10px!important}
+  .chip{font-size:11.5px;padding:8px 10px;border-radius:10px}.chip b{font-size:19px}
+  .chip.c1{top:4%;inset-inline-start:2%}.chip.c2{bottom:4%;inset-inline-end:2%}
+  .hero-cap{display:none}
+}
+
+/* BEFORE/AFTER */
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,80px);align-items:center}
+.ba{position:relative;height:min(72vh,640px);aspect-ratio:3/4;max-width:100%;justify-self:center;border-radius:16px;overflow:hidden;--p:50%;box-shadow:0 30px 60px rgba(0,0,0,.18);user-select:none}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.ba .before{clip-path:inset(0 calc(100% - var(--p)) 0 0)}
+.ba-line{position:absolute;top:0;bottom:0;left:var(--p);width:2px;margin-left:-1px;background:#fff;pointer-events:none}
+.ba-line i{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:#fff;color:var(--olive);display:grid;place-items:center;font-style:normal;font-weight:700;font-size:15px;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.ba-l{position:absolute;top:16px;z-index:2;background:rgba(28,27,24,.62);color:#fff;font-size:13px;font-weight:700;padding:6px 12px;border-radius:99px;pointer-events:none}
+.ba-l.l{left:16px}.ba-l.r{right:16px;background:rgba(43,53,39,.85)}
+.ba-hint{margin-top:2.4vh;font-weight:700;color:var(--olive-2);display:flex;gap:10px;align-items:center}
+.ba-hint span:first-child{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--sage-l)}
+@media(max-width:760px){.ba-grid{grid-template-columns:1fr;gap:12px}.ba{height:50svh}#ba .lead{display:none}.ba-hint{margin-top:6px}}
+@media(max-width:760px) and (max-height:760px){.ba{height:44svh}}
+
+/* MOTION: word reveal */
+.wr .w{display:inline-block;opacity:0;transform:translateY(.45em);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.wr.in .w,.hero h1.in .w{opacity:1;transform:none}
+/* image reveal */
+.ph.rv,.fphoto.rv,.ba.rv{opacity:1;transform:none;clip-path:inset(10% 6% 10% 6% round 16px);transition:clip-path 1.2s var(--ease)}
+.ph.rv.in,.fphoto.rv.in,.ba.rv.in{clip-path:inset(0 0 0 0 round 14px)}
+.ph.rv img,.fphoto.rv img{transform:scale(1.12);transition:transform 1.6s var(--ease)}
+.ph.rv.in img,.fphoto.rv.in img{transform:scale(1)}
+.btn{will-change:transform}
+
+/* readable lining numerals */
+.pkg .pr,.stat .big,.flow .big,.calc-out b,.cr .top output,.chip b{font-family:"Manrope",system-ui,sans-serif!important;font-weight:600;letter-spacing:-.025em;font-variant-numeric:lining-nums tabular-nums;font-feature-settings:"lnum" 1,"tnum" 1}
+.pkg .pr{font-size:clamp(30px,min(2.7vw,5.2vh),40px)!important;margin-top:1.8vh}
+.pkg .pr small,.pkg .pr span{letter-spacing:0;font-size:14px}
+.stat .big{font-size:clamp(44px,min(5.2vw,9.6vh),86px)!important}
+.calc-out b{font-size:clamp(26px,min(2.5vw,4.6vh),38px)!important}
+.cr .top output{font-size:20px!important}
+.chip b{font-size:22px!important}
+.flow .big{font-size:min(4.6cqw,8.4cqh)!important}
+@container (max-aspect-ratio: 1/1){.flow .big{font-size:9.4cqw!important}}
+@media(max-width:760px){.pkg .pr{font-size:30px!important}.stat .big{font-size:42px!important}}
+
+/* ================= DESIGN SYSTEM v6 — "Pulse of the business" ================= */
+:root{
+  --ivory:#ECEBE4; --stone:#E2E1D8; --card:#F5F4EF;
+  --olive:#2B3527; --olive-2:#3B4835; --sage:#8FA287; --sage-l:#CFDCC4;
+  --rose:#4F6A47; --rose-l:#CFDCC4;               /* accents are now fern / celadon — no terracotta */
+  --ink:#1A1C17; --muted:#4C4F46; --line:rgba(26,28,23,.14);
+  --r:6px;
+}
+body{background:var(--ivory)}
+::selection{background:var(--sage-l);color:var(--olive)}
+/* headlines: no accented phrase */
+h1 em,h2 em,.flow .ft h3 em{font-style:normal!important;color:inherit!important}
+h2{font-weight:500;letter-spacing:-.012em;line-height:1.04}
+html[lang="ar"] h2{line-height:1.45}
+/* labels: sentence case, no tracking */
+.eyebrow{text-transform:none!important;letter-spacing:0!important;font-size:15px!important;font-weight:600;color:var(--rose)}
+.dark .eyebrow,.hero .eyebrow{color:var(--sage-l)}
+.flow .k,.rd .d,.wk .w,.ind .tag,.cmp th,.stat .pre{text-transform:none!important;letter-spacing:0!important}
+.flow .k{font-size:min(1.3cqw,2.2cqh)}
+.btn .ar{display:none}
+.btn{border-radius:var(--r);letter-spacing:0}
+.langs,.curs{border-radius:var(--r)}.langs button,.curs button{border-radius:4px}
+.card{border-radius:var(--r);box-shadow:none}
+/* strip without ornaments */
+.strip span::before{content:none}
+.strip .wrap{justify-content:flex-start;gap:6px 0}
+.strip span{padding-inline:0 22px;margin-inline-end:22px;border-inline-end:1px solid rgba(244,241,235,.22)}
+.strip span:last-child{border:none}
+
+/* folio = real pagination */
+.folio{position:absolute;top:calc(var(--navh) + 14px);inset-inline-end:var(--pad);font:600 13px "Manrope",sans-serif;font-variant-numeric:tabular-nums;color:var(--muted);opacity:.7}
+.dark .folio,.flow-s .folio{color:var(--sage-l)}
+@media(max-width:760px){.folio{display:none}}
+
+/* PAINS — editorial statements, no cards */
+.plist{display:grid;grid-template-columns:1fr 1fr;gap:clamp(22px,4.4vh,48px) clamp(30px,6vw,96px)}
+.pl h3{font-size:clamp(24px,min(2.4vw,4.4vh),36px);font-weight:500;line-height:1.12;max-width:18ch}
+.pl p{margin-top:10px;color:var(--muted);max-width:42ch;font-size:clamp(15px,min(1.15vw,2vh),17px)}
+.pl{padding-inline-start:20px;border-inline-start:3px solid var(--sage-l)}
+@media(max-width:760px){.plist{grid-template-columns:1fr;gap:16px}.pl h3{font-size:21px}.pl p{font-size:14px;margin-top:4px}.pl{padding-inline-start:14px}}
+@media(max-width:760px) and (max-height:760px){.pl p{display:none}}
+
+/* SERVICES — interactive index */
+.sx{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,5vw,80px);align-items:start}
+.sx-list{list-style:none;counter-reset:none}
+.sx-list button{all:unset;cursor:pointer;display:block;width:100%;padding:min(1.6vh,14px) 0;border-bottom:1px solid var(--line);font-family:var(--serif);font-size:clamp(24px,min(2.4vw,4.4vh),36px);font-weight:500;line-height:1.1;color:rgba(26,28,23,.38);transition:color .35s var(--ease),padding .35s var(--ease)}
+.sx-list button:focus-visible{outline:2px solid var(--rose);outline-offset:4px}
+.sx-list button[aria-selected="true"]{color:var(--ink);padding-inline-start:18px;box-shadow:inset 3px 0 0 var(--rose)}
+html[dir="rtl"] .sx-list button[aria-selected="true"]{box-shadow:inset -3px 0 0 var(--rose)}
+.sx-m{display:none}
+.sx-panel{background:var(--olive);color:var(--ivory);border-radius:var(--r);padding:clamp(22px,3.6vh,44px);min-height:min(50vh,440px);transition:opacity .18s,transform .18s}
+.sx-panel.out{opacity:0;transform:translateY(6px)}
+.sx-d{font-family:var(--serif);font-size:clamp(22px,min(2vw,3.6vh),30px);line-height:1.25;font-weight:500}
+.sx-panel ul,.sx-m ul{list-style:none;margin:2.6vh 0;display:grid;grid-template-columns:1fr 1fr;gap:10px 22px}
+.sx-panel li,.sx-m li{font-size:15px;line-height:1.45;padding-top:10px;border-top:1px solid rgba(236,235,228,.2)}
+.sx-r{font-weight:700;color:var(--sage-l);font-size:16px}
+.sx-proof{margin-top:12px;font-size:13.5px;color:rgba(236,235,228,.75)}
+@media(max-width:760px){
+  .sx{grid-template-columns:1fr}.sx-panel{display:none}
+  .sx-list button{font-size:20px;padding:11px 0}
+  .sx-list button[aria-selected="true"]{padding-inline-start:12px}
+  .sx-list li .sx-m{display:none;background:var(--olive);color:var(--ivory);border-radius:var(--r);padding:14px;margin:8px 0}
+  .sx-list li:has(button[aria-selected="true"]) .sx-m{display:block}
+  .sx-m .sx-d{font-size:16px}.sx-m ul{grid-template-columns:1fr;gap:4px;margin:8px 0}.sx-m li{font-size:13px;padding-top:5px}.sx-m .sx-proof{display:none}.sx-m .sx-r{font-size:13.5px}
+}
+@media(max-width:760px) and (max-height:760px){.sx-m ul{display:none}}
+@media(min-width:761px) and (max-height:800px){#services .lead{display:none}.sx-list button{padding:9px 0}}
+
+/* INDUSTRIES — expanding gallery */
+.acc{display:flex;gap:10px;height:min(60vh,520px)}
+.ai{all:unset;cursor:pointer;position:relative;flex:1;min-width:0;border-radius:var(--r);overflow:hidden;transition:flex .7s var(--ease);color:#fff}
+.ai.on{flex:3.2}
+.ai img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease),filter .6s}
+.ai:not(.on) img{filter:brightness(.55) saturate(.8)}
+.ai::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(20,24,18,.85) 100%)}
+.ai-t{position:absolute;z-index:2;inset-inline-start:18px;bottom:18px;font:600 15px var(--sans);transition:opacity .3s}
+.ai:not(.on) .ai-t{writing-mode:vertical-rl;transform:rotate(180deg);bottom:18px;inset-inline-start:50%;margin-inline-start:-10px}
+html[dir="rtl"] .ai:not(.on) .ai-t{transform:none}
+.ai-b{position:absolute;z-index:2;inset-inline:22px;bottom:22px;display:flex;flex-direction:column;gap:6px;opacity:0;transform:translateY(10px);transition:opacity .4s .2s,transform .5s .2s var(--ease);max-width:44ch}
+.ai.on .ai-t{opacity:0}
+.ai.on .ai-b{opacity:1;transform:none}
+.ai-b b{font-family:var(--serif);font-weight:500;font-size:clamp(24px,min(2.2vw,4vh),34px);line-height:1.1}
+.ai-b span{font-size:15px;opacity:.9}
+.ai:focus-visible{outline:2px solid var(--rose);outline-offset:3px}
+@media(max-width:760px){
+  .acc{flex-direction:column;height:62svh;gap:8px}
+  .ai.on{flex:4}
+  .ai:not(.on) .ai-t{writing-mode:horizontal-tb;transform:none;inset-inline-start:14px;margin:0;bottom:50%;translate:0 50%}
+  .ai-b{inset-inline:14px;bottom:14px}.ai-b b{font-size:20px}.ai-b span{font-size:13px}
+}
+@media(max-width:760px) and (max-height:760px){.acc{height:58svh}.ai-b span{display:none}}
+
+/* PACKAGES — columns, not identical cards */
+.pkg:not(.hi){background:transparent;border:none;border-top:2px solid var(--olive);border-radius:0;padding-inline:4px}
+.pkg.hi{border-radius:var(--r)}
+.pkg .badge{background:var(--sage-l);color:var(--olive);border-radius:4px}
+.pkg li::before{color:var(--rose)}
+/* other surfaces */
+.rd{border-top-color:rgba(236,235,228,.22)}
+.cmp{border-radius:var(--r)}
+.fphoto,.case-b .ph,.ba,.ind .ph{border-radius:var(--r)!important}
+.ba-l.r{background:rgba(43,53,39,.9)}
+.team span{border-radius:4px}
+.chip{border-radius:8px}
+
+/* MENU */
+.burger{all:unset;cursor:pointer;width:44px;height:40px;display:grid;place-content:center;gap:6px;border:1px solid currentColor;border-radius:var(--r)}
+.burger span:not(.sr){display:block;width:18px;height:1.5px;background:currentColor;transition:transform .35s var(--ease)}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(3.75px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){transform:translateY(-3.75px) rotate(-45deg)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.menu{position:fixed;inset:0;z-index:88;background:var(--olive);color:var(--ivory);display:flex;flex-direction:column;justify-content:center;padding:calc(var(--navh) + 20px) var(--pad) 40px;clip-path:inset(0 0 100% 0);transition:clip-path .55s var(--ease)}
+.menu.open{clip-path:inset(0 0 0 0)}
+.menu nav{display:flex;flex-direction:column;gap:min(1.2vh,10px)}
+.menu nav a{font-family:var(--serif);font-weight:500;font-size:clamp(30px,min(5vw,7vh),68px);line-height:1.05;text-decoration:none;opacity:0;transform:translateY(18px);transition:opacity .45s calc(.12s + var(--i)*.04s),transform .55s calc(.12s + var(--i)*.04s) var(--ease),color .2s}
+.menu.open nav a{opacity:1;transform:none}
+.menu nav a:hover,.menu nav a:focus-visible{color:var(--sage-l)}
+.menu-foot{margin-top:5vh;display:flex;gap:24px;align-items:center;flex-wrap:wrap}.mlangs{display:none}.mlangs button[aria-pressed="true"]{background:var(--ivory)!important;color:var(--ink)!important}
+@media(max-width:760px){.nav .langs{display:none}.mlangs{display:flex}}.menu-foot a{color:var(--sage-l);font-weight:600;text-decoration:none}
+html.menu-open .nav{background:transparent!important;color:var(--ivory)!important;border-color:transparent!important}
+html.menu-open .dots{opacity:0}
+html.menu-open{overflow:hidden}
+@media(max-width:760px){.langs button{padding:6px 8px}.burger{width:40px;height:36px}}
+
+/* MOTION — one orchestrated entrance; quiet reveals elsewhere */
+.rv{transform:none!important;transition:opacity .6s var(--ease)!important}
+.ph.rv,.fphoto.rv,.ba.rv{transition:clip-path 1.2s var(--ease)!important}
+.hero-text>*{animation:heroIn 1s var(--ease) both}
+.hero-text>.eyebrow{animation-delay:.25s}.hero-text>.hero-sub{animation-delay:.9s}.hero-text>.hero-ctas{animation-delay:1.05s}
+.hero-text>h1{animation:none}
+@keyframes heroIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.hero-media{animation:mediaIn 1.4s .15s var(--ease) both}
+@keyframes mediaIn{from{clip-path:inset(0 0 0 100%)}to{clip-path:inset(0 0 0 0)}}
+html[dir="rtl"] .hero-media{animation-name:mediaInR}
+@keyframes mediaInR{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+.phone{animation:phoneIn 1.2s .8s var(--ease) both}
+@keyframes phoneIn{from{opacity:0;transform:translateY(40px) rotate(-2deg)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.hero-text>*,.hero-media,.phone{animation:none!important}.menu,.menu nav a,.ai,.ai img,.sx-panel{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="logo" href="#top" dir="ltr">MAMMEDOV<span class="amp">&amp;</span>CO.</a>
+  <div class="nav-r">
+    <div class="langs" role="group" aria-label="Language"><button data-lang="en" aria-pressed="true">EN</button><button data-lang="ru" aria-pressed="false">RU</button><button data-lang="ar" aria-pressed="false">ع</button><button data-lang="tk" aria-pressed="false">TM</button></div>
+    <a class="btn" href="#audit"><span data-i="nav_cta"></span></a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu"><span></span><span></span><span class="sr" data-i="menu"></span></button>
+  </div>
+</header>
+<div class="menu" id="menu" hidden><nav id="menuList"></nav><div class="menu-foot"><div class="langs mlangs" role="group" aria-label="Language"><button data-lang="en" aria-pressed="true">EN</button><button data-lang="ru" aria-pressed="false">RU</button><button data-lang="ar" aria-pressed="false">ع</button><button data-lang="tk" aria-pressed="false">TM</button></div><a id="menuWa" href="#" target="_blank" rel="noopener" dir="ltr"></a></div></div>
+<nav class="dots" id="dots" aria-label="Sections"></nav>
+
+<!-- 1 HERO -->
+<section class="screen hero" id="top" data-dark>
+  <div class="hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow" data-i="hero_k"></p>
+      <h1 data-ih="hero_h"></h1>
+      <p class="hero-sub" data-i="hero_s"></p>
+      <div class="hero-ctas">
+        <a class="btn light" href="#audit"><span data-i="cta1"></span><span class="ar">→</span></a>
+        <a class="btn" href="#services"><span data-i="cta2"></span></a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="img/01-moment.jpg"></video>
+      <div class="ph-wrap" id="phWrap">
+        <div class="chip c1" id="chip1"><b>⚡</b><span data-h="chip1"></span></div>
+        <div class="chip c2" id="chip2"><span data-h="chip2"></span><b id="chipN">17</b></div>
+        <div class="phone" id="phone">
+          <div class="scr">
+            <div class="reel" id="reel">
+              <img src="img/02-empty.jpg" alt="" id="reelImg">
+              <div class="r-top"><span data-h="ad_sp"></span></div>
+              <div class="r-bot">
+                <div class="r-acc"><i></i><b data-h="ad_name"></b></div>
+                <p data-h="ad_cap"></p>
+                <div class="r-price">AED 599</div>
+                <div class="r-cta" id="rCta"><span data-h="ad_cta"></span><span>›</span></div>
+              </div>
+              <div class="tap" id="tap"></div>
+            </div>
+            <div class="chat" id="chat">
+              <div class="c-head"><span class="back">‹</span><i></i><div><b data-h="ad_name"></b><small id="cStat" data-h="online"></small></div></div>
+              <div class="c-body" id="cBody">
+                <div class="m me" id="m1" data-h="c_m1"></div>
+                <div class="m them typing" id="ty1"><span></span><span></span><span></span></div>
+                <div class="m them" id="m2" data-h="c_m2"></div>
+                <div class="m me" id="m3" data-h="c_m3"></div>
+                <div class="m them typing" id="ty2"><span></span><span></span><span></span></div>
+                <div class="m them ok" id="m4" data-h="c_m4"></div>
+              </div>
+              <div class="c-in"><span data-h="c_ph"></span></div>
+            </div>
+            <div class="notif" id="notif"><i>✓</i><div><b data-h="n_ok"></b><span>+ AED 599</span></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-cap"><span data-i="cap_a"></span><b data-i="cap_b"></b></div>
+    </div>
+  </div>
+  <div class="strip"><div class="wrap" id="strip"></div></div>
+</section>
+
+<!-- 1b FLOW (motion infographic) -->
+<section class="screen flow-s" id="flowS"><div class="stage">
+<div class="flow" id="flow">
+  <div class="ft"><h3 id="flH"></h3><div class="brand" dir="ltr">MAMMEDOV<span class="amp">&amp;</span>CO.</div></div>
+  <div class="track" id="flTrack">
+    <div class="line" id="flLine"><i></i></div>
+    <div class="dot" id="flDot"></div>
+    <div class="node"><div class="ico"><svg viewBox="0 0 100 100" id="ic1">
+      <rect x="30" y="10" width="40" height="80" rx="8" fill="none" stroke="#F4F1EB" stroke-width="3"/>
+      <polygon points="45,40 45,60 61,50" class="b2" id="ic1p"/>
+      <rect x="36" y="78" width="28" height="3" rx="1.5" fill="rgba(244,241,235,.25)"/>
+      <rect x="36" y="78" width="0" height="3" rx="1.5" class="b2" id="ic1bar"/>
+    </svg></div><div class="tx"><div class="k" data-f="k1"></div><div class="big"><span data-f="v1"></span></div><div class="lbl" data-f="l1"></div></div></div>
+    <div class="node"><div class="ico"><svg viewBox="0 0 100 100">
+      <rect x="14" y="22" width="48" height="18" rx="9" class="b" id="bb1"/>
+      <rect x="38" y="44" width="48" height="18" rx="9" class="b2" id="bb2"/>
+      <rect x="14" y="66" width="36" height="18" rx="9" class="b" id="bb3"/>
+    </svg></div><div class="tx"><div class="k" data-f="k2"></div><div class="big"><span id="n2">0</span><small data-f="u2"></small></div><div class="lbl" data-f="l2"></div></div></div>
+    <div class="node"><div class="ico"><svg viewBox="0 0 100 100" class="cal" id="cal"></svg></div><div class="tx"><div class="k" data-f="k3"></div><div class="big"><span id="n3">0</span></div><div class="lbl" data-f="l3"></div></div></div>
+    <div class="node"><div class="ico"><svg viewBox="0 0 100 100">
+      <rect x="18" y="70" width="12" height="0" class="bar" id="br1"/><rect x="36" y="70" width="12" height="0" class="bar" id="br2"/>
+      <rect x="54" y="70" width="12" height="0" class="bar" id="br3"/><rect x="72" y="70" width="12" height="0" class="bar" id="br4"/>
+      <line x1="14" y1="72" x2="88" y2="72" stroke="#F4F1EB" stroke-width="2.5"/>
+    </svg></div><div class="tx"><div class="k" data-f="k4"></div><div class="big"><span id="n4">0</span><small id="n4u">AED</small></div><div class="lbl" data-f="l4"></div></div></div>
+  </div>
+  <div class="fn"><span data-f="fn"></span><span data-f="cta"></span></div>
+</div>
+</div></section>
+
+<!-- 2 PAINS -->
+<section class="screen" id="pains">
+  <div class="wrap">
+    <p class="eyebrow rv" data-i="pa_k"></p>
+    <h2 class="rv" data-ih="pa_h"></h2>
+    <div class="plist mt" id="painsList"></div>
+  </div>
+</section>
+
+<!-- 3 SERVICES -->
+<section class="screen stone" id="services">
+  <div class="wrap">
+    <div class="head">
+      <div><p class="eyebrow rv" data-i="sv_k"></p><h2 class="rv" data-ih="sv_h"></h2><p class="lead opt hide-m rv" data-i="sv_p"></p></div>
+      
+    </div>
+    <div class="sx mt" id="svcList"></div>
+  </div>
+</section>
+
+<!-- 3b BEFORE / AFTER -->
+<section class="screen" id="ba">
+  <div class="wrap ba-grid">
+    <div>
+      <p class="eyebrow rv" data-i="ba_k"></p>
+      <h2 class="rv" data-ih="ba_h"></h2>
+      <p class="lead rv" data-i="ba_p"></p>
+      <p class="ba-hint rv"><span>↔</span> <span data-i="ba_hint"></span></p>
+    </div>
+    <div class="ba rv" id="baBox" dir="ltr">
+      <img src="img/02-empty.jpg" alt="" class="after">
+      <img src="img/09-before.jpg" alt="" class="before" id="baBefore">
+      <span class="ba-l l" data-i="ba_l"></span><span class="ba-l r" data-i="ba_r"></span>
+      <div class="ba-line" id="baLine"><i>‹ ›</i></div>
+      <input type="range" min="0" max="100" value="50" id="baRange" aria-label="Before / after">
+    </div>
+  </div>
+</section>
+
+<!-- 4 ROADMAP -->
+<section class="screen dark">
+  <div class="wrap">
+    <p class="eyebrow rv" data-i="rd_k"></p>
+    <h2 class="rv" data-ih="rd_h"></h2>
+    <div class="rail c4 mt" id="roadList"></div>
+    <p class="swipe-hint" style="color:rgba(244,241,235,.7)" data-i="swipe"></p>
+  </div>
+</section>
+
+<!-- 5 ROI -->
+<section class="screen" id="roi">
+  <div class="wrap roi">
+    <div>
+      <p class="eyebrow rv" data-i="roi_k"></p>
+      <h2 class="rv" data-ih="roi_h"></h2>
+      <p class="lead hide-m rv" data-i="roi_p"></p>
+    </div>
+    <div class="card calc rv"><div class="curs sm" role="group" aria-label="Currency"><button data-cur="AED">AED</button><button data-cur="USD">USD</button><button data-cur="TMT">TMT</button></div>
+      <div class="cr"><div class="top"><label for="c1" style="color:var(--ink)" data-i="c1"></label><output id="o1"></output></div><input type="range" id="c1" min="3" max="60" value="20"></div>
+      <div class="cr"><div class="top"><label for="c2" style="color:var(--ink)" data-i="c2"></label><output id="o2"></output></div><input type="range" id="c2" min="5" max="40" value="15"></div>
+      <div class="cr"><div class="top"><label for="c3" style="color:var(--ink)" data-i="c3"></label><output id="o3"></output></div><input type="range" id="c3" min="100" max="5000" step="50" value="600"></div>
+      <div class="calc-out"><div><span data-i="c_book"></span><b id="rb">0</b></div><div class="x"><span data-i="c_rev"></span><b id="rr">0</b></div></div>
+      <p class="note" data-i="c_note"></p>
+    </div>
+  </div>
+</section>
+
+<!-- 6 INDUSTRIES -->
+<section class="screen stone" id="work">
+  <div class="wrap">
+    <p class="eyebrow rv" data-i="in_k"></p>
+    <h2 class="rv" data-ih="in_h"></h2>
+    <div class="acc mt" id="indList"></div>
+  </div>
+</section>
+
+<!-- 7 CASE A -->
+<section class="screen dark" id="case">
+  <div class="wrap">
+    <p class="eyebrow rv" data-i="cs_k"></p>
+    <div class="case-top">
+      <h2 class="rv" data-ih="cs_h"></h2>
+      <div class="rv"><p class="lead" data-i="cs_p"></p><p class="conf" data-i="cs_c"></p></div>
+    </div>
+    <div class="stats mt">
+      <div class="stat rv"><div class="pre" data-i="s1a"></div><div class="big"><span data-count="20">20</span></div><p data-i="s1"></p></div>
+      <div class="stat rv"><div class="pre" data-i="s2a"></div><div class="big"><span data-count="6">6</span><small>AED</small></div><p data-i="s2"></p></div>
+      <div class="stat rv"><div class="pre"></div><div class="big"><span data-count="3">3</span></div><p data-i="s3"></p></div>
+      <div class="stat rv"><div class="pre"></div><div class="big"><span data-count="2">2</span></div><p data-i="s4"></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 CASE B -->
+<section class="screen dark">
+  <div class="wrap case-b">
+    <div class="ph rv"><img src="img/04-booked.jpg" alt="" loading="lazy"></div>
+    <div><p class="eyebrow rv" data-i="cs_k2"></p><div id="wkList" class="mt"></div></div>
+  </div>
+</section>
+
+<!-- 9 COMPARE -->
+<section class="screen">
+  <div class="wrap">
+    <p class="eyebrow rv" data-i="cm_k"></p>
+    <h2 class="rv" data-ih="cm_h"></h2>
+    <div class="cmp mt rv"><table id="cmpT"></table></div>
+  </div>
+</section>
+
+<!-- 10 FOUNDER -->
+<section class="screen stone" id="founder">
+  <div class="wrap fgrid">
+    <div class="fphoto rv"><img src="img/founder.jpg" alt="Kurban Mammedov" loading="lazy"></div>
+    <div>
+      <p class="eyebrow rv" data-i="f_k"></p>
+      <p class="quote rv" data-i="f_q"></p>
+      <div class="fname rv"><b>Kurban Mammedov</b><span data-i="f_role"></span></div>
+      <p class="lead rv" data-i="f_p"></p>
+      <div class="team rv" id="teamList"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 PACKAGES -->
+<section class="screen" id="pricing">
+  <div class="wrap">
+    <div class="head"><div><p class="eyebrow rv" data-i="pk_k"></p>
+    <h2 class="rv" data-ih="pk_h"></h2></div><div class="curs" role="group" aria-label="Currency"><button data-cur="AED">AED</button><button data-cur="USD">USD</button><button data-cur="TMT">TMT</button></div></div>
+    <div class="rail c3 mt" id="pkList" style="padding-top:14px"></div>
+    <p class="swipe-hint" data-i="swipe"></p>
+    <p class="pk-note hide-m" data-i="pk_note"></p>
+  </div>
+</section>
+
+<!-- 12 FAQ -->
+<section class="screen stone">
+  <div class="wrap">
+    <p class="eyebrow rv" data-i="fq_k"></p>
+    <h2 class="rv" data-ih="fq_h"></h2>
+    <div class="faq mt" id="faqList"></div>
+  </div>
+</section>
+
+<!-- 13 AUDIT -->
+<section class="screen dark" id="audit">
+  <div class="wrap agrid">
+    <div>
+      <p class="eyebrow rv" data-i="a_k"></p>
+      <h2 class="rv" data-ih="a_h"></h2>
+      <p class="lead rv" data-i="a_p"></p>
+      <ul class="gets hide-m rv" id="getsList"></ul>
+    </div>
+    <form id="form" novalidate class="rv">
+      <div class="f"><label for="fn" data-i="f_name"></label><input id="fn" name="name" autocomplete="name"></div>
+      <div class="f"><label for="fb" data-i="f_biz"></label><input id="fb" name="biz" autocomplete="organization"></div>
+      <div class="f"><label for="fi">Instagram</label><input id="fi" name="ig" placeholder="@" dir="ltr"></div>
+      <div class="f"><label for="ft" data-i="f_type"></label><select id="ft" name="type"></select></div>
+      <div class="f full"><label for="fbud" data-i="f_bud"></label><select id="fbud" name="bud"></select></div>
+      <div class="f full msg"><label for="fm" data-i="f_msg"></label><textarea id="fm" name="msg"></textarea></div>
+      <div class="err" id="err" aria-live="polite"></div>
+      <div class="ffoot"><small data-i="f_note"></small><button class="btn light" type="submit"><span data-i="f_btn"></span><span class="ar">→</span></button></div>
+      <div class="sent" id="sent" aria-live="polite">
+        <h3 data-i="ok_h"></h3><p data-i="ok_p"></p><pre id="out"></pre>
+        <div class="row"><a class="btn light" id="wa" href="#" target="_blank" rel="noopener"><span data-i="ok_wa"></span><span class="ar">→</span></a><button class="btn" type="button" id="cp"><span data-i="ok_cp"></span></button></div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer class="screen end" style="padding-top:44px">
+  <div class="wrap">
+    <div class="fbig" dir="ltr">MAMMEDOV<span class="amp">&amp;</span>CO.</div>
+    <div class="frow"><span data-i="ft_p"></span><a id="fwa" href="#" target="_blank" rel="noopener" dir="ltr"></a></div>
+    <div class="frow" style="font-size:12.5px"><span dir="ltr">© 2026 MAMMEDOV &amp; CO.</span><span>English · Русский · العربية · Türkmençe</span></div>
+  </div>
+</footer>
+
+<script>
+
+const FLOW_T={
+ en:{h:"From one second on a phone <em>to revenue in your account.</em>",k1:"01 · Attention",v1:"1 sec",l1:"A Reel stops the scroll",k2:"02 · Conversation",u2:"/ day",l2:"messages in Direct at ≈{cpc} each",k3:"03 · Booking",l3:"confirmed bookings a month",k4:"04 · Revenue",l4:"a month from one ad flow",fn:"Illustration: flow from our spa case (20 conversations a day), 15% booking rate, {chk} average check.",cta:"Check your numbers in a free audit"},
+ ru:{h:"От одной секунды в телефоне <em>до выручки на вашем счёте.</em>",k1:"01 · Внимание",v1:"1 сек",l1:"Рилс останавливает ленту",k2:"02 · Диалог",u2:"/ день",l2:"переписок в директе по ≈{cpc}",k3:"03 · Запись",l3:"подтверждённых записей в месяц",k4:"04 · Выручка",l4:"в месяц с одного рекламного потока",fn:"Иллюстрация: поток из нашего спа-кейса (20 переписок в день), 15% записей, средний чек {chk}.",cta:"Проверим ваши цифры на бесплатном аудите"},
+ tk:{h:"Telefondaky bir sekuntdan <em>hasabyňyzdaky girdejä çenli.</em>",k1:"01 · Üns",v1:"1 sek",l1:"Reels lentany saklaýar",k2:"02 · Gepleşik",u2:"/ gün",l2:"Direct-de ýazyşyk, her biri ≈{cpc}",k3:"03 · Ýazylyş",l3:"aýda tassyklanan ýazylyş",k4:"04 · Girdeji",l4:"bir mahabat akymyndan aýda",fn:"Mysal: spa keýsimizdäki akym (günde 20 ýazyşyk), 15% ýazylyş, ortaça çek {chk}.",cta:"Sanlaryňyzy mugt auditde barlarys"},
+ ar:{h:"من ثانية واحدة على الهاتف <em>إلى إيرادات في حسابك.</em>",k1:"01 · الانتباه",v1:"ثانية",l1:"ريلز يوقف التمرير",k2:"02 · المحادثة",u2:"/ يومياً",l2:"رسائل بتكلفة ≈{cpc} لكل منها",k3:"03 · الحجز",l3:"حجزاً مؤكداً شهرياً",k4:"04 · الإيرادات",l4:"شهرياً من تدفّق إعلاني واحد",fn:"توضيح: تدفّق من دراسة حالة السبا لدينا (20 محادثة يومياً)، ونسبة حجز 15%، ومتوسط فاتورة {chk}.",cta:"نراجع أرقامك في تدقيق مجاني"}
+};
+const Flow=(function(){
+  const root=document.getElementById("flow"); if(!root) return null;
+  const q=s=>root.querySelector(s), qa=s=>[...root.querySelectorAll(s)];
+  // calendar 6x5
+  const cal=q("#cal"); let h="";
+  for(let r=0;r<5;r++)for(let c=0;c<6;c++)h+=`<rect x="${12+c*13.2}" y="${16+r*14}" width="10.5" height="11" rx="2"/>`;
+  cal.innerHTML=h; const cells=[...cal.querySelectorAll("rect")];
+  const nodes=qa(".node"), line=q("#flLine i"), dot=q("#flDot"), track=q("#flTrack");
+  const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)), e=x=>1-Math.pow(1-cl(x),3), io=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2};
+  const seg=(t,a,b)=>cl((t-a)/(b-a));
+  const fmt=n=>Math.round(n).toLocaleString((lang==="ru"||lang==="tk")?"ru-RU":"en-US"); window.fmtN=fmt;
+  const D=14; // loop length (s)
+  const act=[[.4,3],[3.4,6],[6.4,9],[9.4,12.6]];
+  function setLang(l){const d=FLOW_T[l]||FLOW_T.en; root.setAttribute("dir",l==="ar"?"rtl":"ltr");
+    q("#flH").innerHTML=d.h; const fill=v=>typeof v==="string"&&window.FLOWFILL?window.FLOWFILL(v):v;
+    qa("[data-f]").forEach(el=>{const v=d[el.dataset.f]; if(v!==undefined) el.textContent=fill(v)}); }
+  function draw(T){
+    const t=T%D, fadeAll=1-seg(t,13.3,14);
+    root.style.setProperty("--fa",fadeAll);
+    track.style.opacity=fadeAll;
+    const vertical=root.clientWidth<root.clientHeight, rtl=root.getAttribute("dir")==="rtl";
+    // line progress across 4 nodes
+    const p=cl(io(seg(t,2.6,3.4))/3 + io(seg(t,5.6,6.4))/3 + io(seg(t,8.6,9.4))/3);
+    line.style.transform=vertical?`scaleY(${p})`:`scaleX(${p})`; line.style.transformOrigin=vertical?"top":(rtl?"right":"left");
+    // dot position along line
+    const L=root.querySelector("#flLine"), rr=track.getBoundingClientRect(), ics=qa(".ico").map(x=>x.getBoundingClientRect());
+    const f=ics[0], la=ics[3];
+    if(vertical){L.style.left=(f.left+f.width/2-rr.left)+"px";L.style.top=(f.top+f.height/2-rr.top)+"px";L.style.height=(la.top-f.top)+"px";L.style.bottom="auto";L.style.right="auto";L.style.width="2px";}
+    else{const a=Math.min(f.left,la.left)+f.width/2, b=Math.max(f.left,la.left)+f.width/2; L.style.left=(a-rr.left)+"px";L.style.width=(b-a)+"px";L.style.right="auto";L.style.top=(f.top+f.height/2-rr.top)+"px";L.style.height="2px";}
+    const lr=L.getBoundingClientRect();
+    if(vertical){dot.style.left=(lr.left-rr.left+1)+"px"; dot.style.top=(lr.top-rr.top+p*lr.height)+"px";}
+    else{const x=rtl?(lr.right-rr.left-p*lr.width):(lr.left-rr.left+p*lr.width); dot.style.left=x+"px"; dot.style.top=(lr.top-rr.top+1)+"px";}
+    dot.style.opacity=cl(seg(t,.2,.6))*fadeAll;
+    nodes.forEach((n,i)=>{const [a]=act[i]; const on=e(seg(t,a,a+.6)); n.style.opacity=.28+.72*on; n.style.transform=`translateY(${(1-on)*14}px)`;
+      const ic=n.querySelector(".ico"); const pulse=seg(t,a,a+.9); ic.style.boxShadow=`0 0 0 ${pulse<1?pulse*22:0}px rgba(235,213,204,${(1-pulse)*.35})`; ic.style.borderColor=on>.5?"rgba(235,213,204,.7)":"rgba(244,241,235,.2)";});
+    // node1: play + progress bar (1 second)
+    q("#ic1bar").setAttribute("width",28*e(seg(t,.6,1.8))); q("#ic1p").style.transform=`scale(${1+.15*Math.sin(Math.min(t,3)*6)*(t<3?1:0)})`; q("#ic1p").style.transformOrigin="52px 50px";
+    // node2: bubbles + counter to 20
+    ["#bb1","#bb2","#bb3"].forEach((s,i)=>{const v=e(seg(t,3.5+i*.35,3.9+i*.35)); const el=q(s); el.style.opacity=v; el.style.transform=`translateY(${(1-v)*8}px)`});
+    q("#n2").textContent=Math.round(20*e(seg(t,3.5,5.4)));
+    // node3: calendar fill to 90 (cells 27 of 30 lit = visual)
+    const k=Math.round(27*e(seg(t,6.5,8.6))); cells.forEach((c,i)=>c.classList.toggle("on",i<k));
+    q("#n3").textContent=Math.round(90*e(seg(t,6.5,8.6)));
+    // node4: bars + revenue
+    [22,30,40,52].forEach((hh,i)=>{const v=e(seg(t,9.5+i*.25,10.3+i*.25)); const r=q("#br"+(i+1)); r.setAttribute("height",hh*v); r.setAttribute("y",70-hh*v)});
+    q("#n4").textContent=(window.fmtN||fmt)((window.FLOWRATE||1)*54000*e(seg(t,9.5,11.8)));
+  }
+  let raf=0,t0=0,running=false;
+  function loop(ts){if(!t0)t0=ts; draw((ts-t0)/1000); raf=requestAnimationFrame(loop)}
+  function play(){if(running)return; running=true; t0=0; raf=requestAnimationFrame(loop)}
+  function stop(){running=false; cancelAnimationFrame(raf)}
+  return {setLang,draw,play,stop,D};
+})();
+
+const HERO_T={
+ en:{ad_sp:"Sponsored",ad_name:"Ladies Spa · Jumeirah",ad_cap:"Spa Day: hammam, massage and facial in one afternoon",ad_cta:"Send message",online:"online",typing:"typing…",
+  c_m1:"Hi! How much is the Spa Day?",c_m2:"Hello! Spa Day is AED 599: hammam, 60-min massage and facial. This Saturday we have 12:00 or 15:00 — which suits you?",c_m3:"15:00, please",c_m4:"Booked ✓ Saturday, 15:00. See you!",c_ph:"Message…",
+  n_ok:"Booking confirmed",chip1:"Reply in 2 minutes",chip2:"Bookings today"},
+ ru:{ad_sp:"Реклама",ad_name:"Ladies Spa · Джумейра",ad_cap:"Spa Day: хаммам, массаж и уход за лицом за один день",ad_cta:"Написать",online:"в сети",typing:"печатает…",
+  c_m1:"Здравствуйте! Сколько стоит Spa Day?",c_m2:"Добрый день! Spa Day — 599 AED: хаммам, массаж 60 минут и уход за лицом. В субботу свободно 12:00 и 15:00 — какое время удобно?",c_m3:"Давайте на 15:00",c_m4:"Записали вас ✓ Суббота, 15:00. Ждём!",c_ph:"Сообщение…",
+  n_ok:"Запись подтверждена",chip1:"Ответ за 2 минуты",chip2:"Записей сегодня"},
+ ar:{ad_sp:"إعلان مموَّل",ad_name:"سبا السيدات · جميرا",ad_cap:"يوم السبا: حمّام ومساج وعناية بالوجه في ظهيرة واحدة",ad_cta:"أرسل رسالة",online:"متصل الآن",typing:"يكتب…",
+  c_m1:"مرحباً! كم سعر يوم السبا؟",c_m2:"أهلاً بكِ! يوم السبا بـ 599 درهماً: حمّام، ومساج لمدة 60 دقيقة، وعناية بالوجه. يتوفر يوم السبت موعدان: 12:00 أو 15:00 — أيهما يناسبك؟",c_m3:"الساعة 15:00 من فضلك",c_m4:"تم الحجز ✓ السبت، 15:00. بانتظارك!",c_ph:"رسالة…",
+  n_ok:"تم تأكيد الحجز",chip1:"رد خلال دقيقتين",chip2:"حجوزات اليوم"},
+ tk:{ad_sp:"Mahabat",ad_name:"Ladies Spa · Jumeýra",ad_cap:"Spa Day: hammam, massaž we ýüz ideg bir günde",ad_cta:"Hat ýazyň",online:"onlaýn",typing:"ýazýar…",
+  c_m1:"Salam! Spa Day näçe durýar?",c_m2:"Salam! Spa Day — 599 AED: hammam, 60 minutlyk massaž we ýüz ideg. Şenbe güni 12:00 we 15:00 boş — haýsy wagt size amatly?",c_m3:"15:00 bolsun",c_m4:"Ýazdyk ✓ Şenbe, 15:00. Garaşýarys!",c_ph:"Hat…",
+  n_ok:"Ýazylyş tassyklandy",chip1:"2 minutda jogap",chip2:"Şu günki ýazylyşlar"}
+};
+const Hero=(function(){
+  const ph=document.getElementById("phone"); if(!ph) return null;
+  const g=id=>document.getElementById(id);
+  const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)), seg=(t,a,b)=>cl((t-a)/(b-a)), e=x=>1-Math.pow(1-cl(x),3);
+  const D=16, msgs=[["m1",3.4],["ty1",4.2,5.4],["m2",5.4],["m3",7.2],["ty2",7.9,8.7],["m4",8.7]];
+  let lang="en";
+  function setLang(l){lang=l; const d=HERO_T[l]||HERO_T.en; document.querySelectorAll("[data-h]").forEach(el=>{const v=d[el.dataset.h]; if(v!==undefined) el.textContent=v});}
+  function draw(T){
+    const t=T%D, d=HERO_T[lang]||HERO_T.en;
+    g("reelImg").style.transform=`scale(${1.04+.06*cl(t/3)})`;
+    // tap
+    const tp=seg(t,2.1,2.8); const tap=g("tap"); tap.style.opacity=t>2.1&&t<2.9?(1-tp)*.9:0; tap.style.transform=`scale(${.6+tp*1.4})`;
+    g("rCta").style.transform=t>2.2&&t<2.6?"scale(.96)":"none";
+    // chat slide in / out
+    const cin=e(seg(t,2.6,3.1)), cout=e(seg(t,14.6,15.4));
+    g("chat").style.transform=`translateY(${(1-cin+cout)*100}%)`;
+    // messages
+    msgs.forEach(([id,a,b])=>{const el=g(id); const on=t>=a&&(b===undefined||t<b)&&t<15.4; el.style.display=on?"block":"none";
+      const p=e(seg(t,a,a+.35)); el.style.opacity=p; el.style.transform=`translateY(${(1-p)*10}px) scale(${.96+.04*p})`;});
+    g("cStat").textContent=(t>4.2&&t<5.4)||(t>7.9&&t<8.7)?d.typing:d.online;
+    // notification
+    const ni=e(seg(t,9.6,10.1)), no=e(seg(t,13.2,13.7)); const n=g("notif");
+    n.style.opacity=ni*(1-no); n.style.transform=`translateY(${(-150+150*ni)-(150*no)}%)`;
+    // chips
+    const c1=e(seg(t,5.6,6.1))*(1-e(seg(t,14.6,15.2))); g("chip1").style.opacity=c1; g("chip1").style.transform=`translateY(${(1-c1)*12}px)`;
+    const c2=e(seg(t,10.2,10.7))*(1-e(seg(t,14.6,15.2))); g("chip2").style.opacity=c2; g("chip2").style.transform=`translateY(${(1-c2)*12}px)`;
+    g("chipN").textContent=t>10.9?18:17;
+  }
+  let raf=0,t0=0,run=false;
+  const loop=ts=>{if(!t0)t0=ts; draw((ts-t0)/1000); raf=requestAnimationFrame(loop)};
+  return {setLang,draw,play(){if(run)return;run=true;t0=0;raf=requestAnimationFrame(loop)},stop(){run=false;cancelAnimationFrame(raf)}};
+})();
+
+/* ===== EDIT HERE: contacts and package prices ===== */
+const CONFIG = { whatsapp:"995557163621", whatsappLabel:"+995 557 163 621", prices:[6000,10000,15000] };
+/* currencies: base is AED. USD peg 3.6725; TMT computed from USD at ~19 (rate not shown on site) */
+const CUR={AED:{r:1,round:500,lab:{en:"AED",ru:"AED",ar:"درهم",tk:"AED"}},USD:{r:1/3.6725,round:50,lab:{en:"USD",ru:"USD",ar:"دولار",tk:"USD"}},TMT:{r:19/3.6725,round:500,lab:{en:"TMT",ru:"манат",ar:"منات",tk:"manat"}}};
+let cur="AED", curChosen=false; try{const c=localStorage.getItem("cur"); if(c){cur=c;curChosen=true}}catch(e){} if(!CUR[cur])cur="AED";
+const conv=(aed,rd)=>{const c=CUR[cur];const v=aed*c.r;const R=rd===false?1:c.round;return Math.round(v/R)*R};
+const curLab=()=>CUR[cur].lab[lang]||cur;
+const MONTH={en:"month",ru:"мес",ar:"شهرياً",tk:"aý"};
+
+const T = {
+en:{
+nav_cta:"Free ad audit", menu:"Menu", mnu:["The scenario","Your money flow","Services","Before and after","Industries","Our case","Packages","Free audit"], ba_k:"AI production", ba_h:"Same room. <em>A different price in the client\u2019s mind.</em>", ba_p:"Left \u2014 a typical phone photo by an administrator. Right \u2014 the same room after our AI studio. Where would you book for AED 599?", ba_hint:"Drag to compare", ba_l:"Phone photo", ba_r:"Our studio", swipe:"Swipe →", cs_k2:"How we did it",
+hero_k:"Growth house in Dubai",
+hero_h:"Every booking begins with one second on a phone. <em>We engineer that second.</em>",
+hero_s:"Strategy, targeted ads, SMM, AI production, websites and sales in Direct — one accountable team that turns attention into paying clients for premium businesses in Dubai.",
+cta1:"Get a free audit", cta2:"What we do",
+cap_a:"Jumeirah Beach Rd · 19:40", cap_b:"She hasn't decided yet.",
+strip:["Beauty & wellness","Tourism","Real estate","Hospitality & entertainment","English · Русский · العربية · Türkmençe"],
+pa_k:"Sound familiar?", pa_h:"Money goes into advertising. <em>Clients don't come out.</em>",
+pains:[["Ads bring likes, not bookings","Budget is spent on boosted posts and reach, while the calendar stays half-empty."],["Leads go cold in Direct","Messages are answered hours later, without a script — and the client books with a competitor."],["Content without a plan","Posts are made when there is time. The profile doesn't sell and doesn't look premium."],["No one owns the result","A targeting freelancer, an SMM manager and a designer — and no one answers for revenue."]],
+sv_k:"Services", sv_h:"Everything that brings a client — <em>under one roof.</em>", sv_p:"Each service can be taken separately, but the strongest result comes when they work as one system.",
+svcs:[
+["Strategy & audit","We find where money leaks and build a plan around one number: the cost of a paying client.",["Audit of ad account, Direct and website","Competitor ad analysis","Offer and pricing review","Growth plan with target metrics"],"A clear plan and target cost per client"],
+["Targeted advertising","Meta Ads — Instagram and Facebook, built around enquiries, not likes.",["Campaign architecture and audiences","Lookalikes and exclusions of current clients","Pixel, conversion and Direct tracking","Daily optimisation and A/B tests"],"A stable daily flow of qualified enquiries"],
+["SMM & content","A profile that looks premium and sells between ads.",["Content strategy and monthly plan","Reels, carousels, stories","Copywriting in EN / RU / AR","Profile and highlights redesign"],"A profile that converts visitors into enquiries"],
+["AI production","Cinematic photo and video created with AI — without the cost and time of a full shoot.",["Campaign key visuals","Ad creatives in many variations","Short video for Reels and ads","Upscaling and retouching of your photos"],"Premium visuals in days, not weeks","Every image and video on this site was made in our studio"],
+["Websites & funnels","Fast multilingual landing pages built for one goal — an enquiry.",["Landing page in 2–3 languages","Mobile-first design","WhatsApp and form integration","Analytics and conversion tracking"],"A site that turns ad clicks into enquiries","This website is our work"],
+["Sales in Direct","The step most agencies skip: turning a message into a booking.",["Reply scripts and follow-up chains","Objection handling","Training for your front desk","Or live handling of Direct by us"],"More bookings from the same number of enquiries"]],
+rd_k:"The first 30 days", rd_h:"What happens <em>after you say yes.</em>",
+road:[["Week 1","Audit & plan","Full audit, competitor analysis, offer and a growth plan with target numbers."],["Week 2","Launch","New ad structure, first creatives, tracking, Direct scripts."],["Week 3","Optimise","Daily tests: creatives, audiences, offers. We cut what doesn't work."],["Week 4","Report & scale","Report in plain language: spend, enquiries, bookings, cost per client. Plan for month two."]],
+roi_k:"Return on investment", roi_h:"Count it yourself — <em>before you pay us.</em>", roi_p:"Move the sliders to your numbers. With our spa client the flow reached up to 20 conversations a day — see what that means for your business.",
+c1:"Conversations per day", c2:"Share that book, %", c3:"Average check", c_book:"Bookings per month", c_rev:"Revenue per month", c_note:"Illustrative calculation, not a guarantee. Results depend on niche, offer and budget.",
+in_k:"Industries", in_h:"Experience where competition is <em>the hardest.</em>",
+inds:[["img/02-empty.jpg","Beauty & wellness","Spas, salons, aesthetic clinics","Filling treatment rooms through Instagram Direct. See our case below."],["img/06-tourism.jpg","Tourism","Tours and desert experiences","Selling the feeling before the price — and turning interest into bookings."],["img/07-realestate.jpg","Real estate","Premium and off-plan property","Qualified leads for viewings, filtered by budget and intent."],["img/08-entertainment.jpg","Entertainment","High-competition niches","About a year in a segment with strict platform rules and expensive audiences."]],
+cs_k:"Case study", cs_h:"Premium ladies-only spa, Jumeirah. <em>Three weeks.</em>", cs_p:"A beautiful product and an ad account working against it. We rebuilt the system end to end — structure, offers, creative and the conversation itself.", cs_c:"Client name withheld under confidentiality",
+s1a:"up to", s1:"new conversations in Direct per day", s2a:"about", s2:"cost per conversation", s3:"weeks to a stable daily flow", s4:"seasonal campaigns sold in Direct: Spa Day 599 and Flag Day 333",
+wks:[["Week 1","Audit & architecture","New Meta structure around Instagram Direct: engaged audiences, lookalikes and exclusions of existing clients."],["Week 2","Offers & creative","Spa Day package, Reels, carousels and static ads in the brand's own visual language."],["Week 3","Selling in Direct","Reply scripts, follow-ups and live handling of every conversation until the booking was confirmed."]],
+cm_k:"Why us", cm_h:"What you get <em>compared to the usual options.</em>",
+cmp:[["","Freelancer","Typical agency","MAMMEDOV & CO."],["Strategy and growth plan","n","y","y"],["Targeted advertising","y","y","y"],["SMM and content","n","p","y"],["AI photo and video production","n","n","y"],["Website / landing page","n","p","y"],["Sales scripts and Direct handling","n","n","y"],["Founder personally on your project","y","n","y"],["Weekly report in plain language","p","p","y"]],
+cmp_l:{y:"✓",n:"—",p:"partly"},
+f_k:"Founder", f_q:"“You speak with the person responsible for the result — not with an account manager.”", f_role:"Founder & Head of Strategy",
+f_p:"I personally lead every project together with my team of specialists in advertising, content and web development. We take a limited number of clients at a time, so each one gets full attention.",
+team:["Targeting","SMM","AI production","Web development","Sales in Direct"],
+pk_k:"Packages", pk_h:"Choose the level — <em>scale when it works.</em>",
+pks:[["Performance","For businesses that already have content and need a flow of enquiries",["Strategy and audit","Meta Ads management","Creatives for ads (AI production)","Weekly report"]],["Growth","For businesses that want enquiries and a premium profile",["Everything in Performance","SMM: content plan, Reels, carousels","Direct scripts and team training","Monthly strategy session"],"Most chosen"],["Full house","For a full launch or relaunch of the brand online",["Everything in Growth","Landing page in 2–3 languages","Extended AI photo and video production","Live handling of Direct by us"]]],
+pk_from:"from", pk_mo:"AED / month", pk_btn:"Discuss this package", pk_note:"Advertising budget is paid separately, directly to the platforms. Exact scope and price are agreed after the free audit.",
+fq_k:"Questions", fq_h:"Before you <em>write to us.</em>",
+faq:[["How soon will we see results?","First enquiries usually come within the first week after launch. A stable, optimised flow takes about 3–4 weeks of testing."],["What ad budget do we need?","It depends on niche and goals. We recommend a figure after the audit — so you don't overpay and don't under-invest."],["Is there a long-term contract?","We work month to month. If the result suits you, we continue; if not, you're free to stop."],["Do you work in Arabic?","Yes. Content, ads and the website can be in English, Russian, Arabic and Turkmen."],["How will we know what our money does?","Every week you get a short report in plain language: spend, enquiries, bookings and the cost of one client."]],
+a_k:"Free mini-audit", a_h:"See what your advertising is <em>really</em> doing.", a_p:"Within 12 hours — a short, personal audit of your current advertising. Whether or not we work together.",
+gets:["Where your budget is leaking","What your strongest competitors are running now","Three changes you can make tomorrow"],
+f_name:"Your name", f_biz:"Business name", f_type:"Industry", types:["Beauty & wellness","Tourism","Real estate","Hospitality & entertainment","Other"],
+f_bud:"Current monthly ad budget", buds:["Not advertising yet","Under AED 5,000","AED 5,000 – 15,000","AED 15,000 – 30,000","Over AED 30,000"],
+f_msg:"Anything we should know? (optional)", f_note:"Your request is sent via WhatsApp. Nothing is stored on this site.", f_btn:"Get my audit",
+err:"Please fill in your name and business name.", ok_h:"Almost done.", ok_p:"Tap the button to send your request in WhatsApp. If it doesn't open, copy the text and send it to the number below.", ok_wa:"Send in WhatsApp", ok_cp:"Copy text", copied:"Copied",
+mi:"Hello! I'd like a free audit of our advertising.", mpk:"Hello! I'm interested in the package", mn:"Name", mb:"Business", mt:"Industry", mbud:"Monthly ad budget", mnote:"Note",
+ft_p:"Growth house for premium businesses in Dubai."
+},
+ru:{
+nav_cta:"Бесплатный аудит", menu:"Меню", mnu:["Сценарий","Поток денег","Услуги","До и после","Отрасли","Кейс","Пакеты","Бесплатный аудит"], ba_k:"ИИ-продакшн", ba_h:"Тот же кабинет. <em>Другая цена в голове клиента.</em>", ba_p:"Слева — обычное фото администратора на телефон. Справа — тот же кабинет после нашей ИИ-студии. Где бы вы записались за 599 AED?", ba_hint:"Потяните, чтобы сравнить", ba_l:"Фото на телефон", ba_r:"Наша студия", swipe:"Листайте вбок →", cs_k2:"Как мы это сделали",
+hero_k:"Growth house в Дубае",
+hero_h:"Каждая сделка начинается с одной секунды в телефоне. <em>Мы управляем этой секундой.</em>",
+hero_s:"Стратегия, таргет, SMM, ИИ-продакшн, сайты и продажи в директе — одна команда, которая отвечает за результат и превращает внимание в платящих клиентов для премиального бизнеса в Дубае.",
+cta1:"Получить бесплатный аудит", cta2:"Что мы делаем",
+cap_a:"Jumeirah Beach Rd · 19:40", cap_b:"Она ещё не решила.",
+strip:["Beauty и wellness","Туризм","Недвижимость","Гостеприимство и развлечения","English · Русский · العربية · Türkmençe"],
+pa_k:"Знакомо?", pa_h:"Деньги в рекламу уходят. <em>Клиенты не приходят.</em>",
+pains:[["Реклама даёт лайки, а не записи","Бюджет уходит на продвижение постов и охваты, а расписание остаётся полупустым."],["Заявки остывают в директе","Отвечают через несколько часов и без скрипта — и клиент записывается к конкуренту."],["Контент без плана","Посты выходят, когда есть время. Профиль не продаёт и не выглядит премиально."],["За результат никто не отвечает","Таргетолог, SMM-щик и дизайнер по отдельности — а за выручку не отвечает никто."]],
+sv_k:"Услуги", sv_h:"Всё, что приводит клиента, — <em>в одних руках.</em>", sv_p:"Каждую услугу можно взять отдельно, но сильнее всего результат, когда они работают как одна система.",
+svcs:[
+["Стратегия и аудит","Находим, где утекают деньги, и строим план вокруг одной цифры — стоимости платящего клиента.",["Аудит кабинета, директа и сайта","Анализ рекламы конкурентов","Разбор оффера и цен","План роста с целевыми метриками"],"Понятный план и целевая стоимость клиента"],
+["Таргетированная реклама","Meta Ads — Instagram и Facebook, настроенные на заявки, а не на лайки.",["Архитектура кампаний и аудитории","Lookalike и исключение текущих клиентов","Пиксель, конверсии, отслеживание директа","Ежедневная оптимизация и A/B-тесты"],"Стабильный ежедневный поток целевых заявок"],
+["SMM и контент","Профиль, который выглядит премиально и продаёт между рекламными кампаниями.",["Контент-стратегия и план на месяц","Рилсы, карусели, сторис","Тексты на EN / RU / AR","Редизайн профиля и хайлайтсов"],"Профиль, который превращает посетителей в заявки"],
+["ИИ-продакшн","Фото и видео уровня кино с помощью ИИ — без затрат и сроков полноценной съёмки.",["Ключевые визуалы кампаний","Рекламные креативы во множестве вариантов","Короткие видео для рилсов и рекламы","Улучшение и ретушь ваших фото"],"Премиальные визуалы за дни, а не недели","Все фото и видео на этом сайте сделаны в нашей студии"],
+["Сайты и воронки","Быстрые лендинги на нескольких языках с одной целью — заявка.",["Лендинг на 2–3 языках","Дизайн в первую очередь под телефон","Интеграция WhatsApp и формы","Аналитика и отслеживание конверсий"],"Сайт, который превращает клики в заявки","Этот сайт — наша работа"],
+["Продажи в директе","Шаг, который пропускает большинство агентств: превратить сообщение в запись.",["Скрипты ответов и цепочки дожима","Работа с возражениями","Обучение администраторов","Или ведение директа нами"],"Больше записей с того же количества заявок"]],
+rd_k:"Первые 30 дней", rd_h:"Что происходит <em>после вашего «да».</em>",
+road:[["Неделя 1","Аудит и план","Полный аудит, анализ конкурентов, оффер и план роста с целевыми цифрами."],["Неделя 2","Запуск","Новая структура рекламы, первые креативы, аналитика, скрипты для директа."],["Неделя 3","Оптимизация","Ежедневные тесты креативов, аудиторий и офферов. Отключаем то, что не работает."],["Неделя 4","Отчёт и масштаб","Отчёт простым языком: расход, заявки, записи, стоимость клиента. План на второй месяц."]],
+roi_k:"Окупаемость", roi_h:"Посчитайте сами — <em>до того, как платить нам.</em>", roi_p:"Подставьте свои цифры. У нашего клиента-спа поток доходил до 20 переписок в день — посмотрите, что это значит для вашего бизнеса.",
+c1:"Переписок в день", c2:"Доля записавшихся, %", c3:"Средний чек", c_book:"Записей в месяц", c_rev:"Выручка в месяц", c_note:"Расчёт иллюстративный, не гарантия. Результат зависит от ниши, оффера и бюджета.",
+in_k:"Отрасли", in_h:"Опыт там, где конкуренция <em>жёстче всего.</em>",
+inds:[["img/02-empty.jpg","Beauty и wellness","Спа, салоны, эстетические клиники","Заполняем кабинеты через Instagram Direct. Кейс — ниже."],["img/06-tourism.jpg","Туризм","Туры и пустыня","Продаём ощущение раньше цены — и превращаем интерес в бронирования."],["img/07-realestate.jpg","Недвижимость","Премиальные объекты и off-plan","Квалифицированные заявки на показы с фильтром по бюджету и намерению."],["img/08-entertainment.jpg","Развлечения","Высококонкурентные ниши","Около года в сегменте со строгими правилами площадок и дорогими аудиториями."]],
+cs_k:"Кейс", cs_h:"Премиальный ladies-only спа, Джумейра. <em>Три недели.</em>", cs_p:"Прекрасный продукт и рекламный кабинет, который работал против него. Мы перестроили систему целиком: структуру, офферы, креативы и сам диалог с клиентом.", cs_c:"Название клиента не раскрывается по договорённости о конфиденциальности",
+s1a:"до", s1:"новых переписок в директе в день", s2a:"около", s2:"стоимость одной переписки", s3:"недели до стабильного ежедневного потока", s4:"сезонные акции, проданные в директе: Spa Day 599 и Flag Day 333",
+wks:[["Неделя 1","Аудит и архитектура","Новая структура Meta под Instagram Direct: вовлечённые аудитории, lookalike и исключение действующих клиентов."],["Неделя 2","Офферы и креативы","Пакет Spa Day, рилсы, карусели и статика в визуальном языке бренда."],["Неделя 3","Продажи в директе","Скрипты, дожимы и ведение каждой переписки до подтверждённой записи."]],
+cm_k:"Почему мы", cm_h:"Что вы получаете <em>в сравнении с привычными вариантами.</em>",
+cmp:[["","Фрилансер","Обычное агентство","MAMMEDOV & CO."],["Стратегия и план роста","n","y","y"],["Таргетированная реклама","y","y","y"],["SMM и контент","n","p","y"],["ИИ-продакшн фото и видео","n","n","y"],["Сайт / лендинг","n","p","y"],["Скрипты продаж и ведение директа","n","n","y"],["Основатель лично на вашем проекте","y","n","y"],["Еженедельный отчёт простым языком","p","p","y"]],
+cmp_l:{y:"✓",n:"—",p:"частично"},
+f_k:"Основатель", f_q:"«Вы общаетесь с человеком, который отвечает за результат, а не с аккаунт-менеджером».", f_role:"Основатель и руководитель стратегии",
+f_p:"Я лично веду каждый проект вместе со своей командой специалистов по рекламе, контенту и веб-разработке. Мы берём ограниченное число клиентов одновременно, чтобы каждый получал полное внимание.",
+team:["Таргет","SMM","ИИ-продакшн","Веб-разработка","Продажи в директе"],
+pk_k:"Пакеты", pk_h:"Выберите уровень — <em>масштабируйте, когда работает.</em>",
+pks:[["Performance","Для бизнеса, у которого уже есть контент и нужен поток заявок",["Стратегия и аудит","Ведение Meta Ads","Рекламные креативы (ИИ-продакшн)","Еженедельный отчёт"]],["Growth","Для бизнеса, которому нужны заявки и премиальный профиль",["Всё из Performance","SMM: контент-план, рилсы, карусели","Скрипты директа и обучение команды","Ежемесячная стратегическая сессия"],"Чаще всего выбирают"],["Full house","Для полного запуска или перезапуска бренда онлайн",["Всё из Growth","Лендинг на 2–3 языках","Расширенный ИИ-продакшн фото и видео","Ведение директа нами"]]],
+pk_from:"от", pk_mo:"AED / мес", pk_btn:"Обсудить пакет", pk_note:"Рекламный бюджет оплачивается отдельно, напрямую площадкам. Точный объём работ и цена — после бесплатного аудита.",
+fq_k:"Вопросы", fq_h:"Прежде чем <em>написать нам.</em>",
+faq:[["Когда будут первые результаты?","Первые заявки обычно приходят в первую неделю после запуска. Стабильный оптимизированный поток — примерно через 3–4 недели тестов."],["Какой нужен рекламный бюджет?","Зависит от ниши и целей. Мы назовём цифру после аудита — чтобы вы не переплачивали и не недовкладывали."],["Есть ли долгосрочный договор?","Работаем помесячно. Устраивает результат — продолжаем; нет — вы свободны остановиться."],["Работаете на арабском?","Да. Контент, реклама и сайт — на английском, русском, арабском и туркменском."],["Как мы поймём, что делают наши деньги?","Каждую неделю — короткий отчёт простым языком: расход, заявки, записи и стоимость одного клиента."]],
+a_k:"Бесплатный мини-аудит", a_h:"Узнайте, что ваша реклама делает <em>на самом деле.</em>", a_p:"В течение 12 часов — короткий персональный аудит вашей текущей рекламы. Независимо от того, будем ли мы работать вместе.",
+gets:["Где утекает ваш бюджет","Что сейчас крутят ваши сильнейшие конкуренты","Три изменения, которые можно внедрить завтра"],
+f_name:"Ваше имя", f_biz:"Название бизнеса", f_type:"Отрасль", types:["Beauty и wellness","Туризм","Недвижимость","Гостеприимство и развлечения","Другое"],
+f_bud:"Текущий рекламный бюджет в месяц", buds:["Пока не рекламируемся","До 5 000 AED","5 000 – 15 000 AED","15 000 – 30 000 AED","Более 30 000 AED"],
+f_msg:"Что нам стоит знать? (необязательно)", f_note:"Заявка отправляется через WhatsApp. На сайте ничего не сохраняется.", f_btn:"Получить аудит",
+err:"Пожалуйста, укажите имя и название бизнеса.", ok_h:"Почти готово.", ok_p:"Нажмите кнопку, чтобы отправить заявку в WhatsApp. Если не откроется — скопируйте текст и отправьте на номер ниже.", ok_wa:"Отправить в WhatsApp", ok_cp:"Скопировать текст", copied:"Скопировано",
+mi:"Здравствуйте! Хотим бесплатный аудит нашей рекламы.", mpk:"Здравствуйте! Интересует пакет", mn:"Имя", mb:"Бизнес", mt:"Отрасль", mbud:"Бюджет в месяц", mnote:"Комментарий",
+ft_p:"Growth house для премиального бизнеса в Дубае."
+},
+tk:{
+nav_cta:"Mugt audit", menu:"Menýu", mnu:["Ssenariý","Pul akymy","Hyzmatlar","Öň we soň","Pudaklar","Keýs","Paketler","Mugt audit"],
+ba_k:"Emeli aň bilen önümçilik", ba_h:"Şol bir otag. <em>Müşderiniň kellesinde başga baha.</em>", ba_p:"Çepde — administratoryň telefonda düşüren adaty suraty. Sagda — şol otag biziň emeli aň studiýamyzdan soň. 599 AED-e haýsysyna ýazylardyňyz?", ba_hint:"Deňeşdirmek üçin süýşüriň", ba_l:"Telefon suraty", ba_r:"Biziň studiýamyz",
+swipe:"Gapdala süýşüriň →", cs_k2:"Muny nädip etdik",
+hero_k:"Dubaýdaky growth house",
+hero_h:"Her bir söwda telefondaky bir sekuntdan başlanýar. <em>Biz şol sekundy dolandyrýarys.</em>",
+hero_s:"Strategiýa, nyşanaly mahabat, SMM, emeli aň bilen önümçilik, saýtlar we Direct-de satuw — netije üçin jogapkär bir topar. Ünsi töleg edýän müşderilere öwürýäris.",
+cta1:"Mugt audit alyň", cta2:"Näme edýäris",
+cap_a:"Jumeirah Beach Rd · 19:40", cap_b:"Ol entek karar bermedi.",
+strip:["Gözellik we wellness","Syýahatçylyk","Gozgalmaýan emläk","Myhmansöýerlik we güýmenje","English · Русский · العربية · Türkmençe"],
+pa_k:"Tanyş gelýärmi?", pa_h:"Pul mahabata gidýär. <em>Müşderiler gelmeýär.</em>",
+pains:[["Mahabat halanlary getirýär, ýazylyşlary däl","Býudjet postlary öňe sürmäge we gerimlere gidýär, tertip bolsa ýarym boş galýar."],["Ýüzlenmeler Direct-de sowaýar","Birnäçe sagatdan soň we skriptsiz jogap berilýär — müşderi bäsdeşe ýazylýar."],["Meýilnamasyz kontent","Postlar wagt tapylanda çykýar. Profil satmaýar we premium görünmeýär."],["Netije üçin hiç kim jogap bermeýär","Targetolog, SMM-menejer we dizaýner aýratyn işleýär — girdeji üçin bolsa hiç kim jogap bermeýär."]],
+sv_k:"Hyzmatlar", sv_h:"Müşderi getirýän ähli zat — <em>bir ýerde.</em>", sv_p:"Her hyzmaty aýratyn alyp bolýar, ýöne olar bir ulgam hökmünde işlände netije has güýçli bolýar.",
+svcs:[
+["Strategiýa we audit","Puluň nireden akýandygyny tapýarys we meýilnamany bir sanyň töwereginde gurýarys: töleg edýän müşderiniň bahasy.",["Mahabat kabinetiniň, Direct-iň we saýtyň auditi","Bäsdeşleriň mahabatynyň derňewi","Teklibiň we bahalaryň seljermesi","Maksatly görkezijiler bilen ösüş meýilnamasy"],"Düşnükli meýilnama we bir müşderiniň maksatly bahasy"],
+["Nyşanaly mahabat","Meta Ads — Instagram we Facebook, halanlara däl-de, ýüzlenmelere gönükdirilen.",["Kampaniýalaryň gurluşy we auditoriýalar","Lookalike we häzirki müşderileri aýyrmak","Piksel, konwersiýalar we Direct-i yzarlamak","Gündelik optimizasiýa we A/B synaglar"],"Her gün yzygiderli maksatly ýüzlenmeler"],
+["SMM we kontent","Premium görünýän we mahabatlaryň arasynda-da satýan profil.",["Kontent strategiýasy we aýlyk meýilnama","Reels, karuseller, storis","EN / RU / AR / TM dillerinde tekstler","Profiliň we highlights-yň täze dizaýny"],"Gelýänleri ýüzlenmä öwürýän profil"],
+["Emeli aň bilen önümçilik","Emeli aň bilen kino derejesindäki surat we wideo — doly surata düşürişiň çykdajysyz we wagtsyz.",["Kampaniýalar üçin esasy wizuallar","Köp görnüşli mahabat kreatiwleri","Reels we mahabat üçin gysga wideolar","Suratlaryňyzy gowulandyrmak we retuş"],"Premium wizuallar hepdelerde däl, günlerde","Bu saýtdaky ähli surat we wideo biziň studiýamyzda döredildi"],
+["Saýtlar we woronkalar","Bir maksat — ýüzlenme üçin gurlan, birnäçe dilli çalt lendingler.",["2–3 dilde lending","Ilki telefon üçin dizaýn","WhatsApp we forma birikmesi","Analitika we konwersiýalary yzarlamak"],"Basyşlary ýüzlenmä öwürýän saýt","Bu saýt biziň işimiz"],
+["Direct-de satuw","Agentlikleriň köpüsiniň geçip gidýän ädimi: haty ýazylyşa öwürmek.",["Jogap skriptleri we yzarlaýyş zynjyrlary","Garşylyklar bilen işlemek","Administratorlary okatmak","Ýa-da Direct-i biz alyp barýarys"],"Şol bir ýüzlenmelerden has köp ýazylyş"]],
+rd_k:"Ilkinji 30 gün", rd_h:"Siz <em>«hawa» diýeniňizden soň</em> näme bolýar.",
+road:[["1-nji hepde","Audit we meýilnama","Doly audit, bäsdeşleriň derňewi, teklip we maksatly sanlar bilen ösüş meýilnamasy."],["2-nji hepde","Işe girizmek","Mahabatyň täze gurluşy, ilkinji kreatiwler, analitika, Direct üçin skriptler."],["3-nji hepde","Optimizasiýa","Kreatiwleri, auditoriýalary we teklipleri her gün synaýarys. Işlemeýänini öçürýäris."],["4-nji hepde","Hasabat we giňeltmek","Ýönekeý dilde hasabat: çykdajy, ýüzlenmeler, ýazylyşlar, müşderiniň bahasy. Ikinji aý üçin meýilnama."]],
+roi_k:"Özüni ödeýşi", roi_h:"Özüňiz hasaplaň — <em>bize töleg etmezden öň.</em>", roi_p:"Öz sanlaryňyzy goýuň. Spa müşderimizde akym günde 20 ýazyşyga çenli ýetdi — munuň siziň işiňiz üçin nämäni aňladýandygyny görüň.",
+c1:"Günde ýazyşyk", c2:"Ýazylýanlaryň paýy, %", c3:"Ortaça çek", c_book:"Aýda ýazylyş", c_rev:"Aýlyk girdeji", c_note:"Hasaplama mysal üçin, kepillik däl. Netije ugra, teklibe we býudjete bagly.",
+in_k:"Pudaklar", in_h:"Bäsleşigiň <em>iň berk ýerinde</em> tejribe.",
+inds:[["img/02-empty.jpg","Gözellik we wellness","Spa, salonlar, estetik klinikalar","Kabinetleri Instagram Direct arkaly doldurýarys. Mysal aşakda."],["img/06-tourism.jpg","Syýahatçylyk","Syýahatlar we çöl","Duýgyny bahadan öň satýarys — gyzyklanmany bronlamalara öwürýäris."],["img/07-realestate.jpg","Gozgalmaýan emläk","Premium we off-plan obýektler","Býudjet we niýet boýunça süzülen görkezmä ýazylyşlar."],["img/08-entertainment.jpg","Güýmenje","Bäsleşigi ýokary ugurlar","Platformalaryň düzgünleri berk, auditoriýasy gymmat segmentde takmynan bir ýyl."]],
+cs_k:"Keýs", cs_h:"Premium ladies-only spa, Jumeýra. <em>Üç hepde.</em>", cs_p:"Ajaýyp önüm we oňa garşy işleýän mahabat kabineti. Ulgamy doly täzeden gurduk: gurluşy, teklipleri, kreatiwleri we müşderi bilen gepleşigiň özüni.", cs_c:"Müşderiniň ady gizlinlik ylalaşygy boýunça aýdylmaýar",
+s1a:"iň köp", s1:"günde Direct-de täze ýazyşyk", s2a:"takmynan", s2:"bir ýazyşygyň bahasy", s3:"hepdede yzygiderli gündelik akym", s4:"Direct-de satylan möwsümleýin aksiýa: Spa Day 599 we Flag Day 333",
+wks:[["1-nji hepde","Audit we gurluş","Instagram Direct üçin Meta-nyň täze gurluşy: işjeň auditoriýalar, lookalike we häzirki müşderileri aýyrmak."],["2-nji hepde","Teklipler we kreatiwler","Spa Day paketi, Reels, karuseller we brendiň öz wizual dilinde statik mahabat."],["3-nji hepde","Direct-de satuw","Jogap skriptleri, yzarlaýyş we her ýazyşygy ýazylyş tassyklanýança alyp barmak."]],
+cm_k:"Näme üçin biz", cm_h:"Adaty görnüşler bilen deňeşdirende <em>näme alýarsyňyz.</em>",
+cmp:[["","Frilanser","Adaty agentlik","MAMMEDOV & CO."],["Strategiýa we ösüş meýilnamasy","n","y","y"],["Nyşanaly mahabat","y","y","y"],["SMM we kontent","n","p","y"],["Emeli aň bilen surat we wideo","n","n","y"],["Saýt / lending","n","p","y"],["Satuw skriptleri we Direct","n","n","y"],["Esaslandyryjy özi taslamaňyzda","y","n","y"],["Ýönekeý dilde hepdelik hasabat","p","p","y"]],
+cmp_l:{y:"✓",n:"—",p:"bölekleýin"},
+f_k:"Esaslandyryjy", f_q:"«Siz hasap menejeri bilen däl-de, netije üçin jogapkär adam bilen gürleşýärsiňiz.»", f_role:"Esaslandyryjy we strategiýa ýolbaşçysy",
+f_p:"Her taslamany mahabat, kontent we web işläp taýýarlamak boýunça hünärmenlerden ybarat toparym bilen bilelikde özüm alyp barýaryn. Her müşderä doly üns bermek üçin bir wagtda çäkli sanly müşderi bilen işleýäris.",
+team:["Target","SMM","Emeli aň önümçiligi","Web işläp taýýarlamak","Direct-de satuw"],
+pk_k:"Paketler", pk_h:"Derejäni saýlaň — <em>işlände giňeldiň.</em>",
+pks:[["Performance","Kontenti bar we ýüzlenme akymy gerek bolan işler üçin",["Strategiýa we audit","Meta Ads-y alyp barmak","Mahabat kreatiwleri (emeli aň)","Hepdelik hasabat"]],["Growth","Ýüzlenmeler we premium profil isleýän işler üçin",["Performance-daky ähli zat","SMM: kontent meýilnamasy, Reels, karuseller","Direct skriptleri we topary okatmak","Aýlyk strategiki duşuşyk"],"Iň köp saýlanýar"],["Full house","Brendi onlaýnda doly işe girizmek ýa-da täzeden başlatmak üçin",["Growth-daky ähli zat","2–3 dilde lending","Giňeldilen emeli aň surat we wideo önümçiligi","Direct-i biz alyp barýarys"]]],
+pk_from:"iň az", pk_mo:"/ aý", pk_btn:"Paketi maslahatlaşalyň", pk_note:"Mahabat býudjeti aýratyn, gönüden-göni platformalara tölenýär. Takyk iş göwrümi we baha mugt auditden soň ylalaşylýar.",
+fq_k:"Soraglar", fq_h:"Bize <em>ýazmazdan öň.</em>",
+faq:[["Ilkinji netijeler haçan bolar?","Ilkinji ýüzlenmeler adatça işe girizilenden soňky ilkinji hepdede gelýär. Yzygiderli, optimizirlenen akym üçin takmynan 3–4 hepde synag gerek."],["Nähili mahabat býudjeti gerek?","Ugra we maksatlara bagly. Artykmaç tölemezligiňiz we az goýmazlygyňyz üçin sany auditden soň maslahat berýäris."],["Uzak möhletli şertnama barmy?","Aýba-aý işleýäris. Netije kanagatlandyrsa dowam edýäris; ýogsa islän wagtyňyz togtadyp bilersiňiz."],["Türkmen dilinde işleýärsiňizmi?","Hawa. Kontent, mahabat we saýt türkmen, rus, iňlis we arap dillerinde bolup biler."],["Pulumyzyň näme edýändigini nädip bileris?","Her hepde ýönekeý dilde gysga hasabat alýarsyňyz: çykdajy, ýüzlenmeler, ýazylyşlar we bir müşderiniň bahasy."]],
+a_k:"Mugt mini-audit", a_h:"Mahabatyňyzyň <em>hakykatda</em> näme edýändigini biliň.", a_p:"12 sagadyň dowamynda — häzirki mahabatyňyzyň gysga, şahsy auditi. Bilelikde işlesek-de, işlemesek-de.",
+gets:["Býudjetiňiz nireden akýar","Iň güýçli bäsdeşleriňiz häzir näme mahabat berýär","Ertir girizip boljak üç üýtgeşme"],
+f_name:"Adyňyz", f_biz:"Işiň ady", f_type:"Pudak", types:["Gözellik we wellness","Syýahatçylyk","Gozgalmaýan emläk","Myhmansöýerlik we güýmenje","Başga"],
+f_bud:"Häzirki aýlyk mahabat býudjeti", buds:["Entek mahabat bermeýäris","1 500 $-dan az","1 500 – 4 000 $","4 000 – 8 000 $","8 000 $-dan köp"],
+f_msg:"Bilmeli zadymyz barmy? (hökmany däl)", f_note:"Ýüzlenme WhatsApp arkaly iberilýär. Saýtda hiç zat saklanmaýar.", f_btn:"Audit almak",
+err:"Adyňyzy we işiň adyny ýazyň.", ok_h:"Taýýar diýen ýaly.", ok_p:"Ýüzlenmäni WhatsApp-da ibermek üçin düwmä basyň. Açylmasa, teksti göçürip aşakdaky belgä iberiň.", ok_wa:"WhatsApp-da ibermek", ok_cp:"Teksti göçürmek", copied:"Göçürildi",
+mi:"Salam! Mahabatymyzyň mugt auditini isleýäris.", mpk:"Salam! Şu paket gyzyklandyrýar:", mn:"Ady", mb:"Iş", mt:"Pudak", mbud:"Aýlyk býudjet", mnote:"Bellik",
+ft_p:"Dubaýdaky premium işler üçin growth house."
+},
+ar:{
+nav_cta:"تدقيق مجاني للإعلانات", menu:"القائمة", mnu:["السيناريو","تدفّق المال","الخدمات","قبل وبعد","القطاعات","دراسة الحالة","الباقات","تدقيق مجاني"], ba_k:"الإنتاج بالذكاء الاصطناعي", ba_h:"الغرفة نفسها. <em>وسعر مختلف في ذهن العميل.</em>", ba_p:"على اليسار صورة عادية التقطها موظف الاستقبال بالهاتف. وعلى اليمين الغرفة نفسها بعد استوديو الذكاء الاصطناعي لدينا. أين ستحجز مقابل 599 درهماً؟", ba_hint:"اسحب للمقارنة", ba_l:"صورة بالهاتف", ba_r:"استوديونا", swipe:"اسحب جانباً ←", cs_k2:"كيف حققنا ذلك",
+hero_k:"دار نمو في دبي",
+hero_h:"كل صفقة تبدأ بثانية واحدة على شاشة الهاتف. <em>ونحن نصنع تلك الثانية.</em>",
+hero_s:"الاستراتيجية، والإعلانات الموجّهة، وإدارة التواصل الاجتماعي، والإنتاج بالذكاء الاصطناعي، والمواقع، والمبيعات عبر الرسائل — فريق واحد مسؤول عن النتيجة، يحوّل الاهتمام إلى عملاء يدفعون للأعمال الراقية في دبي.",
+cta1:"احصل على تدقيق مجاني", cta2:"ما نقدّمه",
+cap_a:"شارع جميرا · 19:40", cap_b:"لم تقرّر بعد.",
+strip:["الجمال والعافية","السياحة","العقارات","الضيافة والترفيه","English · Русский · العربية · Türkmençe"],
+pa_k:"هل يبدو مألوفاً؟", pa_h:"المال يذهب إلى الإعلانات. <em>والعملاء لا يأتون.</em>",
+pains:[["الإعلانات تجلب الإعجابات لا الحجوزات","تُصرف الميزانية على ترويج المنشورات والوصول، بينما يبقى الجدول نصف فارغ."],["العملاء يفقدون اهتمامهم في الرسائل","يُرد بعد ساعات ودون نص واضح — فيحجز العميل لدى منافس."],["محتوى بلا خطة","تُنشر المنشورات عند توفر الوقت. الحساب لا يبيع ولا يبدو راقياً."],["لا أحد مسؤول عن النتيجة","مختص إعلانات ومدير تواصل ومصمم كلٌّ على حدة — ولا أحد مسؤول عن الإيرادات."]],
+sv_k:"الخدمات", sv_h:"كل ما يجلب العميل — <em>تحت سقف واحد.</em>", sv_p:"يمكن طلب كل خدمة على حدة، لكن أقوى نتيجة تتحقق عندما تعمل جميعها كنظام واحد.",
+svcs:[
+["الاستراتيجية والتدقيق","نجد أين يتسرّب المال ونبني خطة حول رقم واحد: تكلفة العميل الذي يدفع.",["تدقيق الحساب الإعلاني والرسائل والموقع","تحليل إعلانات المنافسين","مراجعة العرض والأسعار","خطة نمو بمؤشرات مستهدفة"],"خطة واضحة وتكلفة مستهدفة لكل عميل"],
+["الإعلانات الموجّهة","إعلانات ميتا — إنستغرام وفيسبوك، مبنية لجلب الطلبات لا الإعجابات.",["هيكلة الحملات والجماهير","جماهير مشابهة واستبعاد العملاء الحاليين","تتبع البكسل والتحويلات والرسائل","تحسين يومي واختبارات A/B"],"تدفّق يومي ثابت من الطلبات المؤهلة"],
+["التواصل الاجتماعي والمحتوى","حساب يبدو راقياً ويبيع بين الحملات الإعلانية.",["استراتيجية المحتوى وخطة شهرية","ريلز وكاروسيل وقصص","كتابة المحتوى بالإنجليزية والروسية والعربية","إعادة تصميم الحساب والقصص المميزة"],"حساب يحوّل الزوار إلى طلبات"],
+["الإنتاج بالذكاء الاصطناعي","صور وفيديوهات بمستوى سينمائي بالذكاء الاصطناعي — دون تكلفة ووقت التصوير الكامل.",["صور رئيسية للحملات","إعلانات بعدة صيغ","فيديوهات قصيرة للريلز والإعلانات","تحسين وتنقيح صورك"],"مواد بصرية راقية خلال أيام لا أسابيع","كل الصور والفيديو في هذا الموقع من إنتاج استوديونا"],
+["المواقع ومسارات التحويل","صفحات هبوط سريعة بعدة لغات بهدف واحد: طلب التواصل.",["صفحة هبوط بلغتين أو ثلاث","تصميم يبدأ من الهاتف","ربط واتساب ونموذج الطلب","تحليلات وتتبع التحويلات"],"موقع يحوّل النقرات إلى طلبات","هذا الموقع من أعمالنا"],
+["المبيعات في الرسائل","الخطوة التي تتجاهلها معظم الوكالات: تحويل الرسالة إلى حجز.",["نصوص الرد وسلاسل المتابعة","التعامل مع الاعتراضات","تدريب فريق الاستقبال","أو إدارة الرسائل من قِبلنا"],"حجوزات أكثر من العدد نفسه من الطلبات"]],
+rd_k:"أول 30 يوماً", rd_h:"ماذا يحدث <em>بعد موافقتك.</em>",
+road:[["الأسبوع 1","التدقيق والخطة","تدقيق شامل، وتحليل المنافسين، وصياغة العرض، وخطة نمو بأرقام مستهدفة."],["الأسبوع 2","الإطلاق","هيكل إعلاني جديد، وأولى التصاميم، والتتبع، ونصوص الرسائل."],["الأسبوع 3","التحسين","اختبارات يومية للتصاميم والجماهير والعروض. نوقف ما لا ينجح."],["الأسبوع 4","التقرير والتوسّع","تقرير بلغة واضحة: الإنفاق، والطلبات، والحجوزات، وتكلفة العميل. وخطة الشهر الثاني."]],
+roi_k:"العائد على الاستثمار", roi_h:"احسبها بنفسك — <em>قبل أن تدفع لنا.</em>", roi_p:"حرّك المؤشرات وفق أرقامك. مع عميلنا في قطاع السبا وصل التدفّق إلى 20 محادثة يومياً — اكتشف ما يعنيه ذلك لعملك.",
+c1:"محادثات يومياً", c2:"نسبة من يحجزون، %", c3:"متوسط الفاتورة", c_book:"حجوزات شهرياً", c_rev:"الإيرادات شهرياً", c_note:"حساب توضيحي وليس ضماناً. تعتمد النتائج على القطاع والعرض والميزانية.",
+in_k:"القطاعات", in_h:"خبرة حيث تكون المنافسة <em>في أشدّها.</em>",
+inds:[["img/02-empty.jpg","الجمال والعافية","السبا والصالونات وعيادات التجميل","نملأ غرف العلاج عبر رسائل إنستغرام. دراسة الحالة أدناه."],["img/06-tourism.jpg","السياحة","الرحلات وتجارب الصحراء","نبيع الإحساس قبل السعر — ونحوّل الاهتمام إلى حجوزات."],["img/07-realestate.jpg","العقارات","العقارات الفاخرة وعلى الخارطة","طلبات مؤهلة للمعاينة مع تصفية حسب الميزانية والنية."],["img/08-entertainment.jpg","الترفيه","قطاعات شديدة المنافسة","قرابة عام في قطاع بقواعد صارمة للمنصات وجماهير مكلفة."]],
+cs_k:"دراسة حالة", cs_h:"سبا فاخر للسيدات فقط، جميرا. <em>ثلاثة أسابيع.</em>", cs_p:"منتج رائع وحساب إعلاني يعمل ضده. أعدنا بناء النظام بالكامل: الهيكل، والعروض، والمحتوى الإبداعي، والمحادثة نفسها.", cs_c:"اسم العميل محجوب التزاماً بالسرية",
+s1a:"حتى", s1:"محادثة جديدة في الرسائل يومياً", s2a:"حوالي", s2:"تكلفة المحادثة الواحدة", s3:"أسابيع حتى تدفّق يومي ثابت", s4:"حملتان موسميتان بيعتا عبر الرسائل: Spa Day 599 و Flag Day 333",
+wks:[["الأسبوع 1","التدقيق والهيكلة","هيكل جديد في ميتا حول رسائل إنستغرام: جماهير متفاعلة، وجماهير مشابهة، واستبعاد العملاء الحاليين."],["الأسبوع 2","العروض والمحتوى","باقة Spa Day، وريلز، وكاروسيل، وإعلانات ثابتة بلغة العلامة البصرية."],["الأسبوع 3","البيع في الرسائل","نصوص الرد، والمتابعات، وإدارة كل محادثة حتى تأكيد الحجز."]],
+cm_k:"لماذا نحن", cm_h:"ما الذي تحصل عليه <em>مقارنة بالخيارات المعتادة.</em>",
+cmp:[["","مستقل","وكالة تقليدية","MAMMEDOV & CO."],["الاستراتيجية وخطة النمو","n","y","y"],["الإعلانات الموجّهة","y","y","y"],["التواصل الاجتماعي والمحتوى","n","p","y"],["إنتاج الصور والفيديو بالذكاء الاصطناعي","n","n","y"],["الموقع / صفحة الهبوط","n","p","y"],["نصوص البيع وإدارة الرسائل","n","n","y"],["المؤسس شخصياً على مشروعك","y","n","y"],["تقرير أسبوعي بلغة واضحة","p","p","y"]],
+cmp_l:{y:"✓",n:"—",p:"جزئياً"},
+f_k:"المؤسس", f_q:"«تتحدث مع الشخص المسؤول عن النتيجة — لا مع مدير حساب».", f_role:"المؤسس ورئيس الاستراتيجية",
+f_p:"أقود كل مشروع بنفسي مع فريقي من المتخصصين في الإعلانات والمحتوى وتطوير المواقع. نعمل مع عدد محدود من العملاء في الوقت نفسه، ليحظى كل عميل باهتمام كامل.",
+team:["الإعلانات الموجّهة","التواصل الاجتماعي","الإنتاج بالذكاء الاصطناعي","تطوير المواقع","المبيعات في الرسائل"],
+pk_k:"الباقات", pk_h:"اختر المستوى — <em>ووسّع عندما ينجح.</em>",
+pks:[["Performance","للأعمال التي لديها محتوى وتحتاج تدفّقاً من الطلبات",["الاستراتيجية والتدقيق","إدارة إعلانات ميتا","تصاميم إعلانية (إنتاج بالذكاء الاصطناعي)","تقرير أسبوعي"]],["Growth","للأعمال التي تريد طلبات وحساباً راقياً",["كل ما في Performance","التواصل الاجتماعي: خطة محتوى، ريلز، كاروسيل","نصوص الرسائل وتدريب الفريق","جلسة استراتيجية شهرية"],"الأكثر اختياراً"],["Full house","لإطلاق العلامة أو إعادة إطلاقها رقمياً بالكامل",["كل ما في Growth","صفحة هبوط بلغتين أو ثلاث","إنتاج موسّع للصور والفيديو بالذكاء الاصطناعي","إدارة الرسائل من قِبلنا"]]],
+pk_from:"ابتداءً من", pk_mo:"درهم / شهرياً", pk_btn:"ناقش هذه الباقة", pk_note:"تُدفع ميزانية الإعلانات بشكل منفصل ومباشرة إلى المنصات. يُتفق على النطاق والسعر النهائيين بعد التدقيق المجاني.",
+fq_k:"أسئلة", fq_h:"قبل أن <em>تراسلنا.</em>",
+faq:[["متى نرى النتائج الأولى؟","عادةً تصل الطلبات الأولى خلال الأسبوع الأول بعد الإطلاق. أما التدفّق الثابت والمُحسَّن فيحتاج نحو 3–4 أسابيع من الاختبارات."],["ما ميزانية الإعلانات المطلوبة؟","تعتمد على القطاع والأهداف. نحدد الرقم بعد التدقيق — حتى لا تدفع أكثر من اللازم ولا أقل مما يحتاجه النمو."],["هل هناك عقد طويل الأمد؟","نعمل شهراً بشهر. إن أرضتك النتيجة نستمر، وإن لم تُرضِك فلك حرية التوقف."],["هل تعملون باللغة العربية؟","نعم. المحتوى والإعلانات والموقع بالإنجليزية والروسية والعربية والتركمانية."],["كيف نعرف ما تحققه أموالنا؟","كل أسبوع تصلك خلاصة قصيرة بلغة واضحة: الإنفاق، والطلبات، والحجوزات، وتكلفة العميل الواحد."]],
+a_k:"تدقيق مجاني مختصر", a_h:"اعرف ما تفعله إعلاناتك <em>حقاً.</em>", a_p:"خلال 12 ساعة — تدقيق شخصي مختصر لإعلاناتك الحالية، سواء عملنا معاً أم لا.",
+gets:["أين تتسرّب ميزانيتك","ما الذي يعرضه أقوى منافسيك الآن","ثلاثة تغييرات يمكنك تطبيقها غداً"],
+f_name:"الاسم", f_biz:"اسم المنشأة", f_type:"القطاع", types:["الجمال والعافية","السياحة","العقارات","الضيافة والترفيه","أخرى"],
+f_bud:"ميزانية الإعلانات الشهرية الحالية", buds:["لا نعلن حالياً","أقل من 5,000 درهم","5,000 – 15,000 درهم","15,000 – 30,000 درهم","أكثر من 30,000 درهم"],
+f_msg:"هل هناك ما يجب أن نعرفه؟ (اختياري)", f_note:"يُرسل طلبك عبر واتساب. لا يُحفظ أي شيء على هذا الموقع.", f_btn:"احصل على التدقيق",
+err:"يرجى إدخال الاسم واسم المنشأة.", ok_h:"اقتربنا.", ok_p:"اضغط الزر لإرسال طلبك عبر واتساب. إن لم يُفتح، انسخ النص وأرسله إلى الرقم أدناه.", ok_wa:"أرسل عبر واتساب", ok_cp:"انسخ النص", copied:"تم النسخ",
+mi:"مرحباً! نرغب في تدقيق مجاني لإعلاناتنا.", mpk:"مرحباً! أنا مهتم بالباقة", mn:"الاسم", mb:"المنشأة", mt:"القطاع", mbud:"الميزانية الشهرية", mnote:"ملاحظة",
+ft_p:"دار نمو للأعمال الراقية في دبي."
+}};
+
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let lang="en";
+const fmt=n=>Math.round(n).toLocaleString("en-US");
+const wa=t=>"https://wa.me/"+CONFIG.whatsapp+"?text="+encodeURIComponent(t);
+
+$("#fwa").href="https://wa.me/"+CONFIG.whatsapp; $("#fwa").textContent="WhatsApp "+CONFIG.whatsappLabel;
+const vid=$("#heroVideo"); vid.src= innerWidth<900 ? "media/hero-mobile.mp4" : "media/hero-1600.mp4"; vid.play&&vid.play().catch(()=>{});
+
+let svcI=0, indI=0;
+function svcPanel(v){return `<p class="sx-d">${esc(v[1])}</p><ul>${v[2].map(x=>`<li>${esc(x)}</li>`).join("")}</ul><p class="sx-r">${esc(v[3])}</p>${v[4]?`<p class="sx-proof">${esc(v[4])}</p>`:""}`}
+function render(){
+  const d=T[lang];
+  $("#strip").innerHTML=d.strip.map(s=>`<span>${esc(s)}</span>`).join("");
+  $("#painsList").innerHTML=d.pains.map(p=>`<div class="pl"><h3>${esc(p[0])}</h3><p>${esc(p[1])}</p></div>`).join("");
+  $("#svcList").innerHTML=`<ol class="sx-list" role="tablist">${d.svcs.map((v,i)=>`<li><button role="tab" aria-selected="${i===svcI}" data-s="${i}"><span>${esc(v[0])}</span></button><div class="sx-m">${svcPanel(v)}</div></li>`).join("")}</ol><div class="sx-panel" id="sxPanel" role="tabpanel">${svcPanel(d.svcs[svcI])}</div>`;
+  $$("#svcList [data-s]").forEach(b=>{const go=()=>{if(svcI===+b.dataset.s&&innerWidth>760)return;svcI=+b.dataset.s;const p=$("#sxPanel");p.classList.add("out");setTimeout(()=>{p.innerHTML=svcPanel(T[lang].svcs[svcI]);p.classList.remove("out")},180);$$("#svcList [data-s]").forEach(x=>x.setAttribute("aria-selected",x===b))};
+    b.addEventListener("click",go); if(matchMedia("(hover:hover)").matches) b.addEventListener("mouseenter",go);});
+  $("#roadList").innerHTML=d.road.map(r=>`<div class="rd rv"><div class="d">${esc(r[0])}</div><h3>${esc(r[1])}</h3><p>${esc(r[2])}</p></div>`).join("");
+  $("#indList").innerHTML=d.inds.map((r,i)=>`<button class="ai ${i===indI?'on':''}" data-a="${i}" aria-expanded="${i===indI}"><img src="${r[0]}" alt="" loading="lazy"><span class="ai-t">${esc(r[1])}</span><span class="ai-b"><b>${esc(r[2])}</b><span>${esc(r[3])}</span></span></button>`).join("");
+  $$("#indList .ai").forEach(b=>{const go=()=>{indI=+b.dataset.a;$$("#indList .ai").forEach(x=>{const on=x===b;x.classList.toggle("on",on);x.setAttribute("aria-expanded",on)})};b.addEventListener("click",go);if(matchMedia("(hover:hover)").matches)b.addEventListener("mouseenter",go)});
+  $("#wkList").innerHTML=d.wks.map(w=>`<div class="wk rv"><div class="w">${esc(w[0])}</div><h3>${esc(w[1])}</h3><p>${esc(w[2])}</p></div>`).join("");
+  const L=d.cmp_l;
+  $("#cmpT").innerHTML=d.cmp.map((r,i)=>i===0?`<tr>${r.map((c,j)=>`<th class="${j===3?'us':''}">${esc(c)}</th>`).join("")}</tr>`:`<tr><td>${esc(r[0])}</td>${r.slice(1).map((c,j)=>`<td class="${c}${j===2?' us':''}">${esc(L[c])}</td>`).join("")}</tr>`).join("");
+  $("#teamList").innerHTML=d.team.map(t=>`<span>${esc(t)}</span>`).join("");
+  $("#pkList").innerHTML=d.pks.map((p,i)=>`<div class="card pkg rv ${p[3]?'hi':''}">${p[3]?`<span class="badge">${esc(p[3])}</span>`:""}<h3 dir="ltr" style="text-align:start">${esc(p[0])}</h3><p class="for">${esc(p[1])}</p><div class="pr"><span>${esc(d.pk_from)}</span>${fmt(conv(CONFIG.prices[i]))}<small>${esc(curLab())} / ${esc(MONTH[lang])}</small></div><ul>${p[2].map(x=>`<li>${esc(x)}</li>`).join("")}</ul><a class="btn ${p[3]?'light':'dark'}" href="${wa(d.mpk+' '+p[0])}" target="_blank" rel="noopener">${esc(d.pk_btn)} <span class="ar">→</span></a></div>`).join("");
+  $("#faqList").innerHTML=d.faq.map((f,i)=>`<details class="rv" ${i===0?'open':''}><summary>${esc(f[0])}</summary><p>${esc(f[1])}</p></details>`).join("");
+  $("#getsList").innerHTML=d.gets.map(g=>`<li>${esc(g)}</li>`).join("");
+  $("#ft").innerHTML=d.types.map(t=>`<option>${esc(t)}</option>`).join("");
+  $("#menuList").innerHTML=d.mnu.map((m,i)=>`<a href="${["#top","#flowS","#services","#ba","#work","#case","#pricing","#audit"][i]}" style="--i:${i}">${esc(m)}</a>`).join("");
+  $("#fbud").innerHTML=d.buds.map(t=>`<option>${esc(t)}</option>`).join("");
+}
+
+function setLang(l){
+  if(!T[l]) l="en"; lang=l; const d=T[l];
+  document.documentElement.lang=l; document.documentElement.dir=l==="ar"?"rtl":"ltr";
+  $$("[data-i]").forEach(e=>{const v=d[e.dataset.i]; if(v!==undefined) e.textContent=v});
+  $$("[data-ih]").forEach(e=>{const v=d[e.dataset.ih]; if(v!==undefined) e.innerHTML=v});
+  $$(".langs button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===l));
+  render(); calc(); observe(); if(Flow){Flow.setLang(l); Flow.draw(0);} if(Hero){Hero.setLang(l);} if(!curChosen && typeof setCur==="function" && window.__curReady){setCur(l==="tk"?"TMT":"AED");} if(typeof motion==="function")motion(); const u=document.getElementById("n4u"); if(u)u.textContent=curLab();
+  try{localStorage.setItem("lang",l)}catch(e){}
+  if(["","#en","#ru","#ar","#tk"].includes(location.hash)) history.replaceState(null,"","#"+l);
+}
+
+// reveal on view (native scroll — no hijacking)
+let io=null;
+function observe(){
+  if(!("IntersectionObserver" in window)){document.documentElement.classList.add("no-io");return}
+  if(io) io.disconnect();
+  io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);
+    e.target.querySelectorAll("[data-count]").forEach(countUp)}}),{threshold:.12,rootMargin:"0px 0px -5% 0px"});
+  $$(".rv:not(.in)").forEach(el=>io.observe(el));
+}
+function countUp(c){const to=+c.dataset.count,t0=performance.now(),dur=1300;
+  const st=t=>{const p=Math.min(1,(t-t0)/dur);c.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(st)};requestAnimationFrame(st)}
+
+// ROI calculator
+function calc(){const a=+$("#c1").value,b=+$("#c2").value,c=+$("#c3").value;
+  $("#o1").textContent=a; $("#o2").textContent=b+"%"; $("#o3").textContent=fmt(conv(c,false))+" "+curLab();
+  $("[data-i=c3]").textContent=T[lang].c3+", "+curLab(); $("[data-i=c_rev]").textContent=T[lang].c_rev+", "+curLab();
+  const book=a*30*b/100; $("#rb").textContent=fmt(book); $("#rr").textContent=fmt(conv(book*c,false));}
+["#c1","#c2","#c3"].forEach(s=>$(s).addEventListener("input",calc));
+
+$$(".langs button").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.lang)));
+(function(){const h=location.hash.slice(1);let s=null;try{s=localStorage.getItem("lang")}catch(e){}
+  const n=(navigator.language||"en").slice(0,2); setLang(T[h]?h:(s&&T[s]?s:(T[n]?n:"en")))})();
+
+window.FLOWFILL=v=>{const c=CUR[cur]; const cpc=6*c.r; const n=(cpc<10&&Math.abs(cpc-Math.round(cpc))>.05)?cpc.toFixed(1).replace(".",(lang==="ru"||lang==="tk")?",":"."):Math.round(cpc);
+  return v.replace("{cpc}",n+" "+curLab()).replace("{chk}",fmt(600*c.r)+" "+curLab());};
+function setCur(c){cur=c;if(curChosen){try{localStorage.setItem("cur",c)}catch(e){}}
+  $$(".curs button").forEach(b=>b.classList.toggle("on",b.dataset.cur===c));
+  window.FLOWRATE=CUR[c].r; const u=document.getElementById("n4u"); if(u)u.textContent=curLab(); if(Flow)Flow.setLang(lang);
+  render(); calc(); motion(); observe(); $$("#pricing .rv,#roi .rv").forEach(el=>el.classList.add("in"));}
+$$(".curs button").forEach(b=>b.addEventListener("click",()=>{curChosen=true;setCur(b.dataset.cur)}));
+window.__curReady=true; setCur(!curChosen&&lang==="tk"?"TMT":cur);
+
+// ===== motion: word split, stagger, magnetic, before/after =====
+function splitW(el){if(el.dataset.split===el.innerHTML)return;const walk=n=>{[...n.childNodes].forEach(c=>{if(c.nodeType===3){const f=document.createDocumentFragment();
+  c.textContent.split(/(\s+)/).forEach(p=>{if(!p)return;if(/^\s+$/.test(p))f.appendChild(document.createTextNode(p));else{const s=document.createElement("span");s.className="w";s.textContent=p;f.appendChild(s)}});c.replaceWith(f)}else if(c.nodeType===1&&!c.classList.contains("w"))walk(c)})};
+  walk(el);[...el.querySelectorAll(".w")].forEach((w,i)=>w.style.transitionDelay=(i*45)+"ms");el.classList.add("wr");el.dataset.split=el.innerHTML;}
+function motion(){
+  const h1=$(".hero h1"); if(h1){h1.classList.remove("in");splitW(h1);requestAnimationFrame(()=>requestAnimationFrame(()=>h1.classList.add("in")));}
+  
+}
+if(matchMedia("(hover:hover) and (pointer:fine)").matches){
+  document.addEventListener("pointermove",e=>{const b=e.target.closest&&e.target.closest(".btn.light,.btn.dark");$$(".btn.mag").forEach(x=>{if(x!==b){x.style.transform="";x.classList.remove("mag")}});
+    if(!b)return;const r=b.getBoundingClientRect();const dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2);b.classList.add("mag");b.style.transform=`translate(${dx*.18}px,${dy*.28}px)`;});
+}
+(function(){const box=$("#baBox"),rg=$("#baRange");if(!box)return;const set=v=>box.style.setProperty("--p",v+"%");
+  rg.addEventListener("input",()=>{demo=false;set(rg.value)});let demo=true;
+  new IntersectionObserver((es,o)=>es.forEach(e=>{if(!e.isIntersecting)return;o.disconnect();const t0=performance.now();
+    const st=t=>{if(!demo)return;const k=(t-t0)/1000;let v;if(k<1)v=50-30*Math.sin(k*Math.PI/2);else if(k<2.4)v=20+65*((1-Math.cos((k-1)/1.4*Math.PI))/2);else if(k<3.2)v=85-35*((1-Math.cos((k-2.4)/.8*Math.PI))/2);else{set(50);rg.value=50;return}
+      set(v);rg.value=v;requestAnimationFrame(st)};setTimeout(()=>requestAnimationFrame(st),700)}),{threshold:.5}).observe(box);})();
+
+const nav=$("#nav");
+(function(){const bg=$("#burger"),mn=$("#menu");$("#menuWa").href="https://wa.me/"+CONFIG.whatsapp;$("#menuWa").textContent="WhatsApp "+CONFIG.whatsappLabel;
+  const set=o=>{bg.setAttribute("aria-expanded",o);document.documentElement.classList.toggle("menu-open",o);if(o){mn.hidden=false;requestAnimationFrame(()=>mn.classList.add("open"))}else{mn.classList.remove("open");setTimeout(()=>mn.hidden=true,450)}};
+  bg.addEventListener("click",()=>set(bg.getAttribute("aria-expanded")!=="true"));
+  mn.addEventListener("click",e=>{const a=e.target.closest("a[href^='#']");if(!a)return;e.preventDefault();set(false);setTimeout(()=>document.querySelector(a.getAttribute("href")).scrollIntoView({behavior:"smooth"}),200)});
+  addEventListener("keydown",e=>{if(e.key==="Escape")set(false)});})();
+if(Hero){ new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting?Hero.play():Hero.stop()),{threshold:.3}).observe($("#top")); }
+if(Flow){ new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting?Flow.play():Flow.stop()),{threshold:.35}).observe($("#flowS")); }
+// dots + active section
+const screens=$$(".screen:not(.end)");
+screens.forEach((sc,i)=>{if(i===0)return;const f=document.createElement("span");f.className="folio";f.setAttribute("aria-hidden","true");f.dir="ltr";f.textContent=String(i+1).padStart(2,"0")+" / "+screens.length;sc.appendChild(f)});
+$("#dots").innerHTML=screens.map((_,i)=>`<button aria-label="${i+1}"></button>`).join("");
+const dots=$$("#dots button");
+dots.forEach((b,i)=>b.addEventListener("click",()=>screens[i].scrollIntoView({behavior:"smooth"})));
+const sio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const i=screens.indexOf(e.target);
+  dots.forEach((d,j)=>d.classList.toggle("on",i===j)); nav.classList.toggle("solid",i>0);}}),{threshold:.55});
+screens.forEach(s=>sio.observe(s));
+// rail arrows
+$$(".rail-ctl button").forEach(b=>b.addEventListener("click",()=>{const r=document.getElementById(b.dataset.rail);
+  const card=r.firstElementChild; const step=card?card.getBoundingClientRect().width+16:300; const rtl=document.documentElement.dir==="rtl";
+  r.scrollBy({left:(+b.dataset.d)*step*(rtl?-1:1),behavior:"smooth"})}));
+// anchor links snap to screen
+$$('a[href^="#"]').forEach(a=>a.addEventListener("click",e=>{const id=a.getAttribute("href");if(id.length<2)return;const t=document.querySelector(id);if(!t)return;e.preventDefault();t.scrollIntoView({behavior:"smooth"})}));
+
+$("#form").addEventListener("submit",e=>{e.preventDefault();const d=T[lang],f=e.target;
+  const n=f.name.value.trim(),b=f.biz.value.trim(); if(!n||!b){$("#err").textContent=d.err;return} $("#err").textContent="";
+  const L=[d.mi,"",`${d.mn}: ${n}`,`${d.mb}: ${b}`]; if(f.ig.value.trim())L.push("Instagram: "+f.ig.value.trim());
+  L.push(`${d.mt}: ${f.type.value}`,`${d.mbud}: ${f.bud.value}`); if(f.msg.value.trim())L.push(`${d.mnote}: ${f.msg.value.trim()}`);
+  const txt=L.join("\n"); $("#out").textContent=txt; $("#wa").href=wa(txt); $("#sent").classList.add("show");});
+$("#cp").addEventListener("click",async()=>{try{await navigator.clipboard.writeText($("#out").textContent);$("#cp span").textContent=T[lang].copied}catch(e){}});
+</script>
+</body>
+</html>
