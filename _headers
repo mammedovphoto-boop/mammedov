@@ -1,0 +1,8 @@
+/*.jpg
+  Cache-Control: public, max-age=2592000, immutable
+/*.mp4
+  Cache-Control: public, max-age=2592000, immutable
+/*.svg
+  Cache-Control: public, max-age=2592000
+/
+  Cache-Control: public, max-age=300
