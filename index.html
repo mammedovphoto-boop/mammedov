@@ -619,6 +619,52 @@ html[dir="rtl"] .hero-media{animation-name:mediaInR}
   .fphoto img{object-position:50% 16%!important}
 }
 @media(max-width:760px) and (max-height:760px){.fphoto{height:30svh!important}}
+
+/* ===== v7 polish ===== */
+.copy-brand{font-family:"Cormorant Garamond",serif;font-weight:600;letter-spacing:.14em;font-size:14px}
+.copy-brand .amp{margin:0 .35em 0 .15em;color:var(--sage-l)}
+.pk-tabs{display:none}
+@media(max-width:760px){
+  /* no side-scrolling anywhere */
+  .rail,.rail.c3,.rail.c4,.rail.swipe{display:grid!important;grid-auto-flow:row!important;grid-template-columns:1fr!important;grid-auto-columns:auto!important;overflow:visible!important;margin-inline:0!important;padding-inline:0!important}
+  /* roadmap: compact vertical timeline */
+  #roadList{gap:0}
+  #roadList .rd{background:none;border:none;border-inline-start:2px solid rgba(207,220,196,.35);border-radius:0;padding:0 0 14px 16px;position:relative}
+  #roadList .rd::before{content:"";position:absolute;inset-inline-start:-6px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--sage-l)}
+  #roadList .rd h3{font-size:19px;margin:2px 0}#roadList .rd p{font-size:13.5px}#roadList .rd .d{font-size:12px}
+  /* packages: segmented tabs, one plan at a time */
+  .pk-tabs{display:flex;gap:4px;margin-top:14px;border:1px solid var(--line);border-radius:var(--r);padding:3px;background:var(--card)}
+  .pk-tabs button{all:unset;flex:1;text-align:center;cursor:pointer;font:700 13.5px var(--sans);padding:9px 4px;border-radius:4px;color:var(--muted)}
+  .pk-tabs button[aria-pressed="true"]{background:var(--olive);color:var(--ivory)}
+  #pkList{padding-top:6px!important;margin-top:10px}
+  #pkList .pkg{display:none}#pkList .pkg.sel{display:flex}
+  #pkList .pkg .badge{position:static;align-self:flex-start;margin-bottom:8px}
+  #pricing .head{flex-direction:column;align-items:flex-start;gap:10px}
+  /* compare: stacked rows that fit the width */
+  .cmp{overflow:visible}
+  .cmp table{min-width:0;display:block}
+  .cmp tbody{display:block}
+  .cmp tr{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line)}
+  .cmp tr:first-child{position:sticky;top:0}
+  .cmp tr:first-child th:first-child{display:none}
+  .cmp th,.cmp td{border:none!important;width:auto!important;padding:6px 6px!important;font-size:12.5px!important;text-align:center}
+  .cmp td:first-child{grid-column:1/-1;text-align:start!important;font-weight:600;padding:8px 10px 0!important;font-size:13px!important}
+  .cmp th{font-size:11.5px!important;line-height:1.25;white-space:normal}
+  .cmp th.us{white-space:nowrap}
+  /* keep content clear of Safari's floating toolbar */
+  .screen{padding-bottom:max(22px,calc(env(safe-area-inset-bottom) + 18px))}
+  .flow-s .stage{height:calc(100svh - var(--navh) - 56px)}
+}
+@media(max-width:760px) and (max-height:760px){#roadList .rd p{display:none}.cmp td{padding:4px!important}}
+
+@media(max-width:760px) and (max-height:700px){
+  html[lang="ar"] #cmpT{line-height:1.45}html[lang="ar"] .cmp+*{display:none}
+  .cmp td:first-child{padding:5px 8px 0!important;font-size:12px!important}
+  .cmp th,.cmp td{padding:3px 4px!important;font-size:11.5px!important}
+  .fphoto{height:22svh!important}.quote{font-size:17px!important}.fgrid .lead{font-size:12.5px!important}.team span{font-size:11.5px;padding:4px 9px}
+}
+
+@container (max-aspect-ratio: 1/1){.flow .k{font-size:3.3cqw!important}}
 </style>
 </head>
 <body>
@@ -760,7 +806,7 @@ html[dir="rtl"] .hero-media{animation-name:mediaInR}
     <p class="eyebrow rv" data-i="rd_k"></p>
     <h2 class="rv" data-ih="rd_h"></h2>
     <div class="rail c4 mt" id="roadList"></div>
-    <p class="swipe-hint" style="color:rgba(244,241,235,.7)" data-i="swipe"></p>
+    
   </div>
 </section>
 
@@ -844,8 +890,9 @@ html[dir="rtl"] .hero-media{animation-name:mediaInR}
   <div class="wrap">
     <div class="head"><div><p class="eyebrow rv" data-i="pk_k"></p>
     <h2 class="rv" data-ih="pk_h"></h2></div><div class="curs" role="group" aria-label="Currency"><button data-cur="AED">AED</button><button data-cur="USD">USD</button><button data-cur="TMT">TMT</button></div></div>
+    <div class="pk-tabs" id="pkTabs" role="group"></div>
     <div class="rail c3 mt" id="pkList" style="padding-top:14px"></div>
-    <p class="swipe-hint" data-i="swipe"></p>
+    
     <p class="pk-note hide-m" data-i="pk_note"></p>
   </div>
 </section>
@@ -889,17 +936,17 @@ html[dir="rtl"] .hero-media{animation-name:mediaInR}
   <div class="wrap">
     <div class="fbig" dir="ltr">MAMMEDOV<span class="amp">&amp;</span>CO.</div>
     <div class="frow"><span data-i="ft_p"></span><a id="fwa" href="#" target="_blank" rel="noopener" dir="ltr"></a></div>
-    <div class="frow" style="font-size:12.5px"><span dir="ltr">© 2026 MAMMEDOV &amp; CO.</span><span>English · Русский · العربية · Türkmençe</span></div>
+    <div class="frow" style="font-size:12.5px"><span dir="ltr" class="copy-brand">© 2026 MAMMEDOV<span class="amp">&amp;</span>CO.</span><span>English · Русский · العربية · Türkmençe</span></div>
   </div>
 </footer>
 
 <script>
 
 const FLOW_T={
- en:{h:"From one second on a phone <em>to revenue in your account.</em>",k1:"01 · Attention",v1:"1 sec",l1:"A Reel stops the scroll",k2:"02 · Conversation",u2:"/ day",l2:"messages in Direct at ≈{cpc} each",k3:"03 · Booking",l3:"confirmed bookings a month",k4:"04 · Revenue",l4:"a month from one ad flow",fn:"Illustration: flow from our spa case (20 conversations a day), 15% booking rate, {chk} average check.",cta:"Check your numbers in a free audit"},
- ru:{h:"От одной секунды в телефоне <em>до выручки на вашем счёте.</em>",k1:"01 · Внимание",v1:"1 сек",l1:"Рилс останавливает ленту",k2:"02 · Диалог",u2:"/ день",l2:"переписок в директе по ≈{cpc}",k3:"03 · Запись",l3:"подтверждённых записей в месяц",k4:"04 · Выручка",l4:"в месяц с одного рекламного потока",fn:"Иллюстрация: поток из нашего спа-кейса (20 переписок в день), 15% записей, средний чек {chk}.",cta:"Проверим ваши цифры на бесплатном аудите"},
- tk:{h:"Telefondaky bir sekuntdan <em>hasabyňyzdaky girdejä çenli.</em>",k1:"01 · Üns",v1:"1 sek",l1:"Reels lentany saklaýar",k2:"02 · Gepleşik",u2:"/ gün",l2:"Direct-de ýazyşyk, her biri ≈{cpc}",k3:"03 · Ýazylyş",l3:"aýda tassyklanan ýazylyş",k4:"04 · Girdeji",l4:"bir mahabat akymyndan aýda",fn:"Mysal: spa keýsimizdäki akym (günde 20 ýazyşyk), 15% ýazylyş, ortaça çek {chk}.",cta:"Sanlaryňyzy mugt auditde barlarys"},
- ar:{h:"من ثانية واحدة على الهاتف <em>إلى إيرادات في حسابك.</em>",k1:"01 · الانتباه",v1:"ثانية",l1:"ريلز يوقف التمرير",k2:"02 · المحادثة",u2:"/ يومياً",l2:"رسائل بتكلفة ≈{cpc} لكل منها",k3:"03 · الحجز",l3:"حجزاً مؤكداً شهرياً",k4:"04 · الإيرادات",l4:"شهرياً من تدفّق إعلاني واحد",fn:"توضيح: تدفّق من دراسة حالة السبا لدينا (20 محادثة يومياً)، ونسبة حجز 15%، ومتوسط فاتورة {chk}.",cta:"نراجع أرقامك في تدقيق مجاني"}
+ en:{h:"From one second on a phone <em>to revenue in your account.</em>",k1:"01 Attention",v1:"1 sec",l1:"A Reel stops the scroll",k2:"02 Conversation",u2:"/ day",l2:"messages in Direct at ≈{cpc} each",k3:"03 Booking",l3:"confirmed bookings a month",k4:"04 Revenue",l4:"a month from one ad flow",fn:"Illustration: flow from our spa case (20 conversations a day), 15% booking rate, {chk} average check.",cta:"Check your numbers in a free audit"},
+ ru:{h:"От одной секунды в телефоне <em>до выручки на вашем счёте.</em>",k1:"01 Внимание",v1:"1 сек",l1:"Рилс останавливает ленту",k2:"02 Диалог",u2:"/ день",l2:"переписок в директе по ≈{cpc}",k3:"03 Запись",l3:"подтверждённых записей в месяц",k4:"04 Выручка",l4:"в месяц с одного рекламного потока",fn:"Иллюстрация: поток из нашего спа-кейса (20 переписок в день), 15% записей, средний чек {chk}.",cta:"Проверим ваши цифры на бесплатном аудите"},
+ tk:{h:"Telefondaky bir sekuntdan <em>hasabyňyzdaky girdejä çenli.</em>",k1:"01 Üns",v1:"1 sek",l1:"Reels lentany saklaýar",k2:"02 Gepleşik",u2:"/ gün",l2:"Direct-de ýazyşyk, her biri ≈{cpc}",k3:"03 Ýazylyş",l3:"aýda tassyklanan ýazylyş",k4:"04 Girdeji",l4:"bir mahabat akymyndan aýda",fn:"Mysal: spa keýsimizdäki akym (günde 20 ýazyşyk), 15% ýazylyş, ortaça çek {chk}.",cta:"Sanlaryňyzy mugt auditde barlarys"},
+ ar:{h:"من ثانية واحدة على الهاتف <em>إلى إيرادات في حسابك.</em>",k1:"01 الانتباه",v1:"ثانية",l1:"ريلز يوقف التمرير",k2:"02 المحادثة",u2:"/ يومياً",l2:"رسائل بتكلفة ≈{cpc} لكل منها",k3:"03 الحجز",l3:"حجزاً مؤكداً شهرياً",k4:"04 الإيرادات",l4:"شهرياً من تدفّق إعلاني واحد",fn:"توضيح: تدفّق من دراسة حالة السبا لدينا (20 محادثة يومياً)، ونسبة حجز 15%، ومتوسط فاتورة {chk}.",cta:"نراجع أرقامك في تدقيق مجاني"}
 };
 const Flow=(function(){
   const root=document.getElementById("flow"); if(!root) return null;
@@ -1020,35 +1067,35 @@ hero_s:"Strategy, targeted ads, SMM, AI production, websites and sales in Direct
 cta1:"Get a free audit", cta2:"What we do",
 cap_a:"Jumeirah Beach Rd · 19:40", cap_b:"She hasn't decided yet.",
 strip:["Beauty & wellness","Tourism","Real estate","Hospitality & entertainment","English · Русский · العربية · Türkmençe"],
-pa_k:"Sound familiar?", pa_h:"Money goes into advertising. <em>Clients don't come out.</em>",
-pains:[["Ads bring likes, not bookings","Budget is spent on boosted posts and reach, while the calendar stays half-empty."],["Leads go cold in Direct","Messages are answered hours later, without a script — and the client books with a competitor."],["Content without a plan","Posts are made when there is time. The profile doesn't sell and doesn't look premium."],["No one owns the result","A targeting freelancer, an SMM manager and a designer — and no one answers for revenue."]],
+pa_k:"Sound familiar?", pa_h:"Money goes into ads. <em>Clients don't come in.</em>",
+pains:[["Ads bring likes, not bookings","The budget goes into boosted posts and reach, while the calendar stays half-empty."],["Leads go cold in Direct","Messages are answered hours later, without a script — and the client books with a competitor."],["Content without a plan","Posts are made when there is time. The profile doesn't sell and doesn't look premium."],["No one owns the result","A targeting freelancer, an SMM manager and a designer — and no one answers for revenue."]],
 sv_k:"Services", sv_h:"Everything that brings a client — <em>under one roof.</em>", sv_p:"Each service can be taken separately, but the strongest result comes when they work as one system.",
 svcs:[
 ["Strategy & audit","We find where money leaks and build a plan around one number: the cost of a paying client.",["Audit of ad account, Direct and website","Competitor ad analysis","Offer and pricing review","Growth plan with target metrics"],"A clear plan and target cost per client"],
 ["Targeted advertising","Meta Ads — Instagram and Facebook, built around enquiries, not likes.",["Campaign architecture and audiences","Lookalikes and exclusions of current clients","Pixel, conversion and Direct tracking","Daily optimisation and A/B tests"],"A stable daily flow of qualified enquiries"],
-["SMM & content","A profile that looks premium and sells between ads.",["Content strategy and monthly plan","Reels, carousels, stories","Copywriting in EN / RU / AR","Profile and highlights redesign"],"A profile that converts visitors into enquiries"],
+["SMM & content","A profile that looks premium and sells between ads.",["Content strategy and monthly plan","Reels, carousels, stories","Copywriting in English, Russian and Arabic","Profile and highlights redesign"],"A profile that converts visitors into enquiries"],
 ["AI production","Cinematic photo and video created with AI — without the cost and time of a full shoot.",["Campaign key visuals","Ad creatives in many variations","Short video for Reels and ads","Upscaling and retouching of your photos"],"Premium visuals in days, not weeks","Every image and video on this site was made in our studio"],
 ["Websites & funnels","Fast multilingual landing pages built for one goal — an enquiry.",["Landing page in 2–3 languages","Mobile-first design","WhatsApp and form integration","Analytics and conversion tracking"],"A site that turns ad clicks into enquiries","This website is our work"],
 ["Sales in Direct","The step most agencies skip: turning a message into a booking.",["Reply scripts and follow-up chains","Objection handling","Training for your front desk","Or live handling of Direct by us"],"More bookings from the same number of enquiries"]],
 rd_k:"The first 30 days", rd_h:"What happens <em>after you say yes.</em>",
 road:[["Week 1","Audit & plan","Full audit, competitor analysis, offer and a growth plan with target numbers."],["Week 2","Launch","New ad structure, first creatives, tracking, Direct scripts."],["Week 3","Optimise","Daily tests: creatives, audiences, offers. We cut what doesn't work."],["Week 4","Report & scale","Report in plain language: spend, enquiries, bookings, cost per client. Plan for month two."]],
 roi_k:"Return on investment", roi_h:"Count it yourself — <em>before you pay us.</em>", roi_p:"Move the sliders to your numbers. With our spa client the flow reached up to 20 conversations a day — see what that means for your business.",
-c1:"Conversations per day", c2:"Share that book, %", c3:"Average check", c_book:"Bookings per month", c_rev:"Revenue per month", c_note:"Illustrative calculation, not a guarantee. Results depend on niche, offer and budget.",
+c1:"Conversations per day", c2:"Booking rate, %", c3:"Average check", c_book:"Bookings per month", c_rev:"Revenue per month", c_note:"Illustrative calculation, not a guarantee. Results depend on niche, offer and budget.",
 in_k:"Industries", in_h:"Experience where competition is <em>the hardest.</em>",
 inds:[["02-empty.jpg","Beauty & wellness","Spas, salons, aesthetic clinics","Filling treatment rooms through Instagram Direct. See our case below."],["06-tourism.jpg","Tourism","Tours and desert experiences","Selling the feeling before the price — and turning interest into bookings."],["07-realestate.jpg","Real estate","Premium and off-plan property","Qualified leads for viewings, filtered by budget and intent."],["08-entertainment.jpg","Entertainment","High-competition niches","About a year in a segment with strict platform rules and expensive audiences."]],
 cs_k:"Case study", cs_h:"Premium ladies-only spa, Jumeirah. <em>Three weeks.</em>", cs_p:"A beautiful product and an ad account working against it. We rebuilt the system end to end — structure, offers, creative and the conversation itself.", cs_c:"Client name withheld under confidentiality",
 s1a:"up to", s1:"new conversations in Direct per day", s2a:"about", s2:"cost per conversation", s3:"weeks to a stable daily flow", s4:"seasonal campaigns sold in Direct: Spa Day 599 and Flag Day 333",
 wks:[["Week 1","Audit & architecture","New Meta structure around Instagram Direct: engaged audiences, lookalikes and exclusions of existing clients."],["Week 2","Offers & creative","Spa Day package, Reels, carousels and static ads in the brand's own visual language."],["Week 3","Selling in Direct","Reply scripts, follow-ups and live handling of every conversation until the booking was confirmed."]],
 cm_k:"Why us", cm_h:"What you get <em>compared to the usual options.</em>",
-cmp:[["","Freelancer","Typical agency","MAMMEDOV & CO."],["Strategy and growth plan","n","y","y"],["Targeted advertising","y","y","y"],["SMM and content","n","p","y"],["AI photo and video production","n","n","y"],["Website / landing page","n","p","y"],["Sales scripts and Direct handling","n","n","y"],["Founder personally on your project","y","n","y"],["Weekly report in plain language","p","p","y"]],
+cmp:[["","Freelancer","Typical agency","MAMMEDOV\u00a0&\u00a0CO."],["Strategy and growth plan","n","y","y"],["Targeted advertising","y","y","y"],["SMM and content","n","p","y"],["AI photo and video production","n","n","y"],["Website / landing page","n","p","y"],["Sales scripts and Direct handling","n","n","y"],["Founder personally on your project","y","n","y"],["Weekly report in plain language","p","p","y"]],
 cmp_l:{y:"✓",n:"—",p:"partly"},
 f_k:"Founder", f_q:"“You speak with the person responsible for the result — not with an account manager.”", f_role:"Founder & Head of Strategy",
 f_p:"I personally lead every project together with my team of specialists in advertising, content and web development. We take a limited number of clients at a time, so each one gets full attention.",
 team:["Targeting","SMM","AI production","Web development","Sales in Direct"],
-pk_k:"Packages", pk_h:"Choose the level — <em>scale when it works.</em>",
+pk_k:"Packages", pk_h:"Choose your level. <em>Scale once you see results.</em>",
 pks:[["Performance","For businesses that already have content and need a flow of enquiries",["Strategy and audit","Meta Ads management","Creatives for ads (AI production)","Weekly report"]],["Growth","For businesses that want enquiries and a premium profile",["Everything in Performance","SMM: content plan, Reels, carousels","Direct scripts and team training","Monthly strategy session"],"Most chosen"],["Full house","For a full launch or relaunch of the brand online",["Everything in Growth","Landing page in 2–3 languages","Extended AI photo and video production","Live handling of Direct by us"]]],
 pk_from:"from", pk_mo:"AED / month", pk_btn:"Discuss this package", pk_note:"Advertising budget is paid separately, directly to the platforms. Exact scope and price are agreed after the free audit.",
-fq_k:"Questions", fq_h:"Before you <em>write to us.</em>",
+fq_k:"Questions", fq_h:"Questions we hear <em>most often.</em>",
 faq:[["How soon will we see results?","First enquiries usually come within the first week after launch. A stable, optimised flow takes about 3–4 weeks of testing."],["What ad budget do we need?","It depends on niche and goals. We recommend a figure after the audit — so you don't overpay and don't under-invest."],["Is there a long-term contract?","We work month to month. If the result suits you, we continue; if not, you're free to stop."],["Do you work in Arabic?","Yes. Content, ads and the website can be in English, Russian, Arabic and Turkmen."],["How will we know what our money does?","Every week you get a short report in plain language: spend, enquiries, bookings and the cost of one client."]],
 a_k:"Free mini-audit", a_h:"See what your advertising is <em>really</em> doing.", a_p:"Within 12 hours — a short, personal audit of your current advertising. Whether or not we work together.",
 gets:["Where your budget is leaking","What your strongest competitors are running now","Three changes you can make tomorrow"],
@@ -1068,37 +1115,37 @@ cta1:"Получить бесплатный аудит", cta2:"Что мы де�
 cap_a:"Jumeirah Beach Rd · 19:40", cap_b:"Она ещё не решила.",
 strip:["Beauty и wellness","Туризм","Недвижимость","Гостеприимство и развлечения","English · Русский · العربية · Türkmençe"],
 pa_k:"Знакомо?", pa_h:"Деньги в рекламу уходят. <em>Клиенты не приходят.</em>",
-pains:[["Реклама даёт лайки, а не записи","Бюджет уходит на продвижение постов и охваты, а расписание остаётся полупустым."],["Заявки остывают в директе","Отвечают через несколько часов и без скрипта — и клиент записывается к конкуренту."],["Контент без плана","Посты выходят, когда есть время. Профиль не продаёт и не выглядит премиально."],["За результат никто не отвечает","Таргетолог, SMM-щик и дизайнер по отдельности — а за выручку не отвечает никто."]],
+pains:[["Реклама даёт лайки, а не записи","Бюджет тратится на продвижение постов ради охвата, а расписание остаётся полупустым."],["Заявки остывают в директе","Отвечают через несколько часов и без скрипта — и клиент записывается к конкуренту."],["Контент без плана","Посты выходят, когда есть время. Профиль не продаёт и не выглядит премиально."],["За результат никто не отвечает","Таргетолог, SMM-менеджер и дизайнер работают по отдельности — а за выручку не отвечает никто."]],
 sv_k:"Услуги", sv_h:"Всё, что приводит клиента, — <em>в одних руках.</em>", sv_p:"Каждую услугу можно взять отдельно, но сильнее всего результат, когда они работают как одна система.",
 svcs:[
 ["Стратегия и аудит","Находим, где утекают деньги, и строим план вокруг одной цифры — стоимости платящего клиента.",["Аудит кабинета, директа и сайта","Анализ рекламы конкурентов","Разбор оффера и цен","План роста с целевыми метриками"],"Понятный план и целевая стоимость клиента"],
 ["Таргетированная реклама","Meta Ads — Instagram и Facebook, настроенные на заявки, а не на лайки.",["Архитектура кампаний и аудитории","Lookalike и исключение текущих клиентов","Пиксель, конверсии, отслеживание директа","Ежедневная оптимизация и A/B-тесты"],"Стабильный ежедневный поток целевых заявок"],
-["SMM и контент","Профиль, который выглядит премиально и продаёт между рекламными кампаниями.",["Контент-стратегия и план на месяц","Рилсы, карусели, сторис","Тексты на EN / RU / AR","Редизайн профиля и хайлайтсов"],"Профиль, который превращает посетителей в заявки"],
-["ИИ-продакшн","Фото и видео уровня кино с помощью ИИ — без затрат и сроков полноценной съёмки.",["Ключевые визуалы кампаний","Рекламные креативы во множестве вариантов","Короткие видео для рилсов и рекламы","Улучшение и ретушь ваших фото"],"Премиальные визуалы за дни, а не недели","Все фото и видео на этом сайте сделаны в нашей студии"],
+["SMM и контент","Профиль, который выглядит премиально и продаёт между рекламными кампаниями.",["Контент-стратегия и план на месяц","Рилсы, карусели, сторис","Тексты на английском, русском и арабском","Редизайн профиля и хайлайтсов"],"Профиль, который превращает посетителей в заявки"],
+["ИИ-продакшн","Фото и видео уровня кино с помощью ИИ — без затрат и сроков полноценной съёмки.",["Ключевые визуалы кампаний","Рекламные креативы во множестве вариантов","Короткие видео для рилсов и рекламы","Улучшение и ретушь ваших фото"],"Премиальные визуалы за дни, а не за недели","Все фото и видео на этом сайте сделаны в нашей студии"],
 ["Сайты и воронки","Быстрые лендинги на нескольких языках с одной целью — заявка.",["Лендинг на 2–3 языках","Дизайн в первую очередь под телефон","Интеграция WhatsApp и формы","Аналитика и отслеживание конверсий"],"Сайт, который превращает клики в заявки","Этот сайт — наша работа"],
-["Продажи в директе","Шаг, который пропускает большинство агентств: превратить сообщение в запись.",["Скрипты ответов и цепочки дожима","Работа с возражениями","Обучение администраторов","Или ведение директа нами"],"Больше записей с того же количества заявок"]],
+["Продажи в директе","Шаг, который пропускает большинство агентств: превратить сообщение в запись.",["Скрипты ответов и цепочки дожима","Работа с возражениями","Обучение администраторов","Или ведём директ за вас"],"Больше записей с того же количества заявок"]],
 rd_k:"Первые 30 дней", rd_h:"Что происходит <em>после вашего «да».</em>",
 road:[["Неделя 1","Аудит и план","Полный аудит, анализ конкурентов, оффер и план роста с целевыми цифрами."],["Неделя 2","Запуск","Новая структура рекламы, первые креативы, аналитика, скрипты для директа."],["Неделя 3","Оптимизация","Ежедневные тесты креативов, аудиторий и офферов. Отключаем то, что не работает."],["Неделя 4","Отчёт и масштаб","Отчёт простым языком: расход, заявки, записи, стоимость клиента. План на второй месяц."]],
-roi_k:"Окупаемость", roi_h:"Посчитайте сами — <em>до того, как платить нам.</em>", roi_p:"Подставьте свои цифры. У нашего клиента-спа поток доходил до 20 переписок в день — посмотрите, что это значит для вашего бизнеса.",
+roi_k:"Окупаемость", roi_h:"Посчитайте сами — <em>до того, как платить нам.</em>", roi_p:"Подставьте свои цифры. У нашего клиента — спа-салона — поток доходил до 20 переписок в день — посмотрите, что это значит для вашего бизнеса.",
 c1:"Переписок в день", c2:"Доля записавшихся, %", c3:"Средний чек", c_book:"Записей в месяц", c_rev:"Выручка в месяц", c_note:"Расчёт иллюстративный, не гарантия. Результат зависит от ниши, оффера и бюджета.",
 in_k:"Отрасли", in_h:"Опыт там, где конкуренция <em>жёстче всего.</em>",
 inds:[["02-empty.jpg","Beauty и wellness","Спа, салоны, эстетические клиники","Заполняем кабинеты через Instagram Direct. Кейс — ниже."],["06-tourism.jpg","Туризм","Туры и пустыня","Продаём ощущение раньше цены — и превращаем интерес в бронирования."],["07-realestate.jpg","Недвижимость","Премиальные объекты и off-plan","Квалифицированные заявки на показы с фильтром по бюджету и намерению."],["08-entertainment.jpg","Развлечения","Высококонкурентные ниши","Около года в сегменте со строгими правилами площадок и дорогими аудиториями."]],
-cs_k:"Кейс", cs_h:"Премиальный ladies-only спа, Джумейра. <em>Три недели.</em>", cs_p:"Прекрасный продукт и рекламный кабинет, который работал против него. Мы перестроили систему целиком: структуру, офферы, креативы и сам диалог с клиентом.", cs_c:"Название клиента не раскрывается по договорённости о конфиденциальности",
+cs_k:"Кейс", cs_h:"Премиальное ladies-only спа, Джумейра. <em>Три недели.</em>", cs_p:"Прекрасный продукт и рекламный кабинет, который работал против него. Мы перестроили систему целиком: структуру, офферы, креативы и сам диалог с клиентом.", cs_c:"Название клиента не раскрывается по договорённости о конфиденциальности",
 s1a:"до", s1:"новых переписок в директе в день", s2a:"около", s2:"стоимость одной переписки", s3:"недели до стабильного ежедневного потока", s4:"сезонные акции, проданные в директе: Spa Day 599 и Flag Day 333",
-wks:[["Неделя 1","Аудит и архитектура","Новая структура Meta под Instagram Direct: вовлечённые аудитории, lookalike и исключение действующих клиентов."],["Неделя 2","Офферы и креативы","Пакет Spa Day, рилсы, карусели и статика в визуальном языке бренда."],["Неделя 3","Продажи в директе","Скрипты, дожимы и ведение каждой переписки до подтверждённой записи."]],
+wks:[["Неделя 1","Аудит и архитектура","Новая структура Meta под Instagram Direct: вовлечённые аудитории, lookalike и исключение действующих клиентов."],["Неделя 2","Офферы и креативы","Пакет Spa Day, рилсы, карусели и статика на визуальном языке бренда."],["Неделя 3","Продажи в директе","Скрипты, дожимы и ведение каждой переписки до подтверждённой записи."]],
 cm_k:"Почему мы", cm_h:"Что вы получаете <em>в сравнении с привычными вариантами.</em>",
-cmp:[["","Фрилансер","Обычное агентство","MAMMEDOV & CO."],["Стратегия и план роста","n","y","y"],["Таргетированная реклама","y","y","y"],["SMM и контент","n","p","y"],["ИИ-продакшн фото и видео","n","n","y"],["Сайт / лендинг","n","p","y"],["Скрипты продаж и ведение директа","n","n","y"],["Основатель лично на вашем проекте","y","n","y"],["Еженедельный отчёт простым языком","p","p","y"]],
+cmp:[["","Фрилансер","Обычное агентство","MAMMEDOV\u00a0&\u00a0CO."],["Стратегия и план роста","n","y","y"],["Таргетированная реклама","y","y","y"],["SMM и контент","n","p","y"],["ИИ-продакшн фото и видео","n","n","y"],["Сайт / лендинг","n","p","y"],["Скрипты продаж и ведение директа","n","n","y"],["Основатель лично на вашем проекте","y","n","y"],["Еженедельный отчёт простым языком","p","p","y"]],
 cmp_l:{y:"✓",n:"—",p:"частично"},
 f_k:"Основатель", f_q:"«Вы общаетесь с человеком, который отвечает за результат, а не с аккаунт-менеджером».", f_role:"Основатель и руководитель стратегии",
 f_p:"Я лично веду каждый проект вместе со своей командой специалистов по рекламе, контенту и веб-разработке. Мы берём ограниченное число клиентов одновременно, чтобы каждый получал полное внимание.",
 team:["Таргет","SMM","ИИ-продакшн","Веб-разработка","Продажи в директе"],
-pk_k:"Пакеты", pk_h:"Выберите уровень — <em>масштабируйте, когда работает.</em>",
-pks:[["Performance","Для бизнеса, у которого уже есть контент и нужен поток заявок",["Стратегия и аудит","Ведение Meta Ads","Рекламные креативы (ИИ-продакшн)","Еженедельный отчёт"]],["Growth","Для бизнеса, которому нужны заявки и премиальный профиль",["Всё из Performance","SMM: контент-план, рилсы, карусели","Скрипты директа и обучение команды","Ежемесячная стратегическая сессия"],"Чаще всего выбирают"],["Full house","Для полного запуска или перезапуска бренда онлайн",["Всё из Growth","Лендинг на 2–3 языках","Расширенный ИИ-продакшн фото и видео","Ведение директа нами"]]],
+pk_k:"Пакеты", pk_h:"Выберите уровень. <em>Расширяйтесь, когда увидите результат.</em>",
+pks:[["Performance","Для бизнеса, у которого уже есть контент и нужен поток заявок",["Стратегия и аудит","Ведение Meta Ads","Рекламные креативы (ИИ-продакшн)","Еженедельный отчёт"]],["Growth","Для бизнеса, которому нужны заявки и премиальный профиль",["Всё из Performance","SMM: контент-план, рилсы, карусели","Скрипты директа и обучение команды","Ежемесячная стратегическая сессия"],"Чаще всего выбирают"],["Full house","Для полного запуска или перезапуска бренда онлайн",["Всё из Growth","Лендинг на 2–3 языках","Расширенный ИИ-продакшн фото и видео","Ведём директ за вас"]]],
 pk_from:"от", pk_mo:"AED / мес", pk_btn:"Обсудить пакет", pk_note:"Рекламный бюджет оплачивается отдельно, напрямую площадкам. Точный объём работ и цена — после бесплатного аудита.",
-fq_k:"Вопросы", fq_h:"Прежде чем <em>написать нам.</em>",
-faq:[["Когда будут первые результаты?","Первые заявки обычно приходят в первую неделю после запуска. Стабильный оптимизированный поток — примерно через 3–4 недели тестов."],["Какой нужен рекламный бюджет?","Зависит от ниши и целей. Мы назовём цифру после аудита — чтобы вы не переплачивали и не недовкладывали."],["Есть ли долгосрочный договор?","Работаем помесячно. Устраивает результат — продолжаем; нет — вы свободны остановиться."],["Работаете на арабском?","Да. Контент, реклама и сайт — на английском, русском, арабском и туркменском."],["Как мы поймём, что делают наши деньги?","Каждую неделю — короткий отчёт простым языком: расход, заявки, записи и стоимость одного клиента."]],
+fq_k:"Вопросы", fq_h:"Вопросы, которые нам задают <em>чаще всего.</em>",
+faq:[["Когда будут первые результаты?","Первые заявки обычно приходят в первую неделю после запуска. Стабильный оптимизированный поток — примерно через 3–4 недели тестов."],["Какой нужен рекламный бюджет?","Зависит от ниши и целей. Мы назовём цифру после аудита — чтобы вы не переплачивали и не экономили там, где нельзя."],["Есть ли долгосрочный договор?","Работаем помесячно. Устраивает результат — продолжаем; если нет, вы можете остановиться в любой момент."],["Работаете на арабском?","Да. Контент, реклама и сайт — на английском, русском, арабском и туркменском."],["Как мы поймём, что делают наши деньги?","Каждую неделю — короткий отчёт простым языком: расход, заявки, записи и стоимость одного клиента."]],
 a_k:"Бесплатный мини-аудит", a_h:"Узнайте, что ваша реклама делает <em>на самом деле.</em>", a_p:"В течение 12 часов — короткий персональный аудит вашей текущей рекламы. Независимо от того, будем ли мы работать вместе.",
-gets:["Где утекает ваш бюджет","Что сейчас крутят ваши сильнейшие конкуренты","Три изменения, которые можно внедрить завтра"],
+gets:["Куда уходит ваш бюджет","Что сейчас крутят ваши сильнейшие конкуренты","Три изменения, которые можно внедрить завтра"],
 f_name:"Ваше имя", f_biz:"Название бизнеса", f_type:"Отрасль", types:["Beauty и wellness","Туризм","Недвижимость","Гостеприимство и развлечения","Другое"],
 f_bud:"Текущий рекламный бюджет в месяц", buds:["Пока не рекламируемся","До 5 000 AED","5 000 – 15 000 AED","15 000 – 30 000 AED","Более 30 000 AED"],
 f_msg:"Что нам стоит знать? (необязательно)", f_note:"Заявка отправляется через WhatsApp. На сайте ничего не сохраняется.", f_btn:"Получить аудит",
@@ -1136,15 +1183,15 @@ cs_k:"Keýs", cs_h:"Premium ladies-only spa, Jumeýra. <em>Üç hepde.</em>", cs
 s1a:"iň köp", s1:"günde Direct-de täze ýazyşyk", s2a:"takmynan", s2:"bir ýazyşygyň bahasy", s3:"hepdede yzygiderli gündelik akym", s4:"Direct-de satylan möwsümleýin aksiýa: Spa Day 599 we Flag Day 333",
 wks:[["1-nji hepde","Audit we gurluş","Instagram Direct üçin Meta-nyň täze gurluşy: işjeň auditoriýalar, lookalike we häzirki müşderileri aýyrmak."],["2-nji hepde","Teklipler we kreatiwler","Spa Day paketi, Reels, karuseller we brendiň öz wizual dilinde statik mahabat."],["3-nji hepde","Direct-de satuw","Jogap skriptleri, yzarlaýyş we her ýazyşygy ýazylyş tassyklanýança alyp barmak."]],
 cm_k:"Näme üçin biz", cm_h:"Adaty görnüşler bilen deňeşdirende <em>näme alýarsyňyz.</em>",
-cmp:[["","Frilanser","Adaty agentlik","MAMMEDOV & CO."],["Strategiýa we ösüş meýilnamasy","n","y","y"],["Nyşanaly mahabat","y","y","y"],["SMM we kontent","n","p","y"],["Emeli aň bilen surat we wideo","n","n","y"],["Saýt / lending","n","p","y"],["Satuw skriptleri we Direct","n","n","y"],["Esaslandyryjy özi taslamaňyzda","y","n","y"],["Ýönekeý dilde hepdelik hasabat","p","p","y"]],
+cmp:[["","Frilanser","Adaty agentlik","MAMMEDOV\u00a0&\u00a0CO."],["Strategiýa we ösüş meýilnamasy","n","y","y"],["Nyşanaly mahabat","y","y","y"],["SMM we kontent","n","p","y"],["Emeli aň bilen surat we wideo","n","n","y"],["Saýt / lending","n","p","y"],["Satuw skriptleri we Direct","n","n","y"],["Esaslandyryjy özi taslamaňyzda","y","n","y"],["Ýönekeý dilde hepdelik hasabat","p","p","y"]],
 cmp_l:{y:"✓",n:"—",p:"bölekleýin"},
 f_k:"Esaslandyryjy", f_q:"«Siz hasap menejeri bilen däl-de, netije üçin jogapkär adam bilen gürleşýärsiňiz.»", f_role:"Esaslandyryjy we strategiýa ýolbaşçysy",
 f_p:"Her taslamany mahabat, kontent we web işläp taýýarlamak boýunça hünärmenlerden ybarat toparym bilen bilelikde özüm alyp barýaryn. Her müşderä doly üns bermek üçin bir wagtda çäkli sanly müşderi bilen işleýäris.",
 team:["Target","SMM","Emeli aň önümçiligi","Web işläp taýýarlamak","Direct-de satuw"],
-pk_k:"Paketler", pk_h:"Derejäni saýlaň — <em>işlände giňeldiň.</em>",
+pk_k:"Paketler", pk_h:"Derejäni saýlaň. <em>Netijäni görenden soň giňeldiň.</em>",
 pks:[["Performance","Kontenti bar we ýüzlenme akymy gerek bolan işler üçin",["Strategiýa we audit","Meta Ads-y alyp barmak","Mahabat kreatiwleri (emeli aň)","Hepdelik hasabat"]],["Growth","Ýüzlenmeler we premium profil isleýän işler üçin",["Performance-daky ähli zat","SMM: kontent meýilnamasy, Reels, karuseller","Direct skriptleri we topary okatmak","Aýlyk strategiki duşuşyk"],"Iň köp saýlanýar"],["Full house","Brendi onlaýnda doly işe girizmek ýa-da täzeden başlatmak üçin",["Growth-daky ähli zat","2–3 dilde lending","Giňeldilen emeli aň surat we wideo önümçiligi","Direct-i biz alyp barýarys"]]],
 pk_from:"iň az", pk_mo:"/ aý", pk_btn:"Paketi maslahatlaşalyň", pk_note:"Mahabat býudjeti aýratyn, gönüden-göni platformalara tölenýär. Takyk iş göwrümi we baha mugt auditden soň ylalaşylýar.",
-fq_k:"Soraglar", fq_h:"Bize <em>ýazmazdan öň.</em>",
+fq_k:"Soraglar", fq_h:"Bize iň köp berilýän <em>soraglar.</em>",
 faq:[["Ilkinji netijeler haçan bolar?","Ilkinji ýüzlenmeler adatça işe girizilenden soňky ilkinji hepdede gelýär. Yzygiderli, optimizirlenen akym üçin takmynan 3–4 hepde synag gerek."],["Nähili mahabat býudjeti gerek?","Ugra we maksatlara bagly. Artykmaç tölemezligiňiz we az goýmazlygyňyz üçin sany auditden soň maslahat berýäris."],["Uzak möhletli şertnama barmy?","Aýba-aý işleýäris. Netije kanagatlandyrsa dowam edýäris; ýogsa islän wagtyňyz togtadyp bilersiňiz."],["Türkmen dilinde işleýärsiňizmi?","Hawa. Kontent, mahabat we saýt türkmen, rus, iňlis we arap dillerinde bolup biler."],["Pulumyzyň näme edýändigini nädip bileris?","Her hepde ýönekeý dilde gysga hasabat alýarsyňyz: çykdajy, ýüzlenmeler, ýazylyşlar we bir müşderiniň bahasy."]],
 a_k:"Mugt mini-audit", a_h:"Mahabatyňyzyň <em>hakykatda</em> näme edýändigini biliň.", a_p:"12 sagadyň dowamynda — häzirki mahabatyňyzyň gysga, şahsy auditi. Bilelikde işlesek-de, işlemesek-de.",
 gets:["Býudjetiňiz nireden akýar","Iň güýçli bäsdeşleriňiz häzir näme mahabat berýär","Ertir girizip boljak üç üýtgeşme"],
@@ -1183,15 +1230,15 @@ cs_k:"دراسة حالة", cs_h:"سبا فاخر للسيدات فقط، جمي
 s1a:"حتى", s1:"محادثة جديدة في الرسائل يومياً", s2a:"حوالي", s2:"تكلفة المحادثة الواحدة", s3:"أسابيع حتى تدفّق يومي ثابت", s4:"حملتان موسميتان بيعتا عبر الرسائل: Spa Day 599 و Flag Day 333",
 wks:[["الأسبوع 1","التدقيق والهيكلة","هيكل جديد في ميتا حول رسائل إنستغرام: جماهير متفاعلة، وجماهير مشابهة، واستبعاد العملاء الحاليين."],["الأسبوع 2","العروض والمحتوى","باقة Spa Day، وريلز، وكاروسيل، وإعلانات ثابتة بلغة العلامة البصرية."],["الأسبوع 3","البيع في الرسائل","نصوص الرد، والمتابعات، وإدارة كل محادثة حتى تأكيد الحجز."]],
 cm_k:"لماذا نحن", cm_h:"ما الذي تحصل عليه <em>مقارنة بالخيارات المعتادة.</em>",
-cmp:[["","مستقل","وكالة تقليدية","MAMMEDOV & CO."],["الاستراتيجية وخطة النمو","n","y","y"],["الإعلانات الموجّهة","y","y","y"],["التواصل الاجتماعي والمحتوى","n","p","y"],["إنتاج الصور والفيديو بالذكاء الاصطناعي","n","n","y"],["الموقع / صفحة الهبوط","n","p","y"],["نصوص البيع وإدارة الرسائل","n","n","y"],["المؤسس شخصياً على مشروعك","y","n","y"],["تقرير أسبوعي بلغة واضحة","p","p","y"]],
+cmp:[["","مستقل","وكالة تقليدية","MAMMEDOV\u00a0&\u00a0CO."],["الاستراتيجية وخطة النمو","n","y","y"],["الإعلانات الموجّهة","y","y","y"],["التواصل الاجتماعي والمحتوى","n","p","y"],["إنتاج الصور والفيديو بالذكاء الاصطناعي","n","n","y"],["الموقع / صفحة الهبوط","n","p","y"],["نصوص البيع وإدارة الرسائل","n","n","y"],["المؤسس شخصياً على مشروعك","y","n","y"],["تقرير أسبوعي بلغة واضحة","p","p","y"]],
 cmp_l:{y:"✓",n:"—",p:"جزئياً"},
 f_k:"المؤسس", f_q:"«تتحدث مع الشخص المسؤول عن النتيجة — لا مع مدير حساب».", f_role:"المؤسس ورئيس الاستراتيجية",
 f_p:"أقود كل مشروع بنفسي مع فريقي من المتخصصين في الإعلانات والمحتوى وتطوير المواقع. نعمل مع عدد محدود من العملاء في الوقت نفسه، ليحظى كل عميل باهتمام كامل.",
 team:["الإعلانات الموجّهة","التواصل الاجتماعي","الإنتاج بالذكاء الاصطناعي","تطوير المواقع","المبيعات في الرسائل"],
-pk_k:"الباقات", pk_h:"اختر المستوى — <em>ووسّع عندما ينجح.</em>",
+pk_k:"الباقات", pk_h:"اختر المستوى. <em>ثم وسّع العمل عندما ترى النتائج.</em>",
 pks:[["Performance","للأعمال التي لديها محتوى وتحتاج تدفّقاً من الطلبات",["الاستراتيجية والتدقيق","إدارة إعلانات ميتا","تصاميم إعلانية (إنتاج بالذكاء الاصطناعي)","تقرير أسبوعي"]],["Growth","للأعمال التي تريد طلبات وحساباً راقياً",["كل ما في Performance","التواصل الاجتماعي: خطة محتوى، ريلز، كاروسيل","نصوص الرسائل وتدريب الفريق","جلسة استراتيجية شهرية"],"الأكثر اختياراً"],["Full house","لإطلاق العلامة أو إعادة إطلاقها رقمياً بالكامل",["كل ما في Growth","صفحة هبوط بلغتين أو ثلاث","إنتاج موسّع للصور والفيديو بالذكاء الاصطناعي","إدارة الرسائل من قِبلنا"]]],
 pk_from:"ابتداءً من", pk_mo:"درهم / شهرياً", pk_btn:"ناقش هذه الباقة", pk_note:"تُدفع ميزانية الإعلانات بشكل منفصل ومباشرة إلى المنصات. يُتفق على النطاق والسعر النهائيين بعد التدقيق المجاني.",
-fq_k:"أسئلة", fq_h:"قبل أن <em>تراسلنا.</em>",
+fq_k:"أسئلة", fq_h:"الأسئلة التي نسمعها <em>كثيراً.</em>",
 faq:[["متى نرى النتائج الأولى؟","عادةً تصل الطلبات الأولى خلال الأسبوع الأول بعد الإطلاق. أما التدفّق الثابت والمُحسَّن فيحتاج نحو 3–4 أسابيع من الاختبارات."],["ما ميزانية الإعلانات المطلوبة؟","تعتمد على القطاع والأهداف. نحدد الرقم بعد التدقيق — حتى لا تدفع أكثر من اللازم ولا أقل مما يحتاجه النمو."],["هل هناك عقد طويل الأمد؟","نعمل شهراً بشهر. إن أرضتك النتيجة نستمر، وإن لم تُرضِك فلك حرية التوقف."],["هل تعملون باللغة العربية؟","نعم. المحتوى والإعلانات والموقع بالإنجليزية والروسية والعربية والتركمانية."],["كيف نعرف ما تحققه أموالنا؟","كل أسبوع تصلك خلاصة قصيرة بلغة واضحة: الإنفاق، والطلبات، والحجوزات، وتكلفة العميل الواحد."]],
 a_k:"تدقيق مجاني مختصر", a_h:"اعرف ما تفعله إعلاناتك <em>حقاً.</em>", a_p:"خلال 12 ساعة — تدقيق شخصي مختصر لإعلاناتك الحالية، سواء عملنا معاً أم لا.",
 gets:["أين تتسرّب ميزانيتك","ما الذي يعرضه أقوى منافسيك الآن","ثلاثة تغييرات يمكنك تطبيقها غداً"],
@@ -1212,7 +1259,7 @@ const wa=t=>"https://wa.me/"+CONFIG.whatsapp+"?text="+encodeURIComponent(t);
 $("#fwa").href="https://wa.me/"+CONFIG.whatsapp; $("#fwa").textContent="WhatsApp "+CONFIG.whatsappLabel;
 const vid=$("#heroVideo"); vid.src= innerWidth<900 ? "hero-mobile.mp4" : "hero-1600.mp4"; vid.play&&vid.play().catch(()=>{});
 
-let svcI=0, indI=0;
+let svcI=0, indI=0, pkI=1;
 function svcPanel(v){return `<p class="sx-d">${esc(v[1])}</p><ul>${v[2].map(x=>`<li>${esc(x)}</li>`).join("")}</ul><p class="sx-r">${esc(v[3])}</p>${v[4]?`<p class="sx-proof">${esc(v[4])}</p>`:""}`}
 function render(){
   const d=T[lang];
@@ -1228,7 +1275,9 @@ function render(){
   const L=d.cmp_l;
   $("#cmpT").innerHTML=d.cmp.map((r,i)=>i===0?`<tr>${r.map((c,j)=>`<th class="${j===3?'us':''}">${esc(c)}</th>`).join("")}</tr>`:`<tr><td>${esc(r[0])}</td>${r.slice(1).map((c,j)=>`<td class="${c}${j===2?' us':''}">${esc(L[c])}</td>`).join("")}</tr>`).join("");
   $("#teamList").innerHTML=d.team.map(t=>`<span>${esc(t)}</span>`).join("");
-  $("#pkList").innerHTML=d.pks.map((p,i)=>`<div class="card pkg rv ${p[3]?'hi':''}">${p[3]?`<span class="badge">${esc(p[3])}</span>`:""}<h3 dir="ltr" style="text-align:start">${esc(p[0])}</h3><p class="for">${esc(p[1])}</p><div class="pr"><span>${esc(d.pk_from)}</span>${fmt(conv(CONFIG.prices[i]))}<small>${esc(curLab())} / ${esc(MONTH[lang])}</small></div><ul>${p[2].map(x=>`<li>${esc(x)}</li>`).join("")}</ul><a class="btn ${p[3]?'light':'dark'}" href="${wa(d.mpk+' '+p[0])}" target="_blank" rel="noopener">${esc(d.pk_btn)} <span class="ar">→</span></a></div>`).join("");
+  $("#pkTabs").innerHTML=d.pks.map((p,i)=>`<button data-k="${i}" aria-pressed="${i===pkI}">${esc(p[0])}</button>`).join("");
+  $$("#pkTabs button").forEach(b=>b.addEventListener("click",()=>{pkI=+b.dataset.k;$$("#pkTabs button").forEach(x=>x.setAttribute("aria-pressed",x===b));$$("#pkList .pkg").forEach((c,i)=>c.classList.toggle("sel",i===pkI))}));
+  $("#pkList").innerHTML=d.pks.map((p,i)=>`<div class="card pkg rv ${p[3]?'hi':''} ${i===pkI?'sel':''}">${p[3]?`<span class="badge">${esc(p[3])}</span>`:""}<h3 dir="ltr" style="text-align:start">${esc(p[0])}</h3><p class="for">${esc(p[1])}</p><div class="pr"><span>${esc(d.pk_from)}</span>${fmt(conv(CONFIG.prices[i]))}<small>${esc(curLab())} / ${esc(MONTH[lang])}</small></div><ul>${p[2].map(x=>`<li>${esc(x)}</li>`).join("")}</ul><a class="btn ${p[3]?'light':'dark'}" href="${wa(d.mpk+' '+p[0])}" target="_blank" rel="noopener">${esc(d.pk_btn)} <span class="ar">→</span></a></div>`).join("");
   $("#faqList").innerHTML=d.faq.map((f,i)=>`<details class="rv" ${i===0?'open':''}><summary>${esc(f[0])}</summary><p>${esc(f[1])}</p></details>`).join("");
   $("#getsList").innerHTML=d.gets.map(g=>`<li>${esc(g)}</li>`).join("");
   $("#ft").innerHTML=d.types.map(t=>`<option>${esc(t)}</option>`).join("");
