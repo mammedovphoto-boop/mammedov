@@ -665,6 +665,37 @@ html[dir="rtl"] .hero-media{animation-name:mediaInR}
 }
 
 @container (max-aspect-ratio: 1/1){.flow .k{font-size:3.3cqw!important}}
+
+/* niche picker */
+.niche{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:3.2vh;animation:heroIn 1s 1.2s var(--ease) both}
+.niche>span{font-size:14px;color:rgba(236,235,228,.7);font-weight:600}
+.niche>div{display:flex;gap:4px;border:1px solid rgba(236,235,228,.25);border-radius:var(--r);padding:3px}
+.niche button{all:unset;cursor:pointer;font:600 13.5px var(--sans);padding:7px 12px;border-radius:4px;color:rgba(236,235,228,.85);transition:background .25s,color .25s}
+.niche button:hover{background:rgba(236,235,228,.1)}
+.niche button[aria-pressed="true"]{background:var(--sage-l);color:var(--olive)}
+.niche button:focus-visible{outline:2px solid var(--sage-l);outline-offset:2px}
+#reelImg{transition:opacity .4s}
+/* floating WhatsApp */
+.wa-fab{position:fixed;z-index:84;inset-inline-end:22px;bottom:22px;display:flex;align-items:center;gap:10px;background:var(--olive);color:var(--ivory);text-decoration:none;font:700 14px var(--sans);padding:12px 18px 12px 14px;border-radius:999px;box-shadow:0 12px 30px rgba(20,24,18,.3);border:1px solid rgba(207,220,196,.35);transition:transform .3s var(--ease),opacity .3s}
+.wa-fab svg{width:22px;height:22px;color:var(--sage-l)}
+.wa-fab:hover{transform:translateY(-2px)}
+html.menu-open .wa-fab,html.on-audit .wa-fab{opacity:0;pointer-events:none}
+@media(max-width:760px){
+  .wa-fab{bottom:calc(14px + env(safe-area-inset-bottom));padding:12px;inset-inline-end:14px}.wa-fab span{display:none}
+  .niche{margin-top:12px;gap:6px}.niche>span{display:none}.niche>div{width:100%}.niche button{flex:1;text-align:center;padding:7px 2px;font-size:12px}
+}
+
+/* hero fit with niche picker */
+@media(min-width:761px){
+  .hero h1{font-size:clamp(32px,min(3.7vw,6.3vh),62px)!important}
+  html[lang="ru"] .hero h1,html[lang="tk"] .hero h1{font-size:clamp(30px,min(3.2vw,5.6vh),54px)!important}
+  html[lang="ar"] .hero h1{font-size:clamp(28px,min(3vw,5.2vh),50px)!important}
+  .hero .eyebrow{margin-bottom:1.6vh}.hero-sub{margin-top:1.8vh}.hero-ctas{margin-top:2.6vh}.niche{margin-top:2.4vh}
+  .hero-text{padding-top:calc(var(--navh) + 1.5vh);padding-bottom:2vh}
+}
+@media(min-width:761px) and (max-height:820px){.hero-sub{display:none}}
+html.on-hero .wa-fab{opacity:0;pointer-events:none}
+@media(max-width:760px) and (max-height:700px){#pricing .pk-note{display:none}}
 </style>
 </head>
 <body>
@@ -677,6 +708,7 @@ html[dir="rtl"] .hero-media{animation-name:mediaInR}
     <button class="burger" id="burger" aria-expanded="false" aria-controls="menu"><span></span><span></span><span class="sr" data-i="menu"></span></button>
   </div>
 </header>
+<a class="wa-fab" id="waFab" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.66 15l-1.3 4.76 4.88-1.28A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-2.9.76.78-2.83-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.14c-.25-.12-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.12-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06a6.7 6.7 0 0 1-3.32-2.9c-.25-.43.25-.4.72-1.34.08-.16.04-.3-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.43h-.48a.92.92 0 0 0-.67.31 2.8 2.8 0 0 0-.87 2.08 4.86 4.86 0 0 0 1.02 2.58 11.1 11.1 0 0 0 4.25 3.76c1.58.68 2.2.74 3 .62.48-.07 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.06-.1-.23-.16-.48-.28Z"/></svg><span data-i="wa_fab"></span></a>
 <div class="menu" id="menu" hidden><nav id="menuList"></nav><div class="menu-foot"><div class="langs mlangs" role="group" aria-label="Language"><button data-lang="en" aria-pressed="true">EN</button><button data-lang="ru" aria-pressed="false">RU</button><button data-lang="ar" aria-pressed="false">ع</button><button data-lang="tk" aria-pressed="false">TM</button></div><a id="menuWa" href="#" target="_blank" rel="noopener" dir="ltr"></a></div></div>
 <nav class="dots" id="dots" aria-label="Sections"></nav>
 
@@ -691,6 +723,7 @@ html[dir="rtl"] .hero-media{animation-name:mediaInR}
         <a class="btn light" href="#audit"><span data-i="cta1"></span><span class="ar">→</span></a>
         <a class="btn" href="#services"><span data-i="cta2"></span></a>
       </div>
+      <div class="niche" role="group" aria-labelledby="nicheL"><span id="nicheL"></span><div id="nicheB"></div></div>
     </div>
     <div class="hero-media">
       <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="01-moment.jpg"></video>
@@ -700,12 +733,12 @@ html[dir="rtl"] .hero-media{animation-name:mediaInR}
         <div class="phone" id="phone">
           <div class="scr">
             <div class="reel" id="reel">
-              <img src="02-empty.jpg" alt="" id="reelImg">
+              <img src="02-empty.jpg" alt="" id="reelImg"><link rel="preload" as="image" href="10-clinic.jpg">
               <div class="r-top"><span data-h="ad_sp"></span></div>
               <div class="r-bot">
                 <div class="r-acc"><i></i><b data-h="ad_name"></b></div>
                 <p data-h="ad_cap"></p>
-                <div class="r-price">AED 599</div>
+                <div class="r-price" id="rPrice">AED 599</div>
                 <div class="r-cta" id="rCta"><span data-h="ad_cta"></span><span>›</span></div>
               </div>
               <div class="tap" id="tap"></div>
@@ -722,7 +755,7 @@ html[dir="rtl"] .hero-media{animation-name:mediaInR}
               </div>
               <div class="c-in"><span data-h="c_ph"></span></div>
             </div>
-            <div class="notif" id="notif"><i>✓</i><div><b data-h="n_ok"></b><span>+ AED 599</span></div></div>
+            <div class="notif" id="notif"><i>✓</i><div><b data-h="n_ok"></b><span id="nAmt">+ AED 599</span></div></div>
           </div>
         </div>
       </div>
@@ -893,7 +926,7 @@ html[dir="rtl"] .hero-media{animation-name:mediaInR}
     <div class="pk-tabs" id="pkTabs" role="group"></div>
     <div class="rail c3 mt" id="pkList" style="padding-top:14px"></div>
     
-    <p class="pk-note hide-m" data-i="pk_note"></p>
+    <p class="pk-note" data-i="pk_note"></p>
   </div>
 </section>
 
@@ -1018,13 +1051,43 @@ const HERO_T={
   c_m1:"Salam! Spa Day näçe durýar?",c_m2:"Salam! Spa Day — 599 AED: hammam, 60 minutlyk massaž we ýüz ideg. Şenbe güni 12:00 we 15:00 boş — haýsy wagt size amatly?",c_m3:"15:00 bolsun",c_m4:"Ýazdyk ✓ Şenbe, 15:00. Garaşýarys!",c_ph:"Hat…",
   n_ok:"Ýazylyş tassyklandy",chip1:"2 minutda jogap",chip2:"Şu günki ýazylyşlar"}
 };
+const HERO_S={
+ spa:{img:"02-empty.jpg",price:{en:"AED 599",ru:"599 AED",ar:"599 درهماً",tk:"599 AED"},amt:"+ AED 599"},
+ clinic:{img:"10-clinic.jpg",price:{en:"from AED 1,200",ru:"от 1 200 AED",ar:"من 1,200 درهم",tk:"1 200 AED-den"},amt:"+ AED 1,200",
+  en:{ad_name:"Lumière Clinic · Jumeirah",ad_cap:"Natural-looking results, doctor's consultation included",c_m1:"Hi! How much is botox for the forehead?",c_m2:"Hello! Forehead botox is AED 1,200 including the doctor's consultation. On Thursday we have 17:30 or 19:00 — which suits you?",c_m3:"Thursday, 19:00",c_m4:"Booked ✓ Thursday, 19:00. The doctor will see you then!",n_ok:"Appointment confirmed",chip2:"Appointments today"},
+  ru:{ad_name:"Lumière Clinic · Джумейра",ad_cap:"Естественный результат, консультация врача включена",c_m1:"Здравствуйте! Сколько стоит ботокс лба?",c_m2:"Добрый день! Ботокс зоны лба — 1 200 AED, консультация врача включена. В четверг свободно 17:30 и 19:00 — какое время удобно?",c_m3:"В четверг в 19:00",c_m4:"Записали вас ✓ Четверг, 19:00. Доктор будет ждать!",n_ok:"Запись подтверждена",chip2:"Записей сегодня"},
+  ar:{ad_name:"عيادة لوميير · جميرا",ad_cap:"نتائج طبيعية مع استشارة الطبيب",c_m1:"مرحباً! كم سعر البوتوكس لمنطقة الجبهة؟",c_m2:"أهلاً بكِ! بوتوكس الجبهة بـ 1,200 درهم شاملاً استشارة الطبيب. يتوفر يوم الخميس موعدان: 17:30 أو 19:00 — أيهما يناسبك؟",c_m3:"الخميس الساعة 19:00",c_m4:"تم الحجز ✓ الخميس، 19:00. الطبيب بانتظارك!",n_ok:"تم تأكيد الموعد",chip2:"مواعيد اليوم"},
+  tk:{ad_name:"Lumière Clinic · Jumeýra",ad_cap:"Tebigy netije, lukmanyň maslahaty bilen",c_m1:"Salam! Maňlaý üçin botoks näçe?",c_m2:"Salam! Maňlaý botoksy — 1 200 AED, lukmanyň maslahaty hem goşulan. Penşenbe güni 17:30 we 19:00 boş — haýsy wagt amatly?",c_m3:"Penşenbe, 19:00",c_m4:"Ýazdyk ✓ Penşenbe, 19:00. Lukman size garaşýar!",n_ok:"Ýazylyş tassyklandy",chip2:"Şu günki ýazylyşlar"}},
+ tour:{img:"06-tourism.jpg",price:{en:"AED 1,250 per guest",ru:"1 250 AED с гостя",ar:"1,250 درهماً للضيف",tk:"myhman başyna 1 250 AED"},amt:"+ AED 5,000",
+  en:{ad_name:"Desert Private · Dubai",ad_cap:"Private dinner in the dunes at sunset, hotel transfer included",c_m1:"Hi! Is Friday available for 4 people?",c_m2:"Hello! Yes — Friday sunset dinner for 4 guests is AED 5,000 with transfer from your hotel. Pickup at 16:30 or 17:00?",c_m3:"17:00, please",c_m4:"Booked ✓ Friday, pickup at 17:00. Have a wonderful evening!",n_ok:"Booking confirmed",chip2:"Bookings this week"},
+  ru:{ad_name:"Desert Private · Дубай",ad_cap:"Частный ужин в дюнах на закате, трансфер из отеля включён",c_m1:"Здравствуйте! В пятницу есть места на 4 человек?",c_m2:"Добрый день! Да — ужин на закате в пятницу для 4 гостей стоит 5 000 AED с трансфером из отеля. Забрать вас в 16:30 или в 17:00?",c_m3:"Давайте в 17:00",c_m4:"Забронировали ✓ Пятница, выезд в 17:00. Хорошего вечера!",n_ok:"Бронь подтверждена",chip2:"Бронирований за неделю"},
+  ar:{ad_name:"ديزرت برايفت · دبي",ad_cap:"عشاء خاص في الكثبان عند الغروب مع التوصيل من الفندق",c_m1:"مرحباً! هل يتوفر يوم الجمعة لأربعة أشخاص؟",c_m2:"أهلاً بك! نعم — عشاء الغروب يوم الجمعة لأربعة ضيوف بـ 5,000 درهم مع التوصيل من فندقك. نأخذكم الساعة 16:30 أم 17:00؟",c_m3:"الساعة 17:00 من فضلك",c_m4:"تم الحجز ✓ الجمعة، الانطلاق 17:00. أمسية سعيدة!",n_ok:"تم تأكيد الحجز",chip2:"حجوزات هذا الأسبوع"},
+  tk:{ad_name:"Desert Private · Dubaý",ad_cap:"Gün ýaşanda çölde hususy agşamlyk, otelden transfer bilen",c_m1:"Salam! Anna güni 4 adam üçin ýer barmy?",c_m2:"Salam! Hawa — anna güni 4 myhman üçin gün ýaşyş agşamlygy otelden transfer bilen 5 000 AED. Sizi 16:30-da ýa-da 17:00-da alyp gideliňmi?",c_m3:"17:00 bolsun",c_m4:"Bronladyk ✓ Anna, 17:00-da ugraýarys. Ajaýyp agşam bolsun!",n_ok:"Bron tassyklandy",chip2:"Şu hepdäniň bronlary"}},
+ estate:{img:"07-realestate.jpg",price:{en:"from AED 2.1M",ru:"от 2,1 млн AED",ar:"من 2.1 مليون درهم",tk:"2,1 mln AED-den"},amt:{en:"Budget AED 2M+",ru:"Бюджет от 2 млн AED",ar:"ميزانية من 2 مليون درهم",tk:"Býudjet 2 mln AED-den"},
+  en:{ad_name:"Olive Residences · Dubai",ad_cap:"Off-plan villas with sea views, 1% monthly payment plan",c_m1:"Hi! What's the price of a 3-bedroom villa?",c_m2:"Hello! 3-bedroom villas start at AED 2.1M with a 1% monthly plan. We can show you the show villa on Saturday at 11:00 or 15:00 — which suits you?",c_m3:"Saturday, 11:00",c_m4:"Viewing booked ✓ Saturday, 11:00. Our agent will meet you at the entrance.",n_ok:"Viewing booked",chip2:"Viewings this week"},
+  ru:{ad_name:"Olive Residences · Дубай",ad_cap:"Виллы off-plan с видом на море, рассрочка 1% в месяц",c_m1:"Здравствуйте! Сколько стоит вилла с тремя спальнями?",c_m2:"Добрый день! Виллы с тремя спальнями — от 2,1 млн AED, рассрочка 1% в месяц. Можем показать шоу-виллу в субботу в 11:00 или в 15:00 — когда удобно?",c_m3:"В субботу в 11:00",c_m4:"Показ назначен ✓ Суббота, 11:00. Агент встретит вас у входа.",n_ok:"Показ назначен",chip2:"Показов за неделю"},
+  ar:{ad_name:"أوليف ريزيدنسز · دبي",ad_cap:"فلل على الخارطة بإطلالة بحرية وخطة سداد 1% شهرياً",c_m1:"مرحباً! كم سعر فيلا بثلاث غرف نوم؟",c_m2:"أهلاً بك! تبدأ أسعار الفلل بثلاث غرف نوم من 2.1 مليون درهم مع خطة سداد 1% شهرياً. يمكننا عرض الفيلا النموذجية يوم السبت الساعة 11:00 أو 15:00 — أي موعد يناسبك؟",c_m3:"السبت الساعة 11:00",c_m4:"تم تحديد موعد المعاينة ✓ السبت، 11:00. سيستقبلك الوكيل عند المدخل.",n_ok:"تم تحديد المعاينة",chip2:"معاينات هذا الأسبوع"},
+  tk:{ad_name:"Olive Residences · Dubaý",ad_cap:"Deňze garaýan off-plan villalar, aýda 1% bölüp tölemek",c_m1:"Salam! Üç ýatylýan otagly villa näçe?",c_m2:"Salam! Üç ýatylýan otagly villalar 2,1 mln AED-den başlaýar, aýda 1% bölüp tölemek bilen. Nusga villany şenbe güni 11:00-da ýa-da 15:00-da görkezip bileris — haýsy wagt amatly?",c_m3:"Şenbe, 11:00",c_m4:"Görkeziş bellendi ✓ Şenbe, 11:00. Agent sizi girelgede garşylar.",n_ok:"Görkeziş bellendi",chip2:"Şu hepdäniň görkezişleri"}}
+};
+const NICHE_ORDER=["spa","clinic","tour","estate"];
+const NICHE_L={en:{l:"Show it for",n:["Spa","Clinic","Tourism","Real estate"]},ru:{l:"Показать для",n:["Спа","Клиника","Туризм","Недвижимость"]},ar:{l:"اعرض لقطاع",n:["سبا","عيادة","سياحة","عقارات"]},tk:{l:"Görkez",n:["Spa","Klinika","Syýahat","Emläk"]}};
+
 const Hero=(function(){
   const ph=document.getElementById("phone"); if(!ph) return null;
   const g=id=>document.getElementById(id);
   const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)), seg=(t,a,b)=>cl((t-a)/(b-a)), e=x=>1-Math.pow(1-cl(x),3);
   const D=16, msgs=[["m1",3.4],["ty1",4.2,5.4],["m2",5.4],["m3",7.2],["ty2",7.9,8.7],["m4",8.7]];
   let lang="en";
-  function setLang(l){lang=l; const d=HERO_T[l]||HERO_T.en; document.querySelectorAll("[data-h]").forEach(el=>{const v=d[el.dataset.h]; if(v!==undefined) el.textContent=v});}
+  let niche="spa", pinned=false;
+  const L=v=>typeof v==="string"?v:(v[lang]||v.en);
+  function data(){return Object.assign({},HERO_T[lang]||HERO_T.en,(HERO_S[niche][lang])||{})}
+  function fill(){const d=data(),S=HERO_S[niche];document.querySelectorAll("[data-h]").forEach(el=>{const v=d[el.dataset.h]; if(v!==undefined) el.textContent=v});
+    g("rPrice").textContent=L(S.price); g("nAmt").textContent=L(S.amt); const im=g("reelImg"); if(!im.src.endsWith(S.img)) im.src=S.img;
+    const NL=NICHE_L[lang]||NICHE_L.en; g("nicheL").textContent=NL.l;
+    g("nicheB").innerHTML=NICHE_ORDER.map((k,i)=>`<button data-n="${k}" aria-pressed="${k===niche}">${NL.n[i]}</button>`).join("");
+    g("nicheB").querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{setNiche(b.dataset.n,true)}));}
+  function setNiche(n,user){niche=n; if(user)pinned=true; fill(); t0=0; if(!run){draw(0)}}
+  function setLang(l){lang=l; fill();}
   function draw(T){
     const t=T%D, d=HERO_T[lang]||HERO_T.en;
     g("reelImg").style.transform=`scale(${1.04+.06*cl(t/3)})`;
@@ -1047,8 +1110,8 @@ const Hero=(function(){
     g("chipN").textContent=t>10.9?18:17;
   }
   let raf=0,t0=0,run=false;
-  const loop=ts=>{if(!t0)t0=ts; draw((ts-t0)/1000); raf=requestAnimationFrame(loop)};
-  return {setLang,draw,play(){if(run)return;run=true;t0=0;raf=requestAnimationFrame(loop)},stop(){run=false;cancelAnimationFrame(raf)}};
+  const loop=ts=>{if(!t0)t0=ts; const el=(ts-t0)/1000; if(el>=D){const i=NICHE_ORDER.indexOf(niche); niche=NICHE_ORDER[(i+1)%NICHE_ORDER.length]; pinned=false; fill(); t0=ts;} draw(Math.min(el,D-0.001)); raf=requestAnimationFrame(loop)};
+  return {setLang,setNiche,draw,play(){if(run)return;run=true;t0=0;raf=requestAnimationFrame(loop)},stop(){run=false;cancelAnimationFrame(raf)}};
 })();
 
 /* ===== EDIT HERE: contacts and package prices ===== */
@@ -1062,11 +1125,11 @@ const MONTH={en:"month",ru:"мес",ar:"شهرياً",tk:"aý"};
 
 const T = {
 en:{
-nav_cta:"Free ad audit", menu:"Menu", mnu:["The scenario","Your money flow","Services","Before and after","Industries","Our case","Packages","Free audit"], ba_k:"AI production", ba_h:"Same room. <em>A different price in the client\u2019s mind.</em>", ba_p:"Left \u2014 a typical phone photo by an administrator. Right \u2014 the same room after our AI studio. Where would you book for AED 599?", ba_hint:"Drag to compare", ba_l:"Phone photo", ba_r:"Our studio", swipe:"Swipe →", cs_k2:"How we did it",
+nav_cta:"Free ad audit", wa_fab:"Write to us", wa_msg:"Hello! I'd like to discuss advertising for my business.", menu:"Menu", mnu:["The scenario","Your money flow","Services","Before and after","Industries","Our case","Packages","Free audit"], ba_k:"AI production", ba_h:"Same room. <em>A different price in the client\u2019s mind.</em>", ba_p:"Left \u2014 a typical phone photo by an administrator. Right \u2014 the same room after our AI studio. Where would you book for AED 599?", ba_hint:"Drag to compare", ba_l:"Phone photo", ba_r:"Our studio", swipe:"Swipe →", cs_k2:"How we did it",
 hero_k:"Growth house in Dubai",
 hero_h:"Every booking begins with one second on a phone. <em>We engineer that second.</em>",
 hero_s:"Strategy, targeted ads, SMM, AI production, websites and sales in Direct — one accountable team that turns attention into paying clients for premium businesses in Dubai.",
-cta1:"Get a free audit", cta2:"What we do",
+cta1:"Get a free audit in 12 hours", cta2:"What we do",
 cap_a:"Jumeirah Beach Rd · 19:40", cap_b:"She hasn't decided yet.",
 strip:["Beauty & wellness","Tourism","Real estate","Hospitality & entertainment","English · Русский · العربية · Türkmençe"],
 pa_k:"Sound familiar?", pa_h:"Money goes into ads. <em>Clients don't come in.</em>",
@@ -1096,7 +1159,7 @@ f_p:"I personally lead every project together with my team of specialists in adv
 team:["Targeting","SMM","AI production","Web development","Sales in Direct"],
 pk_k:"Packages", pk_h:"Choose your level. <em>Scale once you see results.</em>",
 pks:[["Performance","For businesses that already have content and need a flow of enquiries",["Strategy and audit","Meta Ads management","Creatives for ads (AI production)","Weekly report"]],["Growth","For businesses that want enquiries and a premium profile",["Everything in Performance","SMM: content plan, Reels, carousels","Direct scripts and team training","Monthly strategy session"],"Most chosen"],["Full house","For a full launch or relaunch of the brand online",["Everything in Growth","Landing page in 2–3 languages","Extended AI photo and video production","Live handling of Direct by us"]]],
-pk_from:"from", pk_mo:"AED / month", pk_btn:"Discuss this package", pk_note:"Advertising budget is paid separately, directly to the platforms. Exact scope and price are agreed after the free audit.",
+pk_from:"from", pk_mo:"AED / month", pk_btn:"Discuss this package", pk_note:"Advertising budget is paid separately, directly to the platforms. Exact scope and price are agreed after the free audit. No long-term contract: we work month to month.",
 fq_k:"Questions", fq_h:"Questions we hear <em>most often.</em>",
 faq:[["How soon will we see results?","First enquiries usually come within the first week after launch. A stable, optimised flow takes about 3–4 weeks of testing."],["What ad budget do we need?","It depends on niche and goals. We recommend a figure after the audit — so you don't overpay and don't under-invest."],["Is there a long-term contract?","We work month to month. If the result suits you, we continue; if not, you're free to stop."],["Do you work in Arabic?","Yes. Content, ads and the website can be in English, Russian, Arabic and Turkmen."],["How will we know what our money does?","Every week you get a short report in plain language: spend, enquiries, bookings and the cost of one client."]],
 a_k:"Free mini-audit", a_h:"See what your advertising is <em>really</em> doing.", a_p:"Within 12 hours — a short, personal audit of your current advertising. Whether or not we work together.",
@@ -1109,11 +1172,11 @@ mi:"Hello! I'd like a free audit of our advertising.", mpk:"Hello! I'm intereste
 ft_p:"Growth house for premium businesses in Dubai."
 },
 ru:{
-nav_cta:"Бесплатный аудит", menu:"Меню", mnu:["Сценарий","Поток денег","Услуги","До и после","Отрасли","Кейс","Пакеты","Бесплатный аудит"], ba_k:"ИИ-продакшн", ba_h:"Тот же кабинет. <em>Другая цена в голове клиента.</em>", ba_p:"Слева — обычное фото администратора на телефон. Справа — тот же кабинет после нашей ИИ-студии. Где бы вы записались за 599 AED?", ba_hint:"Потяните, чтобы сравнить", ba_l:"Фото на телефон", ba_r:"Наша студия", swipe:"Листайте вбок →", cs_k2:"Как мы это сделали",
+nav_cta:"Бесплатный аудит", wa_fab:"Написать нам", wa_msg:"Здравствуйте! Хочу обсудить рекламу для своего бизнеса.", menu:"Меню", mnu:["Сценарий","Поток денег","Услуги","До и после","Отрасли","Кейс","Пакеты","Бесплатный аудит"], ba_k:"ИИ-продакшн", ba_h:"Тот же кабинет. <em>Другая цена в голове клиента.</em>", ba_p:"Слева — обычное фото администратора на телефон. Справа — тот же кабинет после нашей ИИ-студии. Где бы вы записались за 599 AED?", ba_hint:"Потяните, чтобы сравнить", ba_l:"Фото на телефон", ba_r:"Наша студия", swipe:"Листайте вбок →", cs_k2:"Как мы это сделали",
 hero_k:"Growth house в Дубае",
 hero_h:"Каждая сделка начинается с одной секунды в телефоне. <em>Мы управляем этой секундой.</em>",
 hero_s:"Стратегия, таргет, SMM, ИИ-продакшн, сайты и продажи в директе — одна команда, которая отвечает за результат и превращает внимание в платящих клиентов для премиального бизнеса в Дубае.",
-cta1:"Получить бесплатный аудит", cta2:"Что мы делаем",
+cta1:"Бесплатный аудит за 12 часов", cta2:"Что мы делаем",
 cap_a:"Jumeirah Beach Rd · 19:40", cap_b:"Она ещё не решила.",
 strip:["Beauty и wellness","Туризм","Недвижимость","Гостеприимство и развлечения","English · Русский · العربية · Türkmençe"],
 pa_k:"Знакомо?", pa_h:"Деньги в рекламу уходят. <em>Клиенты не приходят.</em>",
@@ -1143,7 +1206,7 @@ f_p:"Я лично веду каждый проект вместе со свое
 team:["Таргет","SMM","ИИ-продакшн","Веб-разработка","Продажи в директе"],
 pk_k:"Пакеты", pk_h:"Выберите уровень. <em>Расширяйтесь, когда увидите результат.</em>",
 pks:[["Performance","Для бизнеса, у которого уже есть контент и нужен поток заявок",["Стратегия и аудит","Ведение Meta Ads","Рекламные креативы (ИИ-продакшн)","Еженедельный отчёт"]],["Growth","Для бизнеса, которому нужны заявки и премиальный профиль",["Всё из Performance","SMM: контент-план, рилсы, карусели","Скрипты директа и обучение команды","Ежемесячная стратегическая сессия"],"Чаще всего выбирают"],["Full house","Для полного запуска или перезапуска бренда онлайн",["Всё из Growth","Лендинг на 2–3 языках","Расширенный ИИ-продакшн фото и видео","Ведём директ за вас"]]],
-pk_from:"от", pk_mo:"AED / мес", pk_btn:"Обсудить пакет", pk_note:"Рекламный бюджет оплачивается отдельно, напрямую площадкам. Точный объём работ и цена — после бесплатного аудита.",
+pk_from:"от", pk_mo:"AED / мес", pk_btn:"Обсудить пакет", pk_note:"Рекламный бюджет оплачивается отдельно, напрямую площадкам. Точный объём работ и цена — после бесплатного аудита. Без долгосрочного договора: работаем помесячно.",
 fq_k:"Вопросы", fq_h:"Вопросы, которые нам задают <em>чаще всего.</em>",
 faq:[["Когда будут первые результаты?","Первые заявки обычно приходят в первую неделю после запуска. Стабильный оптимизированный поток — примерно через 3–4 недели тестов."],["Какой нужен рекламный бюджет?","Зависит от ниши и целей. Мы назовём цифру после аудита — чтобы вы не переплачивали и не экономили там, где нельзя."],["Есть ли долгосрочный договор?","Работаем помесячно. Устраивает результат — продолжаем; если нет, вы можете остановиться в любой момент."],["Работаете на арабском?","Да. Контент, реклама и сайт — на английском, русском, арабском и туркменском."],["Как мы поймём, что делают наши деньги?","Каждую неделю — короткий отчёт простым языком: расход, заявки, записи и стоимость одного клиента."]],
 a_k:"Бесплатный мини-аудит", a_h:"Узнайте, что ваша реклама делает <em>на самом деле.</em>", a_p:"В течение 12 часов — короткий персональный аудит вашей текущей рекламы. Независимо от того, будем ли мы работать вместе.",
@@ -1156,13 +1219,13 @@ mi:"Здравствуйте! Хотим бесплатный аудит наш�
 ft_p:"Growth house для премиального бизнеса в Дубае."
 },
 tk:{
-nav_cta:"Mugt audit", menu:"Menýu", mnu:["Ssenariý","Pul akymy","Hyzmatlar","Öň we soň","Pudaklar","Keýs","Paketler","Mugt audit"],
+nav_cta:"Mugt audit", wa_fab:"Bize ýazyň", wa_msg:"Salam! Işim üçin mahabaty maslahatlaşmak isleýärin.", menu:"Menýu", mnu:["Ssenariý","Pul akymy","Hyzmatlar","Öň we soň","Pudaklar","Keýs","Paketler","Mugt audit"],
 ba_k:"Emeli aň bilen önümçilik", ba_h:"Şol bir otag. <em>Müşderiniň kellesinde başga baha.</em>", ba_p:"Çepde — administratoryň telefonda düşüren adaty suraty. Sagda — şol otag biziň emeli aň studiýamyzdan soň. 599 AED-e haýsysyna ýazylardyňyz?", ba_hint:"Deňeşdirmek üçin süýşüriň", ba_l:"Telefon suraty", ba_r:"Biziň studiýamyz",
 swipe:"Gapdala süýşüriň →", cs_k2:"Muny nädip etdik",
 hero_k:"Dubaýdaky growth house",
 hero_h:"Her bir söwda telefondaky bir sekuntdan başlanýar. <em>Biz şol sekundy dolandyrýarys.</em>",
 hero_s:"Strategiýa, nyşanaly mahabat, SMM, emeli aň bilen önümçilik, saýtlar we Direct-de satuw — netije üçin jogapkär bir topar. Ünsi töleg edýän müşderilere öwürýäris.",
-cta1:"Mugt audit alyň", cta2:"Näme edýäris",
+cta1:"12 sagatda mugt audit", cta2:"Näme edýäris",
 cap_a:"Jumeirah Beach Rd · 19:40", cap_b:"Ol entek karar bermedi.",
 strip:["Gözellik we wellness","Syýahatçylyk","Gozgalmaýan emläk","Myhmansöýerlik we güýmenje","English · Русский · العربية · Türkmençe"],
 pa_k:"Tanyş gelýärmi?", pa_h:"Pul mahabata gidýär. <em>Müşderiler gelmeýär.</em>",
@@ -1192,7 +1255,7 @@ f_p:"Her taslamany mahabat, kontent we web işläp taýýarlamak boýunça hün�
 team:["Target","SMM","Emeli aň önümçiligi","Web işläp taýýarlamak","Direct-de satuw"],
 pk_k:"Paketler", pk_h:"Derejäni saýlaň. <em>Netijäni görenden soň giňeldiň.</em>",
 pks:[["Performance","Kontenti bar we ýüzlenme akymy gerek bolan işler üçin",["Strategiýa we audit","Meta Ads-y alyp barmak","Mahabat kreatiwleri (emeli aň)","Hepdelik hasabat"]],["Growth","Ýüzlenmeler we premium profil isleýän işler üçin",["Performance-daky ähli zat","SMM: kontent meýilnamasy, Reels, karuseller","Direct skriptleri we topary okatmak","Aýlyk strategiki duşuşyk"],"Iň köp saýlanýar"],["Full house","Brendi onlaýnda doly işe girizmek ýa-da täzeden başlatmak üçin",["Growth-daky ähli zat","2–3 dilde lending","Giňeldilen emeli aň surat we wideo önümçiligi","Direct-i biz alyp barýarys"]]],
-pk_from:"iň az", pk_mo:"/ aý", pk_btn:"Paketi maslahatlaşalyň", pk_note:"Mahabat býudjeti aýratyn, gönüden-göni platformalara tölenýär. Takyk iş göwrümi we baha mugt auditden soň ylalaşylýar.",
+pk_from:"iň az", pk_mo:"/ aý", pk_btn:"Paketi maslahatlaşalyň", pk_note:"Mahabat býudjeti aýratyn, gönüden-göni platformalara tölenýär. Takyk iş göwrümi we baha mugt auditden soň ylalaşylýar. Uzak möhletli şertnama ýok: aýba-aý işleýäris.",
 fq_k:"Soraglar", fq_h:"Bize iň köp berilýän <em>soraglar.</em>",
 faq:[["Ilkinji netijeler haçan bolar?","Ilkinji ýüzlenmeler adatça işe girizilenden soňky ilkinji hepdede gelýär. Yzygiderli, optimizirlenen akym üçin takmynan 3–4 hepde synag gerek."],["Nähili mahabat býudjeti gerek?","Ugra we maksatlara bagly. Artykmaç tölemezligiňiz we az goýmazlygyňyz üçin sany auditden soň maslahat berýäris."],["Uzak möhletli şertnama barmy?","Aýba-aý işleýäris. Netije kanagatlandyrsa dowam edýäris; ýogsa islän wagtyňyz togtadyp bilersiňiz."],["Türkmen dilinde işleýärsiňizmi?","Hawa. Kontent, mahabat we saýt türkmen, rus, iňlis we arap dillerinde bolup biler."],["Pulumyzyň näme edýändigini nädip bileris?","Her hepde ýönekeý dilde gysga hasabat alýarsyňyz: çykdajy, ýüzlenmeler, ýazylyşlar we bir müşderiniň bahasy."]],
 a_k:"Mugt mini-audit", a_h:"Mahabatyňyzyň <em>hakykatda</em> näme edýändigini biliň.", a_p:"12 sagadyň dowamynda — häzirki mahabatyňyzyň gysga, şahsy auditi. Bilelikde işlesek-de, işlemesek-de.",
@@ -1205,11 +1268,11 @@ mi:"Salam! Mahabatymyzyň mugt auditini isleýäris.", mpk:"Salam! Şu paket gyz
 ft_p:"Dubaýdaky premium işler üçin growth house."
 },
 ar:{
-nav_cta:"تدقيق مجاني للإعلانات", menu:"القائمة", mnu:["السيناريو","تدفّق المال","الخدمات","قبل وبعد","القطاعات","دراسة الحالة","الباقات","تدقيق مجاني"], ba_k:"الإنتاج بالذكاء الاصطناعي", ba_h:"الغرفة نفسها. <em>وسعر مختلف في ذهن العميل.</em>", ba_p:"على اليسار صورة عادية التقطها موظف الاستقبال بالهاتف. وعلى اليمين الغرفة نفسها بعد استوديو الذكاء الاصطناعي لدينا. أين ستحجز مقابل 599 درهماً؟", ba_hint:"اسحب للمقارنة", ba_l:"صورة بالهاتف", ba_r:"استوديونا", swipe:"اسحب جانباً ←", cs_k2:"كيف حققنا ذلك",
+nav_cta:"تدقيق مجاني للإعلانات", wa_fab:"راسلنا", wa_msg:"مرحباً! أرغب في مناقشة الإعلانات لنشاطي التجاري.", menu:"القائمة", mnu:["السيناريو","تدفّق المال","الخدمات","قبل وبعد","القطاعات","دراسة الحالة","الباقات","تدقيق مجاني"], ba_k:"الإنتاج بالذكاء الاصطناعي", ba_h:"الغرفة نفسها. <em>وسعر مختلف في ذهن العميل.</em>", ba_p:"على اليسار صورة عادية التقطها موظف الاستقبال بالهاتف. وعلى اليمين الغرفة نفسها بعد استوديو الذكاء الاصطناعي لدينا. أين ستحجز مقابل 599 درهماً؟", ba_hint:"اسحب للمقارنة", ba_l:"صورة بالهاتف", ba_r:"استوديونا", swipe:"اسحب جانباً ←", cs_k2:"كيف حققنا ذلك",
 hero_k:"دار نمو في دبي",
 hero_h:"كل صفقة تبدأ بثانية واحدة على شاشة الهاتف. <em>ونحن نصنع تلك الثانية.</em>",
 hero_s:"الاستراتيجية، والإعلانات الموجّهة، وإدارة التواصل الاجتماعي، والإنتاج بالذكاء الاصطناعي، والمواقع، والمبيعات عبر الرسائل — فريق واحد مسؤول عن النتيجة، يحوّل الاهتمام إلى عملاء يدفعون للأعمال الراقية في دبي.",
-cta1:"احصل على تدقيق مجاني", cta2:"ما نقدّمه",
+cta1:"تدقيق مجاني خلال 12 ساعة", cta2:"ما نقدّمه",
 cap_a:"شارع جميرا · 19:40", cap_b:"لم تقرّر بعد.",
 strip:["الجمال والعافية","السياحة","العقارات","الضيافة والترفيه","English · Русский · العربية · Türkmençe"],
 pa_k:"هل يبدو مألوفاً؟", pa_h:"المال يذهب إلى الإعلانات. <em>والعملاء لا يأتون.</em>",
@@ -1239,7 +1302,7 @@ f_p:"أقود كل مشروع بنفسي مع فريقي من المتخصصين
 team:["الإعلانات الموجّهة","التواصل الاجتماعي","الإنتاج بالذكاء الاصطناعي","تطوير المواقع","المبيعات في الرسائل"],
 pk_k:"الباقات", pk_h:"اختر المستوى. <em>ثم وسّع العمل عندما ترى النتائج.</em>",
 pks:[["Performance","للأعمال التي لديها محتوى وتحتاج تدفّقاً من الطلبات",["الاستراتيجية والتدقيق","إدارة إعلانات ميتا","تصاميم إعلانية (إنتاج بالذكاء الاصطناعي)","تقرير أسبوعي"]],["Growth","للأعمال التي تريد طلبات وحساباً راقياً",["كل ما في Performance","التواصل الاجتماعي: خطة محتوى، ريلز، كاروسيل","نصوص الرسائل وتدريب الفريق","جلسة استراتيجية شهرية"],"الأكثر اختياراً"],["Full house","لإطلاق العلامة أو إعادة إطلاقها رقمياً بالكامل",["كل ما في Growth","صفحة هبوط بلغتين أو ثلاث","إنتاج موسّع للصور والفيديو بالذكاء الاصطناعي","إدارة الرسائل من قِبلنا"]]],
-pk_from:"ابتداءً من", pk_mo:"درهم / شهرياً", pk_btn:"ناقش هذه الباقة", pk_note:"تُدفع ميزانية الإعلانات بشكل منفصل ومباشرة إلى المنصات. يُتفق على النطاق والسعر النهائيين بعد التدقيق المجاني.",
+pk_from:"ابتداءً من", pk_mo:"درهم / شهرياً", pk_btn:"ناقش هذه الباقة", pk_note:"تُدفع ميزانية الإعلانات بشكل منفصل ومباشرة إلى المنصات. يُتفق على النطاق والسعر النهائيين بعد التدقيق المجاني. دون عقد طويل الأمد: نعمل شهراً بشهر.",
 fq_k:"أسئلة", fq_h:"الأسئلة التي نسمعها <em>كثيراً.</em>",
 faq:[["متى نرى النتائج الأولى؟","عادةً تصل الطلبات الأولى خلال الأسبوع الأول بعد الإطلاق. أما التدفّق الثابت والمُحسَّن فيحتاج نحو 3–4 أسابيع من الاختبارات."],["ما ميزانية الإعلانات المطلوبة؟","تعتمد على القطاع والأهداف. نحدد الرقم بعد التدقيق — حتى لا تدفع أكثر من اللازم ولا أقل مما يحتاجه النمو."],["هل هناك عقد طويل الأمد؟","نعمل شهراً بشهر. إن أرضتك النتيجة نستمر، وإن لم تُرضِك فلك حرية التوقف."],["هل تعملون باللغة العربية؟","نعم. المحتوى والإعلانات والموقع بالإنجليزية والروسية والعربية والتركمانية."],["كيف نعرف ما تحققه أموالنا؟","كل أسبوع تصلك خلاصة قصيرة بلغة واضحة: الإنفاق، والطلبات، والحجوزات، وتكلفة العميل الواحد."]],
 a_k:"تدقيق مجاني مختصر", a_h:"اعرف ما تفعله إعلاناتك <em>حقاً.</em>", a_p:"خلال 12 ساعة — تدقيق شخصي مختصر لإعلاناتك الحالية، سواء عملنا معاً أم لا.",
@@ -1284,6 +1347,7 @@ function render(){
   $("#getsList").innerHTML=d.gets.map(g=>`<li>${esc(g)}</li>`).join("");
   $("#ft").innerHTML=d.types.map(t=>`<option>${esc(t)}</option>`).join("");
   $("#menuList").innerHTML=d.mnu.map((m,i)=>`<a href="${["#top","#flowS","#services","#ba","#work","#case","#pricing","#audit"][i]}" style="--i:${i}">${esc(m)}</a>`).join("");
+  $("#waFab").href=wa(d.wa_msg);
   $("#fbud").innerHTML=d.buds.map(t=>`<option>${esc(t)}</option>`).join("");
 }
 
@@ -1363,7 +1427,7 @@ $("#dots").innerHTML=screens.map((_,i)=>`<button aria-label="${i+1}"></button>`)
 const dots=$$("#dots button");
 dots.forEach((b,i)=>b.addEventListener("click",()=>screens[i].scrollIntoView({behavior:"smooth"})));
 const sio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const i=screens.indexOf(e.target);
-  dots.forEach((d,j)=>d.classList.toggle("on",i===j)); nav.classList.toggle("solid",i>0);}}),{threshold:.55});
+  dots.forEach((d,j)=>d.classList.toggle("on",i===j)); nav.classList.toggle("solid",i>0); document.documentElement.classList.toggle("on-audit",e.target.id==="audit"); document.documentElement.classList.toggle("on-hero",e.target.id==="top");}}),{threshold:.55});
 screens.forEach(s=>sio.observe(s));
 // rail arrows
 $$(".rail-ctl button").forEach(b=>b.addEventListener("click",()=>{const r=document.getElementById(b.dataset.rail);
