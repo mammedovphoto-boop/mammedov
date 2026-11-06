@@ -965,7 +965,9 @@ const Flow=(function(){
     q("#flH").innerHTML=d.h; const fill=v=>typeof v==="string"&&window.FLOWFILL?window.FLOWFILL(v):v;
     qa("[data-f]").forEach(el=>{const v=d[el.dataset.f]; if(v!==undefined) el.textContent=fill(v)}); }
   function draw(T){
-    const t=T%D, fadeAll=1-seg(t,13.3,14);
+    // 2x faster build-up, then hold the finished result for 3.5s, then quick fade
+    const RL=10.5, r=T%RL; const t = r<6.3 ? r*2 : (r<9.8 ? 12.6 : 12.6+(r-9.8)*2);
+    const fadeAll=1-seg(t,13.3,14);
     root.style.setProperty("--fa",fadeAll);
     track.style.opacity=fadeAll;
     const vertical=root.clientWidth<root.clientHeight, rtl=root.getAttribute("dir")==="rtl";
