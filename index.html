@@ -696,6 +696,13 @@ html.menu-open .wa-fab,html.on-audit .wa-fab{opacity:0;pointer-events:none}
 @media(min-width:761px) and (max-height:820px){.hero-sub{display:none}}
 html.on-hero .wa-fab{opacity:0;pointer-events:none}
 @media(max-width:760px) and (max-height:700px){#pricing .pk-note{display:none}}
+
+.stats.s3{grid-template-columns:repeat(3,1fr)}
+.stats.s3 .stat p{max-width:28ch}
+.brandmark{font-family:"Cormorant Garamond",serif!important;font-weight:600;letter-spacing:.12em;font-size:15px;white-space:nowrap;text-transform:none;color:var(--olive)}
+.brandmark .amp{margin:0 .3em 0 .12em;color:var(--rose)}
+@media(max-width:760px){.stats.s3{grid-template-columns:1fr 1fr 1fr}.stats.s3 .stat .big{font-size:38px!important}.stats.s3 .stat p{font-size:12.5px}.brandmark{font-size:12px;letter-spacing:.04em}}
+@media(min-width:761px) and (max-height:800px){.cmp th,.cmp td{padding:9px 16px!important}}
 </style>
 </head>
 <body>
@@ -878,11 +885,10 @@ html.on-hero .wa-fab{opacity:0;pointer-events:none}
       <h2 class="rv" data-ih="cs_h"></h2>
       <div class="rv"><p class="lead" data-i="cs_p"></p><p class="conf" data-i="cs_c"></p></div>
     </div>
-    <div class="stats mt">
+    <div class="stats mt s3">
       <div class="stat rv"><div class="pre" data-i="s1a"></div><div class="big"><span data-count="20">20</span></div><p data-i="s1"></p></div>
-      <div class="stat rv"><div class="pre" data-i="s2a"></div><div class="big"><span data-count="6">6</span><small>AED</small></div><p data-i="s2"></p></div>
-      <div class="stat rv"><div class="pre"></div><div class="big"><span data-count="3">3</span></div><p data-i="s3"></p></div>
-      <div class="stat rv"><div class="pre"></div><div class="big"><span data-count="2">2</span></div><p data-i="s4"></p></div>
+      <div class="stat rv"><div class="pre" data-i="s2a"></div><div class="big">≈<span data-count="6">6</span><small>AED</small></div><p data-i="s2"></p></div>
+      <div class="stat rv"><div class="pre" data-i="s3a"></div><div class="big"><span data-count="3">3</span></div><p data-i="s3"></p></div>
     </div>
   </div>
 </section>
@@ -1148,8 +1154,8 @@ roi_k:"Return on investment", roi_h:"Count it yourself — <em>before you pay us
 c1:"Conversations per day", c2:"Booking rate, %", c3:"Average check", c_book:"Bookings per month", c_rev:"Revenue per month", c_note:"Illustrative calculation, not a guarantee. Results depend on niche, offer and budget.",
 in_k:"Industries", in_h:"Experience where competition is <em>the hardest.</em>",
 inds:[["02-empty.jpg","Beauty & wellness","Spas, salons, aesthetic clinics","Filling treatment rooms through Instagram Direct. See our case below."],["06-tourism.jpg","Tourism","Tours and desert experiences","Selling the feeling before the price — and turning interest into bookings."],["07-realestate.jpg","Real estate","Premium and off-plan property","Qualified leads for viewings, filtered by budget and intent."],["08-entertainment.jpg","Entertainment","High-competition niches","About a year in a segment with strict platform rules and expensive audiences."]],
-cs_k:"Case study", cs_h:"Premium ladies-only spa, Jumeirah. <em>Three weeks.</em>", cs_p:"A beautiful product and an ad account working against it. We rebuilt the system end to end — structure, offers, creative and the conversation itself.", cs_c:"Client name withheld under confidentiality",
-s1a:"up to", s1:"new conversations in Direct per day", s2a:"about", s2:"cost per conversation", s3:"weeks to a stable daily flow", s4:"seasonal campaigns sold in Direct: Spa Day 599 and Flag Day 333",
+cs_k:"Case study", cs_h:"Premium ladies-only spa, Jumeirah: <em>from scattered ads to a daily flow of bookings in 3 weeks.</em>", cs_p:"A strong product, but the ads sent people to a profile instead of a conversation. We rebuilt the account, offers, creative and Direct scripts — and within three weeks the spa had a steady daily flow of enquiries.", cs_c:"Client name withheld under confidentiality",
+s1a:"at peak", s1:"enquiries in Direct per day", s2a:"only", s2:"cost per conversation", s3a:"in", s3:"weeks from launch to a steady daily flow", s4:"seasonal campaigns sold in Direct: Spa Day 599 and Flag Day 333",
 wks:[["Week 1","Audit & architecture","New Meta structure around Instagram Direct: engaged audiences, lookalikes and exclusions of existing clients."],["Week 2","Offers & creative","Spa Day package, Reels, carousels and static ads in the brand's own visual language."],["Week 3","Selling in Direct","Reply scripts, follow-ups and live handling of every conversation until the booking was confirmed."]],
 cm_k:"Why us", cm_h:"What you get <em>compared to the usual options.</em>",
 cmp:[["","Freelancer","Typical agency","MAMMEDOV\u00a0&\u00a0CO."],["Strategy and growth plan","n","y","y"],["Targeted advertising","y","y","y"],["SMM and content","n","p","y"],["AI photo and video production","n","n","y"],["Website / landing page","n","p","y"],["Sales scripts and Direct handling","n","n","y"],["Founder personally on your project","y","n","y"],["Weekly report in plain language","p","p","y"]],
@@ -1195,8 +1201,8 @@ roi_k:"Окупаемость", roi_h:"Посчитайте сами — <em>д�
 c1:"Переписок в день", c2:"Доля записавшихся, %", c3:"Средний чек", c_book:"Записей в месяц", c_rev:"Выручка в месяц", c_note:"Расчёт иллюстративный, не гарантия. Результат зависит от ниши, оффера и бюджета.",
 in_k:"Отрасли", in_h:"Опыт там, где конкуренция <em>жёстче всего.</em>",
 inds:[["02-empty.jpg","Beauty и wellness","Спа, салоны, эстетические клиники","Заполняем кабинеты через Instagram Direct. Кейс — ниже."],["06-tourism.jpg","Туризм","Туры и пустыня","Продаём ощущение раньше цены — и превращаем интерес в бронирования."],["07-realestate.jpg","Недвижимость","Премиальные объекты и off-plan","Квалифицированные заявки на показы с фильтром по бюджету и намерению."],["08-entertainment.jpg","Развлечения","Высококонкурентные ниши","Около года в сегменте со строгими правилами площадок и дорогими аудиториями."]],
-cs_k:"Кейс", cs_h:"Премиальное ladies-only спа, Джумейра. <em>Три недели.</em>", cs_p:"Прекрасный продукт и рекламный кабинет, который работал против него. Мы перестроили систему целиком: структуру, офферы, креативы и сам диалог с клиентом.", cs_c:"Название клиента не раскрывается по договорённости о конфиденциальности",
-s1a:"до", s1:"новых переписок в директе в день", s2a:"около", s2:"стоимость одной переписки", s3:"недели до стабильного ежедневного потока", s4:"сезонные акции, проданные в директе: Spa Day 599 и Flag Day 333",
+cs_k:"Кейс", cs_h:"Премиальное ladies-only спа в Джумейре: <em>от разрозненной рекламы к ежедневному потоку записей за 3 недели.</em>", cs_p:"Сильный продукт, но реклама вела в профиль, а не в диалог. Мы перестроили кабинет, офферы, креативы и скрипты для директа — и за три недели вывели спа на стабильный ежедневный поток заявок.", cs_c:"Название клиента не раскрывается по договорённости о конфиденциальности",
+s1a:"на пике", s1:"заявок в директе в день", s2a:"всего", s2:"стоимость одной переписки", s3a:"за", s3:"недели от запуска до стабильного потока", s4:"сезонные акции, проданные в директе: Spa Day 599 и Flag Day 333",
 wks:[["Неделя 1","Аудит и архитектура","Новая структура Meta под Instagram Direct: вовлечённые аудитории, lookalike и исключение действующих клиентов."],["Неделя 2","Офферы и креативы","Пакет Spa Day, рилсы, карусели и статика на визуальном языке бренда."],["Неделя 3","Продажи в директе","Скрипты, дожимы и ведение каждой переписки до подтверждённой записи."]],
 cm_k:"Почему мы", cm_h:"Что вы получаете <em>в сравнении с привычными вариантами.</em>",
 cmp:[["","Фрилансер","Обычное агентство","MAMMEDOV\u00a0&\u00a0CO."],["Стратегия и план роста","n","y","y"],["Таргетированная реклама","y","y","y"],["SMM и контент","n","p","y"],["ИИ-продакшн фото и видео","n","n","y"],["Сайт / лендинг","n","p","y"],["Скрипты продаж и ведение директа","n","n","y"],["Основатель лично на вашем проекте","y","n","y"],["Еженедельный отчёт простым языком","p","p","y"]],
@@ -1244,8 +1250,8 @@ roi_k:"Özüni ödeýşi", roi_h:"Özüňiz hasaplaň — <em>bize töleg etmezd
 c1:"Günde ýazyşyk", c2:"Ýazylýanlaryň paýy, %", c3:"Ortaça çek", c_book:"Aýda ýazylyş", c_rev:"Aýlyk girdeji", c_note:"Hasaplama mysal üçin, kepillik däl. Netije ugra, teklibe we býudjete bagly.",
 in_k:"Pudaklar", in_h:"Bäsleşigiň <em>iň berk ýerinde</em> tejribe.",
 inds:[["02-empty.jpg","Gözellik we wellness","Spa, salonlar, estetik klinikalar","Kabinetleri Instagram Direct arkaly doldurýarys. Mysal aşakda."],["06-tourism.jpg","Syýahatçylyk","Syýahatlar we çöl","Duýgyny bahadan öň satýarys — gyzyklanmany bronlamalara öwürýäris."],["07-realestate.jpg","Gozgalmaýan emläk","Premium we off-plan obýektler","Býudjet we niýet boýunça süzülen görkezmä ýazylyşlar."],["08-entertainment.jpg","Güýmenje","Bäsleşigi ýokary ugurlar","Platformalaryň düzgünleri berk, auditoriýasy gymmat segmentde takmynan bir ýyl."]],
-cs_k:"Keýs", cs_h:"Premium ladies-only spa, Jumeýra. <em>Üç hepde.</em>", cs_p:"Ajaýyp önüm we oňa garşy işleýän mahabat kabineti. Ulgamy doly täzeden gurduk: gurluşy, teklipleri, kreatiwleri we müşderi bilen gepleşigiň özüni.", cs_c:"Müşderiniň ady gizlinlik ylalaşygy boýunça aýdylmaýar",
-s1a:"iň köp", s1:"günde Direct-de täze ýazyşyk", s2a:"takmynan", s2:"bir ýazyşygyň bahasy", s3:"hepdede yzygiderli gündelik akym", s4:"Direct-de satylan möwsümleýin aksiýa: Spa Day 599 we Flag Day 333",
+cs_k:"Keýs", cs_h:"Premium ladies-only spa, Jumeýra: <em>pytraň mahabatdan 3 hepdede gündelik ýazylyş akymyna.</em>", cs_p:"Güýçli önüm, ýöne mahabat adamlary gepleşige däl-de, profile ugradýardy. Kabineti, teklipleri, kreatiwleri we Direct skriptlerini täzeden gurduk — üç hepdede spa yzygiderli gündelik ýüzlenme akymyna çykdy.", cs_c:"Müşderiniň ady gizlinlik ylalaşygy boýunça aýdylmaýar",
+s1a:"iň ýokary nokatda", s1:"günde Direct-de ýüzlenme", s2a:"bary-ýogy", s2:"bir ýazyşygyň bahasy", s3a:"bary-ýogy", s3:"hepdede işe girizilenden yzygiderli akyma çenli", s4:"Direct-de satylan möwsümleýin aksiýa: Spa Day 599 we Flag Day 333",
 wks:[["1-nji hepde","Audit we gurluş","Instagram Direct üçin Meta-nyň täze gurluşy: işjeň auditoriýalar, lookalike we häzirki müşderileri aýyrmak."],["2-nji hepde","Teklipler we kreatiwler","Spa Day paketi, Reels, karuseller we brendiň öz wizual dilinde statik mahabat."],["3-nji hepde","Direct-de satuw","Jogap skriptleri, yzarlaýyş we her ýazyşygy ýazylyş tassyklanýança alyp barmak."]],
 cm_k:"Näme üçin biz", cm_h:"Adaty görnüşler bilen deňeşdirende <em>näme alýarsyňyz.</em>",
 cmp:[["","Frilanser","Adaty agentlik","MAMMEDOV\u00a0&\u00a0CO."],["Strategiýa we ösüş meýilnamasy","n","y","y"],["Nyşanaly mahabat","y","y","y"],["SMM we kontent","n","p","y"],["Emeli aň bilen surat we wideo","n","n","y"],["Saýt / lending","n","p","y"],["Satuw skriptleri we Direct","n","n","y"],["Esaslandyryjy özi taslamaňyzda","y","n","y"],["Ýönekeý dilde hepdelik hasabat","p","p","y"]],
@@ -1291,8 +1297,8 @@ roi_k:"العائد على الاستثمار", roi_h:"احسبها بنفسك �
 c1:"محادثات يومياً", c2:"نسبة من يحجزون، %", c3:"متوسط الفاتورة", c_book:"حجوزات شهرياً", c_rev:"الإيرادات شهرياً", c_note:"حساب توضيحي وليس ضماناً. تعتمد النتائج على القطاع والعرض والميزانية.",
 in_k:"القطاعات", in_h:"خبرة حيث تكون المنافسة <em>في أشدّها.</em>",
 inds:[["02-empty.jpg","الجمال والعافية","السبا والصالونات وعيادات التجميل","نملأ غرف العلاج عبر رسائل إنستغرام. دراسة الحالة أدناه."],["06-tourism.jpg","السياحة","الرحلات وتجارب الصحراء","نبيع الإحساس قبل السعر — ونحوّل الاهتمام إلى حجوزات."],["07-realestate.jpg","العقارات","العقارات الفاخرة وعلى الخارطة","طلبات مؤهلة للمعاينة مع تصفية حسب الميزانية والنية."],["08-entertainment.jpg","الترفيه","قطاعات شديدة المنافسة","قرابة عام في قطاع بقواعد صارمة للمنصات وجماهير مكلفة."]],
-cs_k:"دراسة حالة", cs_h:"سبا فاخر للسيدات فقط، جميرا. <em>ثلاثة أسابيع.</em>", cs_p:"منتج رائع وحساب إعلاني يعمل ضده. أعدنا بناء النظام بالكامل: الهيكل، والعروض، والمحتوى الإبداعي، والمحادثة نفسها.", cs_c:"اسم العميل محجوب التزاماً بالسرية",
-s1a:"حتى", s1:"محادثة جديدة في الرسائل يومياً", s2a:"حوالي", s2:"تكلفة المحادثة الواحدة", s3:"أسابيع حتى تدفّق يومي ثابت", s4:"حملتان موسميتان بيعتا عبر الرسائل: Spa Day 599 و Flag Day 333",
+cs_k:"دراسة حالة", cs_h:"سبا فاخر للسيدات فقط في جميرا: <em>من إعلانات متفرقة إلى تدفّق يومي من الحجوزات خلال 3 أسابيع.</em>", cs_p:"منتج قوي، لكن الإعلانات كانت توجّه الناس إلى الحساب بدلاً من المحادثة. أعدنا بناء الحساب الإعلاني والعروض والمحتوى ونصوص الرسائل — وخلال ثلاثة أسابيع أصبح لدى السبا تدفّق يومي ثابت من الطلبات.", cs_c:"اسم العميل محجوب التزاماً بالسرية",
+s1a:"في الذروة", s1:"طلباً في الرسائل يومياً", s2a:"فقط", s2:"تكلفة المحادثة الواحدة", s3a:"خلال", s3:"أسابيع من الإطلاق حتى تدفّق يومي ثابت", s4:"حملتان موسميتان بيعتا عبر الرسائل: Spa Day 599 و Flag Day 333",
 wks:[["الأسبوع 1","التدقيق والهيكلة","هيكل جديد في ميتا حول رسائل إنستغرام: جماهير متفاعلة، وجماهير مشابهة، واستبعاد العملاء الحاليين."],["الأسبوع 2","العروض والمحتوى","باقة Spa Day، وريلز، وكاروسيل، وإعلانات ثابتة بلغة العلامة البصرية."],["الأسبوع 3","البيع في الرسائل","نصوص الرد، والمتابعات، وإدارة كل محادثة حتى تأكيد الحجز."]],
 cm_k:"لماذا نحن", cm_h:"ما الذي تحصل عليه <em>مقارنة بالخيارات المعتادة.</em>",
 cmp:[["","مستقل","وكالة تقليدية","MAMMEDOV\u00a0&\u00a0CO."],["الاستراتيجية وخطة النمو","n","y","y"],["الإعلانات الموجّهة","y","y","y"],["التواصل الاجتماعي والمحتوى","n","p","y"],["إنتاج الصور والفيديو بالذكاء الاصطناعي","n","n","y"],["الموقع / صفحة الهبوط","n","p","y"],["نصوص البيع وإدارة الرسائل","n","n","y"],["المؤسس شخصياً على مشروعك","y","n","y"],["تقرير أسبوعي بلغة واضحة","p","p","y"]],
@@ -1338,7 +1344,7 @@ function render(){
   $$("#indList .ai").forEach(b=>{const go=()=>{indI=+b.dataset.a;$$("#indList .ai").forEach(x=>{const on=x===b;x.classList.toggle("on",on);x.setAttribute("aria-expanded",on)})};b.addEventListener("click",go);if(matchMedia("(hover:hover)").matches)b.addEventListener("mouseenter",go)});
   $("#wkList").innerHTML=d.wks.map(w=>`<div class="wk rv"><div class="w">${esc(w[0])}</div><h3>${esc(w[1])}</h3><p>${esc(w[2])}</p></div>`).join("");
   const L=d.cmp_l;
-  $("#cmpT").innerHTML=d.cmp.map((r,i)=>i===0?`<tr>${r.map((c,j)=>`<th class="${j===3?'us':''}">${esc(c)}</th>`).join("")}</tr>`:`<tr><td>${esc(r[0])}</td>${r.slice(1).map((c,j)=>`<td class="${c}${j===2?' us':''}">${esc(L[c])}</td>`).join("")}</tr>`).join("");
+  $("#cmpT").innerHTML=d.cmp.map((r,i)=>i===0?`<tr>${r.map((c,j)=>`<th class="${j===3?'us':''}">${j===3?'<span class="brandmark" dir="ltr">MAMMEDOV<span class="amp">&amp;</span>CO.</span>':esc(c)}</th>`).join("")}</tr>`:`<tr><td>${esc(r[0])}</td>${r.slice(1).map((c,j)=>`<td class="${c}${j===2?' us':''}">${esc(L[c])}</td>`).join("")}</tr>`).join("");
   $("#teamList").innerHTML=d.team.map(t=>`<span>${esc(t)}</span>`).join("");
   $("#pkTabs").innerHTML=d.pks.map((p,i)=>`<button data-k="${i}" aria-pressed="${i===pkI}">${esc(p[0])}</button>`).join("");
   $$("#pkTabs button").forEach(b=>b.addEventListener("click",()=>{pkI=+b.dataset.k;$$("#pkTabs button").forEach(x=>x.setAttribute("aria-pressed",x===b));$$("#pkList .pkg").forEach((c,i)=>c.classList.toggle("sel",i===pkI))}));
